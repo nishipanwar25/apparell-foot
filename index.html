@@ -1,365 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>home</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!--navbar start-->
-    <header class="navbar">
-      <div class="logo">
-        <img src="images/fusorum.png" alt="JPloft Logo" />
-      </div>
-      <nav class="nav-menu">
-        <ul>
-          <li class="start-journey">
-            <a href="#">Start AI Journey</a>
-          </li>
-    
-          <li><a href="#">Retail <span>&#x25BE;</span></a></li>
-    
-          <!-- Distribution Dropdown Start -->
-          <li class="dropdown" id="distributionDropdown">
-            <a href="javascript:void(0);" class="dropdown-toggle">Distribution </a>
-            <div class="dropdown-grid">
-              <div class="grid-column">
-                <div class="grid-item">
-                  <img src="icons/restaurant.png" alt="Restaurant">
-                  <span>Apparel & Footwear</span>
-                </div>
-                <div class="grid-item">
-                  <img src="icons/education.png" alt="Education">
-                  <span>Garments</span>
-                </div>
-                <div class="grid-item">
-                  <img src="icons/healthcare.png" alt="Healthcare">
-                  <span>Textile</span>
-                </div>
-                <div class="grid-item">
-                  <img src="icons/travel.png" alt="Travel">
-                  <span>Pharma & Healthcare</span>
-                </div>
-                <div class="grid-item">
-                  <img src="icons/media.png" alt="Media">
-                  <span>FMCG</span>
-                </div>
-                <div class="grid-item">
-                  <img src="icons/scooter.png" alt="E-Scooter">
-                  <span>Lifestyle & Fashion</span>
-                </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--navbar start-->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/fusorum.png" alt="JPloft Logo" />
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li class="start-journey">
+          <a href="#">Start AI Journey</a>
+        </li>
+
+        <li><a href="#">Retail <span>&#x25BE;</span></a></li>
+
+        <!-- Distribution Dropdown Start -->
+        <li class="dropdown" id="distributionDropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">Distribution </a>
+          <div class="dropdown-grid">
+            <div class="grid-column">
+              <div class="grid-item">
+                <img src="icons/restaurant.png" alt="Restaurant">
+                <span>Apparel & Footwear</span>
               </div>
-              <div class="grid-column">
-                <div class="grid-item">
-                  <img src="icons/automotive.png" alt="Automotive">
-                  <span>Electrical & Electronics</span>
-                </div>
-                <div class="grid-item">
-                  <img src="icons/gaming.png" alt="Gaming">
-                  <span>Auto Parts</span>
-                </div>
-                
+              <div class="grid-item">
+                <img src="icons/education.png" alt="Education">
+                <span>Garments</span>
               </div>
-              
+              <div class="grid-item">
+                <img src="icons/healthcare.png" alt="Healthcare">
+                <span>Textile</span>
+              </div>
+              <div class="grid-item">
+                <img src="icons/travel.png" alt="Travel">
+                <span>Pharma & Healthcare</span>
+              </div>
+              <div class="grid-item">
+                <img src="icons/media.png" alt="Media">
+                <span>FMCG</span>
+              </div>
+              <div class="grid-item">
+                <img src="icons/scooter.png" alt="E-Scooter">
+                <span>Lifestyle & Fashion</span>
               </div>
             </div>
-          </li>
-          
-          <!-- Distribution Dropdown End -->
-    
-          <li><a href="#">Manufacturing <span>&#x25BE;</span></a></li>
-          <li><a href="#">ERP <span>&#x25BE;</span></a></li>
-          <li><a href="#">Company <span>&#x25BE;</span></a></li>
-          <li><a href="#">Contact Us </a></li>
-        </ul>
-      </nav>
-      <div class="cta">
-        <button>Get a Free Quote</button>
-      </div>
-    </header>
-        <!--navbar end-->
+            <div class="grid-column">
+              <div class="grid-item">
+                <img src="icons/automotive.png" alt="Automotive">
+                <span>Electrical & Electronics</span>
+              </div>
+              <div class="grid-item">
+                <img src="icons/gaming.png" alt="Gaming">
+                <span>Auto Parts</span>
+              </div>
+
+            </div>
+
+          </div>
+          </div>
+        </li>
+
+        <!-- Distribution Dropdown End -->
+
+        <li><a href="#">Manufacturing <span>&#x25BE;</span></a></li>
+        <li><a href="#">ERP <span>&#x25BE;</span></a></li>
+        <li><a href="#">Company <span>&#x25BE;</span></a></li>
+        <li><a href="#">Contact Us </a></li>
+      </ul>
+    </nav>
+    <div class="cta">
+      <button>Get a Free Quote</button>
+    </div>
+  </header>
+  <!--navbar end-->
 
   <!--heroslider start-->
-    <section class="hero-mockup-section">
+  <section class="hero-mockup-section">
 
-      <div class="hero-mackup-blur" style="position: absolute; width: 700px; height: 700px; background: linear-gradient(#1d6bba,#225e9a); border-radius: 50%; top: 10%; right: -30%; transform: translate(-50% , -50%); filter: blur(300px);">
+    <div class="hero-mackup-blur"
+      style="position: absolute; width: 700px; height: 700px; background: linear-gradient(#1d6bba,#225e9a); border-radius: 50%; top: 10%; right: -30%; transform: translate(-50% , -50%); filter: blur(300px);">
 
-      </div>
+    </div>
 
-      <div class="hero-section">
-          <div class="hero-grid-bg"></div>
-          <h1><span>Leading Los Angeles</span> <strong>Mobile App</strong> Developers</h1>
+    <div class="hero-section">
+      <div class="hero-grid-bg"></div>
+      <h1><span>Leading Los Angeles</span> <strong>Mobile App</strong> Developers</h1>
 
-          <div class="hero-content">
-              <div class="features-left">
-                  <div class="feature">
-                      <img src="/images/feature1.png"
-                          alt="Team">
-                      <div>
-                          <strong>Team of 30 App Experts</strong>
-                          <p>You will be assigned our top Los Angeles developers to build your software</p>
-                      </div>
-                  </div>
-                  <div class="feature">
-                      <img src="/images/feature2.png"
-                          alt="Meeting">
-                      <div>
-                          <strong>1-ON-1, In Person</strong>
-                          <p>In-person meetings with project managers, guiding every step together</p>
-                      </div>
-                  </div>
-                  <div class="feature">
-                      <img src="/images/feature3.png"
-                          alt="Code">
-                      <div>
-                          <strong>Best Code Practices</strong>
-                          <p>Keeping your code healthy and ready for growth & scale</p>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="hero-phone-div">
-                  <div class="phone-frame-backcircle" style="position: absolute; width: 500px; height: 500px; background: linear-gradient(#225e9a8f, #225e9a08); border-radius: 50%; top: 35%; left: 50%; transform: translate(-50%, -50%);">
-                  </div>
-                  <div class="phone-frame">
-                      <img src="https://cdn-ilchebh.nitrocdn.com/tddUaqtYoWmRfDTHlxtxPMGaFYrSAorD/assets/images/optimized/rev-b6bbc8e/appmakersla.com/wp-content/uploads/2024/02/Book-Club.png"
-                          alt="App in Phone" />
-                  </div>
-              </div>
-
-              <div class="features-right">
-                  <div class="feature">
-
-                      <div>
-                          <strong>Privacy & Cybersecurity</strong>
-                          <p>Your ideas are kept confidential with the best security practices.</p>
-                      </div>
-                      <img src="/images/feature4.png"
-                          alt="Privacy">
-                  </div>
-                  <div class="feature">
-
-                      <div>
-                          <strong>Cross Platform Development</strong>
-                          <p>iOS and Android development for the price of 1.</p>
-                      </div>
-                      <img src="/images/feature5.png"
-                          alt="Cross-platform">
-                  </div>
-                  <div class="feature">
-
-                      <div>
-                          <strong>Support & Maintenance</strong>
-                          <p>Best support while building and maintaining your mobile app.</p>
-                      </div>
-                      <img src="/images/feature6.png"
-                          alt="Support">
-                  </div>
-              </div>
+      <div class="hero-content">
+        <div class="features-left">
+          <div class="feature">
+            <img src="images/feature1.png" alt="Team">
+            <div>
+              <strong>Team of 30 App Experts</strong>
+              <p>You will be assigned our top Los Angeles developers to build your software</p>
+            </div>
           </div>
-
-          <div class="stats-container">
-              <div class="stat-card">
-                  <div class="icon-box">
-                      <i class="fas fa-rocket"></i>
-                  </div>
-                  <div class="stat-text">
-                      <h2>100+</h2>
-                      <p>Apps Launched</p>
-                  </div>
-              </div>
-              <div class="stat-card">
-                  <div class="icon-box">
-                      <i class="fas fa-users"></i>
-                  </div>
-                  <div class="stat-text">
-                      <h2>10 M+</h2>
-                      <p>Total Users</p>
-                  </div>
-              </div>
-              <div class="stat-card">
-                  <div class="icon-box">
-                      <i class="fas fa-chart-line"></i>
-                  </div>
-                  <div class="stat-text">
-                      <h2>$100M</h2>
-                      <p>Raised</p>
-                  </div>
-              </div>
+          <div class="feature">
+            <img src="images/feature2.png" alt="Meeting">
+            <div>
+              <strong>1-ON-1, In Person</strong>
+              <p>In-person meetings with project managers, guiding every step together</p>
+            </div>
           </div>
-        
-    </section>
-    <!--Heroslider end-->
-
-    <!--trusted by section-->
-    <section class="trusted-section">
-      <div class="container text-center">
-        <h2 class="section-heading">Trusted By</h2>
-        <p class="subheading">
-          Empowering Global Brands and Startups to Drive Innovation and Success
-          with <br />
-          our unparalleled expertise and commitment to excellence
-        </p>
-
-        <!-- Logo slider -->
-        <div class="logo-slider">
-          <div class="logo-track" id="logoTrack"></div>
+          <div class="feature">
+            <img src="images/feature3.png" alt="Code">
+            <div>
+              <strong>Best Code Practices</strong>
+              <p>Keeping your code healthy and ready for growth & scale</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Stats -->
-        <div class="stats-container mt-5">
-          <div class="stat-box">
-            <h3>2,000+</h3>
-            <p>Apps & Digital Products Delivered</p>
+        <div class="hero-phone-div">
+          <div class="phone-frame-backcircle"
+            style="position: absolute; width: 500px; height: 500px; background: linear-gradient(#225e9a8f, #225e9a08); border-radius: 50%; top: 35%; left: 50%; transform: translate(-50%, -50%);">
           </div>
-          <div class="stat-box">
-            <h3>50+</h3>
-            <p>App Development Agency & B2B Provider Awards</p>
+          <div class="phone-frame">
+            <img
+              src="https://cdn-ilchebh.nitrocdn.com/tddUaqtYoWmRfDTHlxtxPMGaFYrSAorD/assets/images/optimized/rev-b6bbc8e/appmakersla.com/wp-content/uploads/2024/02/Book-Club.png"
+              alt="App in Phone" />
           </div>
-          <div class="stat-box">
-            <h3>700+</h3>
-            <p>Global Brands & Fast Growing Startups Trust us</p>
+        </div>
+
+        <div class="features-right">
+          <div class="feature">
+
+            <div>
+              <strong>Privacy & Cybersecurity</strong>
+              <p>Your ideas are kept confidential with the best security practices.</p>
+            </div>
+            <img src="images/feature4.png" alt="Privacy">
           </div>
-          <div class="stat-box">
-            <h3>15+</h3>
-            <p>Years of Proven Success in the Industry</p>
+          <div class="feature">
+
+            <div>
+              <strong>Cross Platform Development</strong>
+              <p>iOS and Android development for the price of 1.</p>
+            </div>
+            <img src="images/feature5.png" alt="Cross-platform">
+          </div>
+          <div class="feature">
+
+            <div>
+              <strong>Support & Maintenance</strong>
+              <p>Best support while building and maintaining your mobile app.</p>
+            </div>
+            <img src="images/feature6.png" alt="Support">
           </div>
         </div>
       </div>
-    </section>
-    <!--trusted by section-->
 
-    <!--services section-->
-    <section class="services">
-      <h2 style="color: #567dd9; font-size: 20px; margin-top: 20px">
-        Your Full Stack Design and Engineering Partner
-      </h2>
-      <p
-        style="
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="icon-box">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="stat-text">
+            <h2>100+</h2>
+            <p>Apps Launched</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="icon-box">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-text">
+            <h2>10 M+</h2>
+            <p>Total Users</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="icon-box">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="stat-text">
+            <h2>$100M</h2>
+            <p>Raised</p>
+          </div>
+        </div>
+      </div>
+
+  </section>
+  <!--Heroslider end-->
+
+  <section class="clients-wrapper">
+    <div class="clients-row clients-row--1">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-180,h-31/Main_Page_New/levels-health-logo-vector_1.webp"
+        alt="Levels" width="180" height="31">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-98,h-34/Main_Page_New/Chegg_logo_1.webp" alt="Chegg" width="98"
+        height="34">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-236,h-40/Main_Page_New/logo.webp" alt="Student" width="233"
+        height="40">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-94,h-30/Main_Page_New/New_Bloomberg_Logo_3__1_.webp" alt="Dell"
+        width="94" height="30">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-81,h-27/Main_Page_New/Group.webp" alt="LYTE" width="81"
+        height="27">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-130,h-34/Main_Page_New/Logo__1_.webp" alt="MyTutor" width="129"
+        height="34">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-155,h-39/Main_Page_New/Mask_group__1_.webp" alt="Festicket"
+        width="155" height="39">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-118,h-40/Main_Page_New/Finance_Unlocked.webp"
+        alt="Finance Unlocked" width="118" height="40">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-180,h-31/Main_Page_New/levels-health-logo-vector_1.webp"
+        alt="Levels" width="180" height="31">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-98,h-34/Main_Page_New/Chegg_logo_1.webp" alt="Chegg" width="98"
+        height="34">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-236,h-40/Main_Page_New/logo.webp" alt="Student" width="233"
+        height="40">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-94,h-30/Main_Page_New/New_Bloomberg_Logo_3__1_.webp" alt="Dell"
+        width="94" height="30">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-81,h-27/Main_Page_New/Group.webp" alt="LYTE" width="81"
+        height="27">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-130,h-34/Main_Page_New/Logo__1_.webp" alt="MyTutor" width="129"
+        height="34">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-155,h-39/Main_Page_New/Mask_group__1_.webp" alt="Festicket"
+        width="155" height="39">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-118,h-40/Main_Page_New/Finance_Unlocked.webp"
+        alt="Finance Unlocked" width="118" height="40">
+
+    </div>
+
+    <div class="clients-row clients-row--2">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-185,h-44/Main_Page_New/Mask_group__3_.webp" alt="Forethought"
+        width="185" height="48">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-171,h-32/Main_Page_New/New_Bloomberg_Logo_4.webp" alt="Bloomberg"
+        width="171" height="32">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-244,h-25/Main_Page_New/Clip_path_group.webp" alt="MaxRewards"
+        width="242" height="25">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-77,h-52/Main_Page_New/Frame.webp" alt="Keep" width="77"
+        height="52">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-116,h-40/Main_Page_New/Zytara_Logo.webp" alt="Zytara" width="116"
+        height="40">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-190,h-38/Main_Page_New/Mask_group__4_.webp" alt="BorisCooper"
+        width="190" height="38">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-134,h-40/Main_Page_New/Mask_group__2_.webp" alt="Nimble"
+        width="134" height="40">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-185,h-44/Main_Page_New/Mask_group__3_.webp" alt="Forethought"
+        width="185" height="48">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-171,h-32/Main_Page_New/New_Bloomberg_Logo_4.webp" alt="Bloomberg"
+        width="171" height="32">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-244,h-25/Main_Page_New/Clip_path_group.webp" alt="MaxRewards"
+        width="242" height="25">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-77,h-52/Main_Page_New/Frame.webp" alt="Keep" width="77"
+        height="52">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-116,h-40/Main_Page_New/Zytara_Logo.webp" alt="Zytara" width="116"
+        height="40">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-190,h-38/Main_Page_New/Mask_group__4_.webp" alt="BorisCooper"
+        width="190" height="38">
+      <img src="https://ik.imagekit.io/k0jemnbco/tr:w-134,h-40/Main_Page_New/Mask_group__2_.webp" alt="Nimble"
+        width="134" height="40">
+    </div>
+  </section>
+
+
+  <!--trusted by section-->
+  <section class="trusted-section">
+    <div class="container text-center">
+      <h2 class="section-heading">Trusted By</h2>
+      <p class="subheading">
+        Empowering Global Brands and Startups to Drive Innovation and Success
+        with <br />
+        our unparalleled expertise and commitment to excellence
+      </p>
+
+      <!-- Logo slider -->
+      <div class="logo-slider">
+        <div class="logo-track" id="logoTrack"></div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-container mt-5">
+        <div class="stat-box">
+          <h3>2,000+</h3>
+          <p>Apps & Digital Products Delivered</p>
+        </div>
+        <div class="stat-box">
+          <h3>50+</h3>
+          <p>App Development Agency & B2B Provider Awards</p>
+        </div>
+        <div class="stat-box">
+          <h3>700+</h3>
+          <p>Global Brands & Fast Growing Startups Trust us</p>
+        </div>
+        <div class="stat-box">
+          <h3>15+</h3>
+          <p>Years of Proven Success in the Industry</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--trusted by section-->
+
+  <!--services section-->
+  <section class="services">
+    <h2 style="color: #567dd9; font-size: 20px; margin-top: 20px">
+      Your Full Stack Design and Engineering Partner
+    </h2>
+    <p style="
           color: #ffffff;
           font-size: 32px;
           margin: 30px 0 120px;
           line-height: 1.5;
-        "
-      >
-        From innovative design thinking to AI-integrated engineering <br />
-        solutions, we empower your business transformation.
-      </p>
+        ">
+      From innovative design thinking to AI-integrated engineering <br />
+      solutions, we empower your business transformation.
+    </p>
 
-      <div class="container3">
-        <div class="services-cards">
-          <div class="card">
-            <h1>Design & Innovate</h1>
-            <ul>
-              <li>
-                <i class="fa-solid fa-palette"></i>
-                <a href="">User Experience Design</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                <a href="">Discovery and Prototyping</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-robot"></i>
-                <a href="">Artificial Intelligence (AI) Consulting</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-network-wired"></i>
-                <a href="">Internet of Things (IoT) Solutions</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-arrows-rotate"></i>
-                <a href="">Digital Transformation</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-code"></i>
-                <a href="">Custom Software Development</a>
-              </li>
-            </ul>
-          </div>
-          <div class="plus">
-            <i class="fa-solid fa-plus"></i>
-          </div>
-          <div class="card">
-            <h1>Engineer & Transform</h1>
-            <ul>
-              <li>
-                <i class="fa-solid fa-mobile"></i>
-                <a href="">Mobile App Development</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-globe"></i>
-                <a href="">Web App Development</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-database"></i>
-                <a href="">Backend Development</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-cloud"></i>
-                <a href="">Cloud Solutions</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-brain"></i>
-                <a href="">AI & Machine Learning Development</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-gears"></i>
-                <a href="">DevOps & Quality Engineering</a>
-              </li>
-              
-            </ul>
-          </div>
-          <div class="plus">
-            <i class="fa-solid fa-plus"></i>
-          </div>
-          <div class="card">
-            <h1>Optimize & Scale</h1>
-            <ul>
-              <li>
-                <i class="fa-solid fa-gauge-high"></i>
-                <a href="">Performance Optimization</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-compass-drafting"></i>
-                <a href="">Discovery and Prototyping</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                <a href="">Maintenance and Support</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-chart-line"></i>
-                <a href="">Data Analytics & Business Intelligence</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-cloud-arrow-up"></i>
-                <a href="">Managed Cloud Services</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-users-gear"></i>
-                <a href="">Staff Augmentation</a>
-              </li>
-              
-            </ul>
-          </div>
+    <div class="container3">
+      <div class="services-cards">
+        <div class="card">
+          <h1>Design & Innovate</h1>
+          <ul>
+            <li>
+              <i class="fa-solid fa-palette"></i>
+              <a href="">User Experience Design</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+              <a href="">Discovery and Prototyping</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-robot"></i>
+              <a href="">Artificial Intelligence (AI) Consulting</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-network-wired"></i>
+              <a href="">Internet of Things (IoT) Solutions</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <a href="">Digital Transformation</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-code"></i>
+              <a href="">Custom Software Development</a>
+            </li>
+          </ul>
         </div>
+        <div class="plus">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="card">
+          <h1>Engineer & Transform</h1>
+          <ul>
+            <li>
+              <i class="fa-solid fa-mobile"></i>
+              <a href="">Mobile App Development</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <a href="">Web App Development</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-database"></i>
+              <a href="">Backend Development</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-cloud"></i>
+              <a href="">Cloud Solutions</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-brain"></i>
+              <a href="">AI & Machine Learning Development</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-gears"></i>
+              <a href="">DevOps & Quality Engineering</a>
+            </li>
 
-        <div class="text-on-border">
-          <h1>UNIFIED EXCELLENCE</h1>
+          </ul>
+        </div>
+        <div class="plus">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="card">
+          <h1>Optimize & Scale</h1>
+          <ul>
+            <li>
+              <i class="fa-solid fa-gauge-high"></i>
+              <a href="">Performance Optimization</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-compass-drafting"></i>
+              <a href="">Discovery and Prototyping</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <a href="">Maintenance and Support</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-chart-line"></i>
+              <a href="">Data Analytics & Business Intelligence</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <a href="">Managed Cloud Services</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-users-gear"></i>
+              <a href="">Staff Augmentation</a>
+            </li>
+
+          </ul>
         </div>
       </div>
-    </section>
 
-    <script src="JS/Script.js"></script>
-  </body>
+      <div class="text-on-border">
+        <h1>UNIFIED EXCELLENCE</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us">
+    <div class="wave-grid"></div>
+    <div class="container">
+      <!-- Left Content -->
+      <div class="left">
+        <h1>
+          Professional <span class="highlight-us">US </span>App<br>
+          Developers that <br>
+          <div style="position: relative"><span class="highlight-guarantee">Guarantee Delivery</span><br>
+            <samp class="mirror-text" style="position: absolute; width: 400px; top: 80%;">Guarantee Delivery</samp>
+          </div>
+        </h1>
+
+        <div class="trusted-companies">Trusted by Top-Tier Companies</div>
+
+        <div class="company-logos">
+          <img src="your-path/cvs.png" alt="CVS Health">
+          <img src="your-path/laa.png" alt="Los Angeles Apparel">
+          <img src="your-path/lmu.png" alt="Loyola Marymount University">
+          <img src="your-path/nfl.png" alt="NFL">
+        </div>
+
+        <div class="badge-logos" style="margin-top: 30px;">
+          <img src="your-path/badge1.png" alt="Clutch Badge 1">
+          <img src="your-path/badge2.png" alt="Clutch Badge 2">
+          <img src="your-path/badge3.png" alt="Clutch Badge 3">
+          <!-- Optional empty badge for spacing -->
+          <img src="your-path/empty.png" alt="" style="opacity: 0;">
+        </div>
+      </div>
+
+      <!-- Right Form -->
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+
+        <div class="form-group">
+          <label for="fullName">Full Name <span class="required">*</span></label>
+          <input type="text" id="fullName" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile No <span class="required">*</span></label>
+            <input type="text" id="mobile" placeholder="+91" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Industry <span class="required">*</span></label>
+          <div class="industry-options">
+            <input type="checkbox" id="retail" />
+            <label for="retail">Retail</label>
+
+            <input type="checkbox" id="distribution" />
+            <label for="distribution">Distribution</label>
+
+            <input type="checkbox" id="manufacturing" />
+            <label for="manufacturing">Manufacturing</label>
+
+            <input type="checkbox" id="othersIndustry" />
+            <label for="othersIndustry">Others</label>
+          </div>
+
+        </div>
+
+        <!-- Hidden input for 'Others' selection -->
+        <div id="otherIndustryInput" style="margin:10px 0; display: none;">
+          <label for="specify">Specify about your vertical <span class="required">*</span></label>
+          <input type="text" id="specifyIndustry" placeholder="Please specify your industry" />
+        </div>
+
+        <div class="form-group">
+          <label for="verticals">Verticals <span class="required">*</span></label>
+          <select id="verticals" required>
+            <option>Others</option>
+            <option>Automotive</option>
+            <option>Healthcare</option>
+            <option>Finance</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="specify">Specify about your vertical <span class="required">*</span></label>
+          <textarea id="specify" rows="3" placeholder="Provide more details..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Comments</label>
+          <textarea id="comments" rows="3" placeholder="Enter any comments"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </div>
+
+
+  </section>
+
+  <footer>
+    <div class="col-9 footer">
+      <div class="footer-logo-wrap-upd">
+        <a href="https://geniusee.com/" class="footer-logo-wrapper"><img src="images/fusorum.png" width="140"
+            height="45" alt="Geniusee logo" class="footer-logo"></a>
+        <p class="font--14 pale no-hover">Geniusee — software product development services.</p>
+
+        <div class="social-wrap-upd">
+          <a class="social-icon-wrap" href="https://www.facebook.com/Fusorum" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/facebook-icon_pOwRbXvVm.svg" alt="Social Icon" width="10"
+              height="20" loading="lazy">
+          </a>
+          <a class="social-icon-wrap" href="https://www.linkedin.com/company/geniusee" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/linkedin-icon_7EtYZVLqIu.svg" alt="Social Icon" width="18"
+              height="18" loading="lazy">
+          </a>
+          <a class="social-icon-wrap" href="https://www.behance.net/geniusee_software" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/behance-icon_i8a2EDPAj.svg" alt="Social Icon" width="22"
+              height="14" loading="lazy">
+          </a>
+          <a class="social-icon-wrap" href="https://www.instagram.com/fusorum/" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/instagram-icon_hB0rjh8aG.svg" alt="Social Icon" width="18"
+              height="18" loading="lazy">
+          </a>
+          <a class="social-icon-wrap" href="https://twitter.com/GeniuseeSW" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/layer1.webp" alt="Social Icon" width="18" height="17"
+              loading="lazy">
+          </a>
+
+        </div>
+        <div class="white-cards-wrapper">
+          <div class="footer-white-card">
+            <img src="https://ik.imagekit.io/k0jemnbco/footer-certs/clutch.png?updatedAt=1709038221945" alt="Clutch"
+              width="114" height="auto" loading="lazy" />
+          </div>
+          <div class="footer-white-card">
+            <img src="https://ik.imagekit.io/k0jemnbco/footer-certs/goodfirms.png?updatedAt=1709038221875"
+              alt="goodfirms" width="100" height="auto" loading="lazy" />
+          </div>
+          <div class="footer-white-card">
+            <img src="https://ik.imagekit.io/k0jemnbco/footer-certs/iso-9001.png?updatedAt=1709038221935" alt="ISO"
+              width="117" height="auto" loading="lazy" />
+          </div>
+          <div class="footer-white-card">
+            <img src="https://ik.imagekit.io/k0jemnbco/footer-certs/iso27001.png?updatedAt=1709038221923" alt="ISO"
+              width="117" height="auto" loading="lazy" />
+          </div>
+          <div>
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=ce358681-f774-4d44-b1ea-d261dfa06ac3"
+              title="DMCA.com Protection Status" class="dmca-badge">
+              <img
+                src="https://images.dmca.com/Badges/dmca-badge-w150-5x1-06.png?ID=ce358681-f774-4d44-b1ea-d261dfa06ac3"
+                alt="DMCA.com Protection Status" loading="lazy">
+            </a>
+            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"
+              type="5f8783fa9bb415a0604cfe28-text/javascript">
+                      </script>
+          </div>
+        </div>
+
+      </div>
+      <div class="links-wrapper-grid">
+        <div class="footer-links">
+          <div>
+            <h4 class="font--h4"><a href="/digital-transformation-consulting" class="font--h4">Consulting</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/discovery-phase">Discovery Phase</a></li>
+              <li class="menu-item"><a class="font--14" href="/technology-consulting-services">Technology Consulting</a>
+              </li>
+              <li class="menu-item"><a class="font--14" href="/it-audit-services">IT Audit Services</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font--h4 h4-mt"><a href="/outstaffing" class="font--h4">Outstaffing</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/dedicated-team">Dedicated Team</a></li>
+              <li class="menu-item"><a class="font--14" href="/time-and-material">Time And Material</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font--h4 h4-mt"><a href="/digital-transformation-consulting" class="font--h4 no-hover">Product
+                design</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/ui-ux-design">Product Experience Design</a></li>
+              <li class="menu-item"><a class="font--14" href="/business-analysis">Business Analysis</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4 class="font--h4"><a href="/software" class="font--h4">Software Engineering<br>Services</a></h4>
+          <ul>
+            <li class="menu-item"><a class="font--14" href="/mvp-startups">MVP Development</a></li>
+            <li class="menu-item"><a class="font--14" href="/digital-transformation">Digital Transformation</a></li>
+            <li class="menu-item"><a class="font--14" href="/web-development">Web Development</a></li>
+            <li class="menu-item"><a class="font--14" href="/mobile-development">Mobile Development</a></li>
+            <li class="menu-item"><a class="font--14 no-hover" href="#">Cloud Infrastructure</a></li>
+            <li class="menu-item"><a class="font--14" href="/devops">DevOps Engineering</a></li>
+            <li class="menu-item"><a class="font--14" href="/aws">Amazon Web Services</a></li>
+            <li class="menu-item"><a class="font--14" href="/integration">Integration Services</a></li>
+          </ul>
+          <div>
+            <h4 class="font--h4 h4-mt"><a href="/ai-powered-app-development" class="font--h4">AI-powered App
+                Development</a></h4>
+          </div>
+        </div>
+        <div class="footer-links">
+
+          <div>
+            <h4 class="font--h4"><a href="/fintech" class="font--h4">FinTech</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/ewallet">e-Wallet</a></li>
+              <li class="menu-item"><a class="font--14" href="/banking-software-development">Banking</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">Lending</a></li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <h4 class="font--h4 h4-mt"><a href="/edtech" class="font--h4">EdTech</a></h4>
+              <ul>
+                <li class="menu-item"><a class="font--14" href="/e-learning">e-Learning</a></li>
+                <li class="menu-item"><a class="font--14" href="/lms">LMS</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font--h4 h4-mt"><a href="/retail" class="font--h4">Retail</a></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9 footer-copyright-upd">
+      <div>
+        <p class="font--14 pale no-hover">
+          ©Copyright 2025, All rights reserved.
+        </p>
+      </div>
+      <div>
+        <a href="#" class="font--14 pale" style="display: none">Terms & Conditions</a>
+      </div>
+      <div>
+        <a href="/privacy-policy" class="font--14 pale">Privacy Policy</a>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <script src="JS/Script.js"></script>
+</body>
+
 </html>
