@@ -679,15 +679,25 @@ body {
   background-clip: text;
   color: transparent;
   font-size: 1.8rem;
-  margin-bottom: 30px;
+  margin-bottom: 0.5rem;
   /* Added spacing */
   margin-top: 20px;
 }
 
 .subheading {
-  font-size: 1.1rem;
+  margin-top: 0.5rem; /* Reduce this if needed */
+  font-size: 1.1rem; /* Optional: adjust size */
+  line-height: 1.5;
   margin-top: 10px;
   color: #ddd;
+}
+
+/* Ensure vertical stacking and center alignment */
+.trusted-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Logo slider styles */
