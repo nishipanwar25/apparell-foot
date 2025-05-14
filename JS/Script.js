@@ -242,61 +242,61 @@ document.querySelectorAll('.accordion-header').forEach(header => {
 });
 
 // process section
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-  // LEFT BANNERS: show on scroll up, hide on scroll down
-  gsap.utils.toArray(".process-left .banner").forEach((el, i) => {
-    gsap.fromTo(el,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",
-          toggleActions: "play reverse play reverse", // Play on enter, reverse on leave
-        },
-        duration: 0.5,
-        ease: "power2.out",
-        delay: i * 0.1
-      }
-    );
-  });
+// LEFT BANNERS: slower appearance
+gsap.utils.toArray(".process-left .banner").forEach((el, i) => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 30 },
+    {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 90%",
+        toggleActions: "play reverse play reverse",
+      },
+      duration: 1.2, // slower
+      ease: "power3.out",
+      delay: i * 0.3  // more staggered
+    }
+  );
+});
 
-  // RIGHT TIMELINE STEPS: same scroll up/down behavior
-  gsap.utils.toArray(".step").forEach((step, i) => {
-    gsap.fromTo(step,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: step,
-          start: "top 90%",
-          toggleActions: "play reverse play reverse",
-        },
-        duration: 0.5,
-        ease: "power2.out",
-        delay: i * 0.1
-      }
-    );
-  });
-
-  // CTA Button: same scroll-trigger behavior
-  gsap.fromTo(".cta-button",
+// RIGHT TIMELINE STEPS: slower appearance
+gsap.utils.toArray(".step").forEach((step, i) => {
+  gsap.fromTo(step,
     { opacity: 0, y: 50 },
     {
       opacity: 1,
       y: 0,
       scrollTrigger: {
-        trigger: ".cta-button",
+        trigger: step,
         start: "top 90%",
         toggleActions: "play reverse play reverse",
       },
-      duration: 0.6,
-      ease: "power2.out"
+      duration: 1.2,
+      ease: "power3.out",
+      delay: i * 0.3
     }
   );
+});
+
+// CTA Button: slower fade in
+gsap.fromTo(".cta-button",
+  { opacity: 0, y: 50 },
+  {
+    opacity: 1,
+    y: 0,
+    scrollTrigger: {
+      trigger: ".cta-button",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse",
+    },
+    duration: 1.2,
+    ease: "power3.out"
+  }
+);
 
 
 

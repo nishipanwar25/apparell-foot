@@ -1139,8 +1139,8 @@ body {
   width: 2px;
   background: repeating-linear-gradient(
     to bottom,
-    #ccc,
-    #ccc 6px,
+    #1c2e46,
+    #1c2e46 6px,
     transparent 6px,
     transparent 12px
   );
