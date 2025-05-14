@@ -1006,7 +1006,7 @@ body {
     font-size: 11px;
   }
 }
-
+/* FAQ SECTION */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -1031,7 +1031,7 @@ body {
   text-align: center;
   font-size: 32px;
   font-weight: bold;
-  color: #444;
+  margin-bottom: 40px;
 }
 
 .accordion-item {
@@ -1070,7 +1070,7 @@ body {
   color: #555;
 }
 
-
+/* BLOGS */
 /* Section Styling */
 .section_primary.white {
   padding: 60px 20px;
