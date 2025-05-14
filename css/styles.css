@@ -1085,7 +1085,6 @@ footer {
   font-weight: bold;
 }
 
-.company-logos,
 .badge-logos {
   display: flex;
   justify-content: center;
@@ -1095,19 +1094,21 @@ footer {
   margin-top: 20px;
 }
 
-.company-logos img,
-.badge-logos img {
-  height: 50px;
-  max-width: 120px;
-  object-fit: contain;
+.company-logos img{
+  width: 500px;
+  height: 80px;
+  margin-top: 10px;
 }
 
 .badge-logos img {
   height: 100px;
+  padding: 10px;
   border-radius: 10px;
   background: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  object-fit: contain;
 }
+
 
 
 .contact-form {
