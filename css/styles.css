@@ -1007,6 +1007,240 @@ body {
   }
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #225e9ae1;
+  font-weight: 500;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #444;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header .icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+}
+
+.accordion-body p {
+  margin: 10px 0 20px;
+  color: #555;
+}
+
+
+/* Section Styling */
+.section_primary.white {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+/* Container Centered */
+.container_primary {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading Block */
+.heading-articles {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading-articles h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Article Container - Horizontal Layout */
+.articles-container .collection-list-wrapper-7 {
+  overflow: visible;
+}
+
+.articles-container .collection-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Individual Blog Card */
+.collection-item-5 {
+  flex: 1 1 35%;
+  max-width: 35%;
+  box-sizing: border-box;
+  height: 450px;
+}
+
+/* Card Box */
+.article-box {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.article-box:hover {
+  transform: translateY(-4px);
+}
+
+/* Blog Image */
+.article-img {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Type and Date Container */
+.article-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Article Heading */
+.article-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin: 30px 0;
+}
+
+/* Read Time Container */
+.div-block-137 {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Timer Icon */
+.image-166 {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+/* Read Time Text */
+.div-block-281.time {
+  display: flex;
+  gap: 4px;
+}
+
+/* Button */
+.cta.secondary.w-button {
+  margin: 40px auto 0;
+  display: block;
+  width: 150px;
+  padding: 10px 24px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta.secondary.w-button:hover {
+  background-color: #333;
+}
+
+/* Responsive (Tablet and Below) */
+@media screen and (max-width: 991px) {
+  .articles-container .collection-list {
+    flex-wrap: wrap;
+  }
+
+  .collection-item-5 {
+    max-width: 48%;
+    flex: 1 1 48%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .collection-item-5 {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .heading-articles h2 {
+    font-size: 26px;
+  }
+}
+
+/* Remove underline from all anchor links */
+a {
+  text-decoration: none;
+}
+
+/* If there are any buttons styled as links */
+.cta.secondary.w-button,
+.article-heading,
+.article-type a {
+  text-decoration: none;
+}
+
+/* Optional: Ensure child elements inside blog cards don't inherit underline */
+.article-box * {
+  text-decoration: none;
+}
+
+
+
 footer {
   background-color: #27273d;
   padding-top: 65px;
