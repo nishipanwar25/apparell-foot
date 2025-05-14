@@ -1071,6 +1071,178 @@ body {
   color: #555;
 }
 
+
+
+.process-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 50px;
+  gap: 80px;
+  position: relative;
+  flex-wrap: wrap;
+  font-family: 'Urbanist', sans-serif;
+  color: #1c2e46;
+  background: url('/fusorum/fusorum/css/winter-light-blue-gradient-vector-background_53876-128352.avif') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Optional for a parallax effect */
+  background-color: #0f0f0f; /* fallback */
+  position: relative;
+  z-index: 0;
+}
+
+.process-left {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 350px;
+  max-width: 400px;
+  margin-top: 70px; /* 👈 adds space from the top */
+}
+
+.process-left .banner {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 20px 40px;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 10px; /* reduce this as needed */
+}
+
+.process-left .banner:hover {
+  transform: scale(1.05) rotate(-2deg); /* Adjust depending on original tilt */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.purple { background: #ece1ff; color: #000; transform: rotate(-3deg); }
+.pink { background: #ffe2ea; color: #000; transform: rotate(2deg); }
+.yellow { background: #fff3c7; color: #000; transform: rotate(-2deg); }
+
+.process-right {
+  flex: 1 1 500px;
+  max-width: 550px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 60px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 35px; /* Half of circle's width (50px/2 = 25px) + margin-right (10px) */
+  top: 0;
+  bottom: 40px; /* leaves space for CTA button */
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ccc,
+    #ccc 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  z-index: 0;
+}
+
+
+.step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  z-index: 1;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #1c2e46;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.4;
+  padding-top: 8px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+
+.circle span {
+  font-size: 10px;
+  display: block;
+}
+
+.content h4 {
+  margin: 0 0 12px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background: #1c2e46;
+  color: white;
+  padding: 15px 24px;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(50px);
+  position: relative;
+  left:90px
+  
+}
+
+/* Base tilt for each banner */
+.process-left .banner:nth-child(1) {
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.process-left .banner:nth-child(2) {
+  transform: rotate(2deg);
+  transition: transform 0.3s ease;
+}
+
+.process-left .banner:nth-child(3) {
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+/* Hover: scale while keeping the tilt */
+.process-left .banner:nth-child(1):hover {
+  transform: rotate(-2deg) scale(1.03);
+}
+
+.process-left .banner:nth-child(2):hover {
+  transform: rotate(2deg) scale(1.03);
+}
+
+.process-left .banner:nth-child(3):hover {
+  transform: rotate(-2deg) scale(1.03);
+}
+
+
+
+
 /* BLOGS */
 /* Section Styling */
 .section_primary.white {
