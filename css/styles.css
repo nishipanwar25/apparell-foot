@@ -1086,7 +1086,6 @@ body {
   background: url('/fusorum/fusorum/css/winter-light-blue-gradient-vector-background_53876-128352.avif') no-repeat center center;
   background-size: cover;
   background-attachment: fixed; /* Optional for a parallax effect */
-  
   position: relative;
   z-index: 0;
 }
