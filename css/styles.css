@@ -1016,7 +1016,7 @@ body {
 }
 
 .faq-section {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
 }
@@ -1037,6 +1037,7 @@ body {
 .accordion-item {
   border-bottom: 1px solid #e0e0e0;
   overflow: hidden;
+
 }
 
 .accordion-header {
