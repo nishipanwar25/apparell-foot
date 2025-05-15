@@ -623,7 +623,6 @@ body {
 
 /* Section Layout */
 .about-section {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -631,30 +630,17 @@ body {
   gap: 40px;
   flex-wrap: wrap;
   color: #1c2e46;
-  overflow: hidden;
-  width: 100%;
-  height: 600px;
-  background-image: url('/fusorum/fusorum/css/elegant-white-background-with-shiny-lines_1017-17580.avif');
-  background-size: cover;
-  background-position: center;
 }
 
-.background-img {
+.about-section .bg-image {
   position: absolute;
-  top: 0;
+  top: 10;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
-  opacity: 0.15; /* Lower opacity so text is readable */
-  pointer-events: none; /* Allows clicking through */
-}
+  z-index:-1;
 
-.about-content,
-.about-image {
-  position: relative;
-  z-index: 1;
 }
 
 .about-content {
@@ -673,6 +659,7 @@ body {
   font-size: 1.1rem;
 }
 
+/* Highlighted paragraph */
 .about-content p strong {
   font-weight: bold;
 }
@@ -691,8 +678,6 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
-
-
 
 /* Responsive */
 @media (max-width: 900px) {
