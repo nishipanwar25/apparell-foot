@@ -865,11 +865,22 @@ body {
 }
 /* Why choose us */
 .why-choose-us {
+  position: relative;
   padding: 60px 20px;
   font-family: 'Inter', sans-serif;
-  background: url('/fusorum/fusorum/css/shiny-white-gray-background-with-wavy-lines_1017-25101.avif') no-repeat center center/cover;
   color: #333;
-  z-index: 999;
+  overflow: hidden;
+}
+
+.why-choose-us .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+
 }
 
 .content-wrapper {
