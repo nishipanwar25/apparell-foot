@@ -629,11 +629,18 @@ body {
   padding: 60px 10%;
   gap: 40px;
   flex-wrap: wrap;
-  background-image: url('/fusorum/fusorum/css/winter-light-blue-gradient-vector-background_53876-128352.avif'); 
+
   color: #1c2e46;
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
+}
+
+.about-section .bg-image {
+  position: absolute;
+  top: 35;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .about-content {
@@ -880,7 +887,6 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-
 }
 
 .content-wrapper {
