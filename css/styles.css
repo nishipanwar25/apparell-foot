@@ -2,7 +2,7 @@ body {
   background: white;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -907,13 +907,40 @@ body {
 
 
 /* Responsive */
-@media (max-width: 768px) {
+/* For tablets and smaller desktops (768px to 1024px) */
+@media (max-width: 1024px) {
   .clients-row {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+  }
+
+  .clients-wrapper img {
+    max-width: 100px;
+    max-height: 40px;
   }
 }
+
+@media (max-width: 991px) {
+  .clients-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 40px 0;
+  }
+
+  .clients-row {
+    flex-wrap: nowrap;
+    gap: 30px;
+    min-width: max-content;
+  }
+
+  .clients-wrapper img {
+    max-height: 40px;
+    flex-shrink: 0;
+  }
+}
+
+
 
 
 /* trusted */
