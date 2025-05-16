@@ -1606,7 +1606,7 @@ body {
 
 /* Article Container - Horizontal Layout */
 .articles-container .collection-list-wrapper-7 {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .articles-container .collection-list {
