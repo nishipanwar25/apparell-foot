@@ -1719,8 +1719,97 @@ body {
   color: #555;
 }
 
+/* ==== Mobile Devices (max-width: 600px) ==== */
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 15px;
+    margin: 30px 10px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .accordion-header {
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  .accordion-body {
+    padding: 0 15px;
+  }
+
+  .accordion-body p {
+    font-size: 14px;
+  }
+
+  .accordion-header .icon {
+    font-size: 18px;
+  }
+}
+
+/* ==== Tablets (601px to 1024px) ==== */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .faq-section {
+    padding: 25px;
+    margin: 40px 20px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .accordion-header {
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .accordion-body {
+    padding: 0 18px;
+  }
+
+  .accordion-body p {
+    font-size: 15px;
+  }
+
+  .accordion-header .icon {
+    font-size: 20px;
+  }
+}
+
+/* ==== Desktop (above 1024px) ==== */
+@media (min-width: 1025px) {
+  .faq-section {
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .accordion-header {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .accordion-body {
+    padding: 0 20px;
+  }
+
+  .accordion-body p {
+    font-size: 16px;
+  }
+
+  .accordion-header .icon {
+    font-size: 20px;
+  }
+}
 
 
+
+/* process */
 .process-section {
   display: flex;
   justify-content: center;
@@ -1742,19 +1831,23 @@ body {
   flex: 0 0 350px;
   max-width: 400px;
   margin-top: 70px; /* 👈 adds space from the top */
+  align-items: center; /* center all banners */
 }
 
 .process-left .banner {
   font-size: 28px;
   font-weight: 700;
   padding: 20px 40px;
-  display: inline-block;
+  display: block;
   opacity: 0;
   transform: translateY(30px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   margin-top: 50px;
   margin-bottom: 10px; /* reduce this as needed */
+  transform-origin: center;    /* rotate around center */
+  margin-left: auto;           
+  margin-right: auto;     
 }
 
 .process-left .banner:hover {
@@ -1874,16 +1967,278 @@ body {
 
 /* Hover: scale while keeping the tilt */
 .process-left .banner:nth-child(1):hover {
-  transform: rotate(-2deg) scale(1.03);
+  transform: rotate(-4deg) scale(1.03);
 }
 
 .process-left .banner:nth-child(2):hover {
-  transform: rotate(2deg) scale(1.03);
+  transform: rotate(4deg) scale(1.03);
 }
 
 .process-left .banner:nth-child(3):hover {
-  transform: rotate(-2deg) scale(1.03);
+  transform: rotate(-6deg) scale(1.03);
 }
+
+/* Mobile: up to 600px */
+@media (max-width: 600px) {
+  .process-section {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 40px;
+  }
+
+  .process-left {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center banners */
+  }
+
+  .process-left .banner {
+    font-size: 20px;
+    padding: 15px 25px;
+    margin-top: 30px;
+    margin-bottom: 8px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-left: 80px;
+    margin-right: auto; /* center horizontally */
+    transform-origin: center;  /* added */
+    display: block;            /* added */
+  }
+
+  /* Keep tilt on banners for each child */
+  .process-left .banner:nth-child(1) {
+    transform: rotate(-4deg);
+  }
+  .process-left .banner:nth-child(2) {
+    transform: rotate(4deg);
+  }
+  .process-left .banner:nth-child(3) {
+    transform: rotate(-6deg);
+  }
+
+  /* Remove hover scale & rotate on mobile if you want, or keep */
+  .process-left .banner:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .process-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  .timeline {
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    left: 25px;
+    top: 0;
+    bottom: 20px;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    padding-top: 6px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .circle span {
+    font-size: 9px;
+  }
+
+  .content h4 {
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 15px;
+  }
+
+  .cta-button {
+    position: relative;
+    left: 0;
+    margin-top: 15px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet: 601px to 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  .process-section {
+    padding: 70px 40px;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .process-left {
+    flex: 0 0 300px;
+    max-width: 350px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center banners */
+  }
+
+  .process-left .banner {
+    font-size: 24px;
+    padding: 18px 30px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-left: auto;
+    margin-right: auto; /* center horizontally */
+  }
+
+  /* Keep tilt for banners */
+  .process-left .banner:nth-child(1) {
+    transform: rotate(-2deg);
+  }
+  .process-left .banner:nth-child(2) {
+    transform: rotate(2deg);
+  }
+  .process-left .banner:nth-child(3) {
+    transform: rotate(-2deg);
+  }
+
+  .process-right {
+    flex: 1 1 450px;
+    max-width: 500px;
+    margin-top: 30px;
+  }
+
+  .timeline {
+    padding-left: 50px;
+  }
+
+  .timeline::before {
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .step {
+    margin-bottom: 28px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    padding-top: 7px;
+    margin-right: 18px;
+  }
+
+  .circle span {
+    font-size: 9.5px;
+  }
+
+  .content h4 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    left: 50px;
+    margin-top: 12px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Small Desktop: 901px to 1200px */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .process-section {
+    padding: 90px 60px;
+    gap: 70px;
+  }
+
+  .process-left {
+    flex: 0 0 350px;
+    max-width: 400px;
+    margin-top: 60px;
+  }
+
+  .process-left .banner {
+    font-size: 26px;
+    padding: 20px 38px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .process-right {
+    flex: 1 1 500px;
+    max-width: 550px;
+    margin-top: 40px;
+  }
+
+  .timeline {
+    padding-left: 60px;
+  }
+
+  .timeline::before {
+    left: 35px;
+    bottom: 40px;
+  }
+
+  .step {
+    margin-bottom: 30px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    padding-top: 8px;
+    margin-right: 20px;
+  }
+
+  .circle span {
+    font-size: 10px;
+  }
+
+  .content h4 {
+    font-size: 25px;
+  }
+
+  .content p {
+    font-size: 17px;
+  }
+
+  .cta-button {
+    left: 90px;
+    margin-top: 10px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 
@@ -2016,29 +2371,7 @@ body {
   background-color: #333;
 }
 
-/* Responsive (Tablet and Below) */
-@media screen and (max-width: 991px) {
-  .articles-container .collection-list {
-    flex-wrap: wrap;
-  }
 
-  .collection-item-5 {
-    max-width: 48%;
-    flex: 1 1 48%;
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .collection-item-5 {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-
-  .heading-articles h2 {
-    font-size: 26px;
-  }
-}
 
 /* Remove underline from all anchor links */
 a {
@@ -2056,6 +2389,110 @@ a {
 .article-box * {
   text-decoration: none;
 }
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .section_primary.white {
+    padding: 40px 15px;
+  }
+
+  .heading-articles h2 {
+    font-size: 24px;
+  }
+
+  .articles-container .collection-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .collection-item-5 {
+    max-width: 100%;
+    flex: 1 1 100%;
+    height: auto;
+  }
+
+  .article-img {
+    height: 200px;
+  }
+
+  .article-heading {
+    font-size: 15px;
+    margin: 20px 0;
+  }
+
+  .cta.secondary.w-button {
+    width: 100%;
+    max-width: 200px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .section_primary.white {
+    padding: 50px 20px;
+  }
+
+  .heading-articles h2 {
+    font-size: 28px;
+  }
+
+  .articles-container .collection-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .collection-item-5 {
+    max-width: 48%;
+    flex: 1 1 48%;
+    height: auto;
+  }
+
+  .article-img {
+    height: 210px;
+  }
+
+  .article-heading {
+    font-size: 16px;
+  }
+
+  .cta.secondary.w-button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+/* Small Desktop (901px to 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .section_primary.white {
+    padding: 60px 30px;
+  }
+
+  .articles-container .collection-list {
+    gap: 24px;
+  }
+
+  .collection-item-5 {
+    max-width: 30%;
+    flex: 1 1 30%;
+    height: auto;
+  }
+
+  .article-img {
+    height: 220px;
+  }
+
+  .article-heading {
+    font-size: 16px;
+  }
+
+  .cta.secondary.w-button {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+}
+
 
 
 
@@ -2265,16 +2702,206 @@ label {
   background-color: #1c2e46;
 }
 
-@media (max-width: 768px) {
+/* Base Style (already in your inline style, better to move it to CSS) */
+.mirror-text {
+  position: absolute;
+  width: 450px;
+  top: 80%;
+  white-space: nowrap;
+  font-size: 2.5rem;
+  color: #111;
+  opacity: 0.4;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========== Mobile Devices (max-width: 600px) ========== */
+@media (max-width: 600px) {
   .container {
     flex-direction: column;
+    padding: 30px 10px;
   }
 
-  .right,
   .left {
+    padding: 30px 15px;
     width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .left h1,
+  .mirror-text {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .trusted-companies {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .badge-logos {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .company-logos img {
+    width: 100%;
+    height: auto;
+  }
+
+  .badge-logos img {
+    height: 60px;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .mirror-text {
+    width: 100%;
+    font-size: 1.5rem;
+    top: 90%;
+    text-align: left;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
+
+
+/* ========== Tablets (601px - 1024px) ========== */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .left {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .left h1,
+  .mirror-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .badge-logos {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .badge-logos img {
+    height: 80px;
+  }
+
+  .mirror-text {
+    width: 80%;
+    font-size: 2rem;
+    top: 85%;
+    left: 10%;
+  }
+
+  .company-logos img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-form {
+    padding: 35px 25px;
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+  }
+}
+
+
+/* ========== Small Desktops & Large Tablets (901px to 1025px) ========== */
+@media (min-width: 901px) and (max-width: 1025px) {
+  .container {
+    flex-direction: row;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .left {
+    width: 50%;
+    padding: 40px 15px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .left h1 {
+    font-size: 2rem;
+  }
+
+  .mirror-text {
+    width: 300px;
+    font-size: 2rem;
+    top: 85%;
+    left: 15px; /* Adjust if necessary */
+  }
+
+  .badge-logos {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .company-logos img {
+    width: 350px;
+    height: 60px;
+  }
+
+  .badge-logos img {
+    height: 80px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+
 
 
 
