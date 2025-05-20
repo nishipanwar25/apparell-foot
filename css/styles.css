@@ -588,6 +588,38 @@ body {
   opacity: 1;
 }
 
+.phone-frame-backcircle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(#225e9a8f, #225e9a08);
+  border-radius: 50%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+
+
+/* ---------- Tablet ( ≤ 920px ) ---------- */
+@media (max-width: 920px) {
+  .phone-frame-backcircle {
+    width: 500px;
+    height: 500px;
+    top: 40%;
+  }
+}
+
+/* ---------- Mobile ( ≤ 600px ) ---------- */
+@media (max-width: 600px) {
+  .phone-frame-backcircle {
+    width: 400px;
+    height: 400px;
+    top: 37%;
+  }
+}
+
 /* ---------- Large Tablet / Small Desktop ( ≤ 1240px ) ---------- */
 @media (max-width: 1240px) {
   .hero-content {
