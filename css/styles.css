@@ -590,11 +590,11 @@ body {
 
 .phone-frame-backcircle {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 750px;
+  height: 750px;
   background: linear-gradient(#225e9a8f, #225e9a08);
   border-radius: 50%;
-  top: 35%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
@@ -1472,7 +1472,7 @@ body {
 
 /* services */
 .services {
-  width: 100%;
+  width: auto;
   height: auto;
   background-color: #18122b;
   text-align: center;
@@ -1509,7 +1509,7 @@ body {
 
 .card {
   width: auto;
-  height: 100%;
+  height: auto;
   background: linear-gradient(to bottom, #3a3c40, #231c3b 50%);
   border-radius: 10px;
   text-align: center;
@@ -1612,112 +1612,60 @@ body {
   line-height: 1.8;
 }
 
-/* Mobile Devices: up to 600px */
-@media screen and (max-width: 600px) {
+@media (max-width: 768px) {
+  .services {
+    padding: 30px 10px;
+  }
+
   .container3 {
-    margin: 50px 20px;
+    margin: 50px 15px;
     min-height: auto;
   }
 
   .services-cards {
-    flex-direction: column;
-    align-items: center;
     position: static;
     transform: none;
-    margin-top: -50px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
   }
 
   .card {
-    width: 90%;
+    width: 100%;
     margin-bottom: 30px;
   }
 
   .card ul {
     grid-template-columns: 1fr;
-    gap: 40px 10px;
     padding: 0 20px;
     height: auto;
+    gap: 40px 0;
   }
 
   .card ul li {
     width: 100%;
-    padding: 0 10px;
+    padding: 0;
   }
 
   .text-on-border {
-    position: relative;
-    left: auto;
-    bottom: auto;
+    position: static;
     transform: none;
     margin-top: 20px;
   }
-  
+
   .text-on-border h1 {
     font-size: 20px;
     text-align: center;
   }
-  
 
   .plus {
-    width: 45px;
-    margin-bottom: 25px; /* Adjust this value as needed */
+    margin: 0 auto 20px auto;
   }
 }
 
-/* Tablets: 601px to 1024px */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-  .container3 {
-    margin: 80px 30px;
-    min-height: auto;
-  }
 
-  .services-cards {
-    flex-wrap: wrap;
-    gap: 30px;
-    position: static;
-    transform: none;
-    justify-content: center;
-  }
 
-  .card {
-    width: 45%;
-  }
 
-  .card ul {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 30px;
-    gap: 40px 20px;
-    height: auto;
-  }
-
-  .text-on-border h1 {
-    font-size: 24px;
-  }
-}
-
-/* Small Desktops: 1025px to 1366px */
-@media screen and (min-width: 1025px) and (max-width: 1366px) {
-  .container3 {
-    margin: 100px 50px;
-  }
-
-  .services-cards {
-    gap: 40px;
-  }
-
-  .card {
-    width: 30%;
-  }
-
-  .card ul {
-    padding: 0 40px;
-    gap: 50px 20px;
-  }
-
-  .text-on-border h1 {
-    font-size: 26px;
-  }
-}
 
 
 /* FAQ SECTION */
