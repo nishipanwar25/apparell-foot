@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -27,89 +27,290 @@
     <ul>
       
 
-      <li><a href="#">Company <span>&#x25BE;</span></a></li>
+      <!-- Company Dropdown -->
+      <li class="nav-item dropdown" onmouseover="showDropdown('companyDropdown')" onmouseout="hideDropdown('companyDropdown')">
+        <a href="#" class="nav-link">Company <span>&#x25BE;</span></a>
+        <div class="services-dropdown" id="companyDropdown">
+        <div class="dropdown-left">
+          <button class="dropdown-tab active">About Us</button>
+          <button class="dropdown-tab">Careers</button>
+        </div>
+        <div class="dropdown-right">
+          <div class="dropdown-column">
+            <div class="dropdown-item">
+              <img src="icons/mission.svg" alt="Mission Icon">
+              <div>
+                <h4>Our Mission</h4>
+                <p>Deliver innovative IT solutions that drive business success.</p>
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <img src="icons/team.svg" alt="Team Icon">
+              <div>
+                <h4>Our Team</h4>
+                <p>Meet the people behind our success.</p>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-column">
+            <div class="dropdown-item">
+              <img src="icons/culture.svg" alt="Culture Icon">
+              <div>
+                <h4>Culture & Values</h4>
+                <p>We foster a culture of innovation and integrity.</p>
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <img src="icons/careers.svg" alt="Careers Icon">
+              <div>
+                <h4>Careers</h4>
+                <p>Join us and shape the future of tech.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
 
       <!-- Distribution Dropdown Start -->
-      <li class="nav-item dropdown" onmouseover="showDropdown()" onmouseout="hideDropdown()">
+      <li class="nav-item dropdown" onmouseover="showDropdown('servicesDropdown')" onmouseout="hideDropdown('servicesDropdown')">
         <a href="#" class="nav-link">Industries <span>&#x25BE;</span></a>
       
-        <div class="services-dropdown" id="servicesDropdown">
-          <!-- LEFT COLUMN: Tabs or Nav Buttons -->
+        <div class="services-dropdown" id="servicesDropdown" style="display: none;">
           <div class="dropdown-left">
-            <button class="dropdown-tab active">Services</button>
-            <button class="dropdown-tab">XYZ</button>
+            <button class="dropdown-tab active" onclick="showIndustryContent('retailContent', this)">RETAIL</button>
+            <button class="dropdown-tab" onclick="showIndustryContent('manufacturingContent', this)">MANUFACTURING</button>
           </div>
       
-          <!-- RIGHT COLUMN: Existing Services Content -->
           <div class="dropdown-right">
-            <div class="dropdown-column">
-              <div class="dropdown-item">
-                <img src="icons/custom-software.svg" alt="Custom Software Development Icon">
-                <div>
-                  <h4>Custom Software Development</h4>
-                  <p>Elevate your business with our bespoke software development services.</p>
+            <!-- RETAIL CONTENT (Visible by Default) -->
+            <style>
+              .industry-content h4 {
+                font-weight: 700;
+              }
+            
+              .industry-content p {
+                font-weight: 300 !important;
+                margin: 4px 0;
+              }
+            </style>
+            
+            <div id="retailContent" class="industry-content" style="display: flex;">
+              <div class="dropdown-column">
+                <div class="dropdown-item">
+                  <i class="fas fa-tshirt"></i>
+                  <div>
+                    <h4>Apparel & Footwear</h4>
+                    <p><a href="page.html">Bridal Store</a></p>
+                    <p><a href="#"> Boutique Store</a></p>
+                    <p><a href="#"> Readymade Garment</a></p>
+                    <p><a href="#"> Footwear Store</a></p>
+                  </div>
+                </div>
+                <div class="dropdown-item">
+                  <i class="fas fa-book"></i>
+
+                  <div>
+                    <h4>Books & Office Supplies</h4>
+                    <p><a href="#">Book Store</a></p>
+                    <p><a href="#">Stationery Store</a></p>
+                  </div>
+                </div>
+                <div class="dropdown-item">
+                  <i class="fas fa-ice-cream"></i>
+
+                  <div>
+                    <h4>Food & Confectionery</h4>
+                    <p><a href="#">Bakery Shop</a></p>
+                    <p><a href="#">IceCream Shop</a></p>
+                    <p><a href="#">Sweet Shop</a></p>
+                  </div>
                 </div>
               </div>
-              <div class="dropdown-item">
-                <img src="icons/mobile-app.svg" alt="Mobile App Development Icon">
-                <div>
-                  <h4>Mobile App Development</h4>
-                  <p>Elevate your business with our expert Mobile App Development Services.</p>
+              <div class="dropdown-column">
+                <div class="dropdown-item">
+                  <i class="fas fa-store"></i>
+
+                  <div>
+                    <h4>Hypermarket & Departmental Store</h4>
+                    <p><a href="#">Convenience Store</a></p>
+                    <p><a href="#"> Departmental Store</a></p>
+                    <p><a href="#"> Hypermarket</a></p>
+                  </div>
+                </div>
+                <div class="dropdown-item">
+                  <i class="fas fa-spa"></i>
+
+                  <div>
+                    <h4>Lifestyle</h4>
+                    <p><a href="#">Cosmetic Store</a></p>
+                    <p><a href="#">HomeDecor & Furniture</a></p>
+                    <p><a href="#">Imitation Jewellery</a></p>
+                  </div>
                 </div>
               </div>
-              <div class="dropdown-item">
-                <img src="icons/web-app.svg" alt="Web App Development Icon">
-                <div>
-                  <h4>Web App Development</h4>
-                  <p>Explore our comprehensive web development services designed to elevate your online presence.</p>
+              <div class="dropdown-column">
+                <div class="dropdown-item">
+                  <i class="fas fa-shopping-basket"></i>
+
+                  <div>
+                    <h4>Supermarket & Groceries</h4>
+                    <p><a href="#">Fruits & Vegetable Shop</a></p>
+                    <p><a href="#"> Grocery Store</a></p>
+                    <p><a href="#"> Kirana Store</a></p>
+                    <p><a href="#"> Minimart</a></p>
+                    <p><a href="#"> Supermarket</a></p>
+                  </div>
                 </div>
-              </div>
-              <div class="dropdown-item">
-                <img src="icons/ai.svg" alt="Artificial Intelligence Icon">
-                <div>
-                  <h4>Artificial Intelligence</h4>
-                  <p>From intelligent automation to machine learning, we tailor AI solutions to meet your app's unique needs.</p>
+                <div class="dropdown-item">
+                  <i class="fas fa-tags"></i>
+
+                  <div>
+                    <h4>Specialized Retail</h4>
+                    <p><a href="#">Gift Shop</a></p>
+                    <p><a href="#">Hardware Store</a></p>
+                    <p><a href="#">Liquor Store</a></p>
+                    <p><a href="#">Pet Shop</a></p>
+                    <p><a href="#">Shopping Mall</a></p>
+                    <p><a href="#">Sports Shop</a></p>
+                    <p><a href="#">Toy Store</a></p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="dropdown-column">
-              <div class="dropdown-item">
-                <img src="icons/low-code.svg" alt="Low-Code Icon">
-                <div>
-                  <h4>Low-Code/No-Code</h4>
-                  <p>Empower your organization with cutting-edge apps without the complexities of traditional coding.</p>
+            
+            
+            
+            <!-- MANUFACTURING CONTENT (Hidden by Default) -->
+            <div id="manufacturingContent" class="industry-content" style="display: none;">
+              <div class="dropdown-column">
+                <div class="dropdown-item">
+                  <i class="fas fa-industry"></i>
+                  <div><h4>FMCG</h4></div>
+                </div>
+                <div class="dropdown-item">
+                  <i class="fas fa-robot"></i>
+                  <div><h4>Food & Beverages</h4></div>
+                </div>
+                <div class="dropdown-item">
+                  <i class="fas fa-tools"></i>
+                  <div><h4>Footwear</h4></div>
                 </div>
               </div>
-              <div class="dropdown-item">
-                <img src="icons/ios.svg" alt="iOS Development Icon">
-                <div>
-                  <h4>iOS Development</h4>
-                  <p>Explore cutting-edge iOS app development.</p>
+              <div class="dropdown-column">
+                <div class="dropdown-item">
+                  <i class="fas fa-tools"></i>
+                  <div><h4>Garment & Apparel</h4></div>
                 </div>
-              </div>
-              <div class="dropdown-item">
-                <img src="icons/android.svg" alt="Android Development Icon">
-                <div>
-                  <h4>Android Development</h4>
-                  <p>Our team merges expertise and innovation to create bespoke solutions that redefine user experiences.</p>
+                <div class="dropdown-item">
+                  <i class="fas fa-cogs"></i>
+                  <div><h4>Steel</h4></div>
                 </div>
-              </div>
-              <div class="dropdown-item">
-                <img src="icons/staff-augmentation.svg" alt="Staff Augmentation Icon">
-                <div>
-                  <h4>Staff Augmentation</h4>
-                  <p>Unlock the full potential of your projects by integrating our Staff Augmentation services.</p>
+                <div class="dropdown-item">
+                  <i class="fas fa-cogs"></i>
+                  <div><h4>Textile</h4></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </li>
-      
       <!-- Distribution Dropdown End -->
 
-      <li><a href="#">Solutions <span>&#x25BE;</span></a></li>
-      <li><a href="#">Career</a></li>
+      <script>
+        function showDropdown(id) {
+          document.getElementById(id).style.display = 'flex';
+        
+          // Optional: reset to Retail when dropdown opens
+          showIndustryContent('retailContent', document.querySelector('.dropdown-tab:first-child'));
+        }
+        
+        function hideDropdown(id) {
+          document.getElementById(id).style.display = 'none';
+        }
+        
+        function showIndustryContent(idToShow, button) {
+          // Hide all content sections
+          document.querySelectorAll('.industry-content').forEach(el => {
+            el.style.display = 'none';
+          });
+        
+          // Remove active class from all tabs
+          document.querySelectorAll('.dropdown-tab').forEach(tab => {
+            tab.classList.remove('active');
+          });
+        
+          // Show selected content and mark button as active
+          document.getElementById(idToShow).style.display = 'flex';
+          button.classList.add('active');
+        }
+        </script>
+        
+  
+
+      <!-- Solutions Dropdown -->
+      <li class="nav-item dropdown" onmouseover="showDropdown('solutionsDropdown')" onmouseout="hideDropdown('solutionsDropdown')">
+        <a href="#" class="nav-link">Solutions <span>&#x25BE;</span></a>
+        <div class="services-dropdown" id="solutionsDropdown">
+        <div class="dropdown-left">
+          <button class="dropdown-tab active">Solutions</button>
+          <!-- <button class="dropdown-tab">Startups</button> -->
+        </div>
+        <div class="dropdown-right">
+          <div class="dropdown-column">
+            <div class="dropdown-item">
+              <i class="fas fa-cash-register"></i> <!-- POS -->
+              <div>
+                <h4>POS</h4>
+                <!-- <p>Optimize business operations with scalable ERP systems.</p> -->
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <i class="fas fa-boxes"></i> <!-- ERP -->
+              <div>
+                <h4>ERP</h4>
+                <!-- <p>Enhance customer relationships and sales efficiency.</p> -->
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <i class="fas fa-file-invoice-dollar"></i> <!-- Accounting -->
+              <div>
+                <h4>Accounting</h4>
+                <!-- <p>Enhance customer relationships and sales efficiency.</p> -->
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <i class="fas fa-users"></i> <!-- CRM -->
+              <div>
+                <h4>CRM</h4>
+                <!-- <p>Enhance customer relationships and sales efficiency.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-column">
+            <div class="dropdown-item">
+              <i class="fas fa-warehouse"></i> <!-- Inventory -->
+              <div>
+                <h4>Inventory Management</h4>
+                <!-- <p>Accelerate your delivery pipeline with DevOps best practices.</p> -->
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <i class="fas fa-store"></i> <!-- Omnichannel E-Commerce -->
+              <div>
+                <h4>Omnichannel E-Commerce</h4>
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <i class="fas fa-lightbulb"></i> <!-- Smart Retail -->
+              <div>
+                <h4>Smart Retail</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
       <li><a href="#">Contact Us</a></li>
       <li class="start-journey">
         <a href="#contact">Book Demo Now</a>
@@ -120,14 +321,18 @@
   
 
   <script>
-    function showDropdown() {
-      document.getElementById('servicesDropdown').style.display = 'flex';
+    // Generic dropdown handler with IDs
+    function showDropdown(id) {
+      const dropdown = document.getElementById(id);
+      if (dropdown) dropdown.style.display = 'flex';
     }
   
-    function hideDropdown() {
-      document.getElementById('servicesDropdown').style.display = 'none';
+    function hideDropdown(id) {
+      const dropdown = document.getElementById(id);
+      if (dropdown) dropdown.style.display = 'none';
     }
   </script>
+  
   
 </header>
 <!--navbar end-->
@@ -851,7 +1056,7 @@
       <div class="footer-logo-wrap-upd">
         <a href="https://geniusee.com/" class="footer-logo-wrapper"><img src="images/fusorum.png" width="140"
             height="45" alt="Geniusee logo" class="footer-logo"></a>
-        <p class="font--14 pale no-hover">Fusorum — software product development services.</p>
+        <!-- <p class="font--14 pale no-hover">Fusorum — software product development services.</p> -->
 
         <div class="social-wrap-upd">
           <a class="social-icon-wrap" href="https://www.facebook.com/Fusorum" rel="nofollow" target="_blank">
@@ -862,10 +1067,7 @@
             <img src="https://ik.imagekit.io/k0jemnbco/icons/linkedin-icon_7EtYZVLqIu.svg" alt="Social Icon" width="18"
               height="18" loading="lazy">
           </a>
-          <a class="social-icon-wrap" href="https://www.behance.net/geniusee_software" rel="nofollow" target="_blank">
-            <img src="https://ik.imagekit.io/k0jemnbco/icons/behance-icon_i8a2EDPAj.svg" alt="Social Icon" width="22"
-              height="14" loading="lazy">
-          </a>
+          
           <a class="social-icon-wrap" href="https://www.instagram.com/fusorum/" rel="nofollow" target="_blank">
             <img src="https://ik.imagekit.io/k0jemnbco/icons/instagram-icon_hB0rjh8aG.svg" alt="Social Icon" width="18"
               height="18" loading="lazy">
@@ -876,36 +1078,6 @@
           </a>
 
         </div>
-        <div class="white-cards-wrapper">
-          <div class="footer-white-card">
-            <img src="https://ik.imagekit.io/k0jemnbco/footer-certs/clutch.png?updatedAt=1709038221945" alt="Clutch"
-              width="114" height="auto" loading="lazy" />
-          </div>
-          <div class="footer-white-card">
-            <img src="https://ik.imagekit.io/k0jemnbco/footer-certs/goodfirms.png?updatedAt=1709038221875"
-              alt="goodfirms" width="100" height="auto" loading="lazy" />
-          </div>
-          <div class="footer-white-card">
-            <img src="https://ik.imagekit.io/k0jemnbco/footer-certs/iso-9001.png?updatedAt=1709038221935" alt="ISO"
-              width="117" height="auto" loading="lazy" />
-          </div>
-          <div class="footer-white-card">
-            <img src="https://ik.imagekit.io/k0jemnbco/footer-certs/iso27001.png?updatedAt=1709038221923" alt="ISO"
-              width="117" height="auto" loading="lazy" />
-          </div>
-          <div>
-            <a href="//www.dmca.com/Protection/Status.aspx?ID=ce358681-f774-4d44-b1ea-d261dfa06ac3"
-              title="DMCA.com Protection Status" class="dmca-badge">
-              <img
-                src="https://images.dmca.com/Badges/dmca-badge-w150-5x1-06.png?ID=ce358681-f774-4d44-b1ea-d261dfa06ac3"
-                alt="DMCA.com Protection Status" loading="lazy">
-            </a>
-            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"
-              type="5f8783fa9bb415a0604cfe28-text/javascript">
-                      </script>
-          </div>
-        </div>
-
       </div>
       <div class="links-wrapper-grid">
         <div class="footer-links">
@@ -978,9 +1150,6 @@
     </div>
     <div class="col-9 footer-copyright-upd">
       <div>
-        <p class="font--14 pale no-hover">
-          ©Copyright 2025, All rights reserved.
-        </p>
       </div>
       <div>
         <a href="#" class="font--14 pale" style="display: none">Terms & Conditions</a>

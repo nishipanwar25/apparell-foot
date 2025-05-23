@@ -59,7 +59,7 @@ body {
 .nav-menu ul li a {
   text-decoration: none;
   color: #000;
-  font-weight: 400;
+  font-weight: 600;
   /* bolder */
   font-size: 18px;
   /* increased */
@@ -72,29 +72,42 @@ body {
 .start-journey {
   position: relative;
   display: inline-block;
+  margin-left: 0;
 }
 
 .start-journey a {
-  position: relative;
-  display: inline-block;
-  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #225e9a;
+  color: white !important;
+  font-size: 16px;
+  padding: 10px 20px;
   text-decoration: none;
-  z-index: 1;
-  font-size: 17px;
-  /* bigger text */
-  padding: 12px 28px;
-  /* more spacious */
- 
+  font-weight: 500;
+  border: none;
+  width: max-content;
+  min-width: 150px; /* optional: keeps consistent button width */
 }
+
+
+
+.industry-content {
+  display: none;
+}
+.industry-content.active {
+  display: flex;
+}
+
 
 /* Animated border outside the text box */
 .start-journey a::before {
   content: "";
   position: absolute;
-  top: -6px;
+  top: -8px;
   left: -8px;
   right: -8px;
-  bottom: -6px;
+  bottom: -8px;
   border: 2px solid transparent;
   box-sizing: border-box;
   pointer-events: none;
@@ -105,6 +118,7 @@ body {
     linear-gradient(to left, #225e9a 100%, transparent 0%) bottom right / 0% 2px no-repeat,
     linear-gradient(to top, #225e9a 100%, transparent 0%) bottom left / 2px 0% no-repeat;
   animation: drawBorder 4s linear infinite;
+  color: white;
 }
 
 /* Keyframes for forward animation */
@@ -139,12 +153,12 @@ body {
 /* Services Dropdown Styling */
 .services-dropdown {
   position: fixed; /* Fixed to viewport */
-  top: 60px; /* height of navbar (adjust accordingly) */
+  top: 55px; /* height of navbar (adjust accordingly) */
   left: 0;
   width: 100vw;
   background: white;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  padding: 20px 60px;
+  padding: 20px 50px;
   display: flex;
   gap: 60px;
   z-index: 1001;
@@ -156,12 +170,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  
 }
 
 .dropdown-item {
   display: flex;
   gap: 15px;
   align-items: flex-start;
+  text-wrap: nowrap;
 }
 
 .dropdown-item img {
@@ -175,10 +191,50 @@ body {
 
 .dropdown-item h4 {
   margin: 0 0 5px;
-  font-size: 16px;
+  font-size: 10px;
   color: #111;
-  font-weight: 600;
+  font-weight: 500;
 }
+
+.dropdown-tab.active {
+  background-color: #E84266;
+  color: white;
+}
+.dropdown-tab {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+}
+.dropdown-right {
+  display: flex;
+  gap: 20px;
+}
+
+
+.industry-content {
+  display: none;
+  gap: 40px;
+}
+
+.industry-content h4 {
+  font-weight: 700; /* Bold */
+}
+
+.industry-content p {
+  font-weight: 300; /* Light for p */
+  margin: 4px 0;
+}
+
+.industry-content p a {
+  font-weight: 400 !important; /* Light for links inside p */
+  color: black !important; /* inherit color from parent */
+  text-decoration: none; /* optional */
+}
+
+
+
+
 
 .dropdown-item p {
   margin: 0;
@@ -268,8 +324,12 @@ body {
   border: 3px solid #192133; /* 🔵 Custom border color */
 }
 
-#servicesDropdown {
-  display: none; /* Hidden initially */
+.services-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 1000;
+  /* add any additional styling you need */
 }
 
 
@@ -3149,6 +3209,7 @@ body:not(.main-page) .footer-copyright-upd {
   border-radius: 20px;
   transition: background 0.3s ease-in;
   margin: 0;
+  margin-top: 25px;
 }
 
 .footer .social-icon-wrap:hover {
