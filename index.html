@@ -25,106 +25,110 @@
   <nav class="nav-menu" id="navMenu">
 
     <ul>
-      <li class="start-journey">
-        <a href="#">Start AI Journey</a>
-      </li>
+      
 
-      <li><a href="#">Retail <span>&#x25BE;</span></a></li>
+      <li><a href="#">Company <span>&#x25BE;</span></a></li>
 
       <!-- Distribution Dropdown Start -->
-      <li class="dropdown" id="distributionDropdown">
-        <a href="javascript:void(0);" class="dropdown-toggle" onclick="toggleDropdown(event, 'distributionDropdown')">Distribution <span>&#x25BE;</span></a>
-        <div class="dropdown-grid">
-          <div class="grid-column">
-            <div class="grid-item">
-              <img src="icons/restaurant.png" alt="Restaurant" />
-              <span>Apparel & Footwear</span>
-            </div>
-            <div class="grid-item">
-              <img src="icons/education.png" alt="Education" />
-              <span>Garments</span>
-            </div>
-            <div class="grid-item">
-              <img src="icons/healthcare.png" alt="Healthcare" />
-              <span>Textile</span>
-            </div>
-            <div class="grid-item">
-              <img src="icons/travel.png" alt="Travel" />
-              <span>Pharma & Healthcare</span>
-            </div>
-            <div class="grid-item">
-              <img src="icons/media.png" alt="Media" />
-              <span>FMCG</span>
-            </div>
-            <div class="grid-item">
-              <img src="icons/scooter.png" alt="E-Scooter" />
-              <span>Lifestyle & Fashion</span>
-            </div>
+      <li class="nav-item dropdown" onmouseover="showDropdown()" onmouseout="hideDropdown()">
+        <a href="#" class="nav-link">Industries <span>&#x25BE;</span></a>
+      
+        <div class="services-dropdown" id="servicesDropdown">
+          <!-- LEFT COLUMN: Tabs or Nav Buttons -->
+          <div class="dropdown-left">
+            <button class="dropdown-tab active">Services</button>
+            <button class="dropdown-tab">XYZ</button>
           </div>
-          <div class="grid-column">
-            <div class="grid-item">
-              <img src="icons/automotive.png" alt="Automotive" />
-              <span>Electrical & Electronics</span>
+      
+          <!-- RIGHT COLUMN: Existing Services Content -->
+          <div class="dropdown-right">
+            <div class="dropdown-column">
+              <div class="dropdown-item">
+                <img src="icons/custom-software.svg" alt="Custom Software Development Icon">
+                <div>
+                  <h4>Custom Software Development</h4>
+                  <p>Elevate your business with our bespoke software development services.</p>
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <img src="icons/mobile-app.svg" alt="Mobile App Development Icon">
+                <div>
+                  <h4>Mobile App Development</h4>
+                  <p>Elevate your business with our expert Mobile App Development Services.</p>
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <img src="icons/web-app.svg" alt="Web App Development Icon">
+                <div>
+                  <h4>Web App Development</h4>
+                  <p>Explore our comprehensive web development services designed to elevate your online presence.</p>
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <img src="icons/ai.svg" alt="Artificial Intelligence Icon">
+                <div>
+                  <h4>Artificial Intelligence</h4>
+                  <p>From intelligent automation to machine learning, we tailor AI solutions to meet your app's unique needs.</p>
+                </div>
+              </div>
             </div>
-            <div class="grid-item">
-              <img src="icons/gaming.png" alt="Gaming" />
-              <span>Auto Parts</span>
+            <div class="dropdown-column">
+              <div class="dropdown-item">
+                <img src="icons/low-code.svg" alt="Low-Code Icon">
+                <div>
+                  <h4>Low-Code/No-Code</h4>
+                  <p>Empower your organization with cutting-edge apps without the complexities of traditional coding.</p>
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <img src="icons/ios.svg" alt="iOS Development Icon">
+                <div>
+                  <h4>iOS Development</h4>
+                  <p>Explore cutting-edge iOS app development.</p>
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <img src="icons/android.svg" alt="Android Development Icon">
+                <div>
+                  <h4>Android Development</h4>
+                  <p>Our team merges expertise and innovation to create bespoke solutions that redefine user experiences.</p>
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <img src="icons/staff-augmentation.svg" alt="Staff Augmentation Icon">
+                <div>
+                  <h4>Staff Augmentation</h4>
+                  <p>Unlock the full potential of your projects by integrating our Staff Augmentation services.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </li>
+      
       <!-- Distribution Dropdown End -->
 
-      <li><a href="#">Manufacturing <span>&#x25BE;</span></a></li>
-      <li><a href="#">ERP <span>&#x25BE;</span></a></li>
-      <li><a href="#">Company <span>&#x25BE;</span></a></li>
+      <li><a href="#">Solutions <span>&#x25BE;</span></a></li>
+      <li><a href="#">Career</a></li>
       <li><a href="#">Contact Us</a></li>
-      <div class="cta">
-        <button>Book Demo Now</button>
-      </div>
+      <li class="start-journey">
+        <a href="#">Book Demo Now</a>
+      </li>
     </ul>
     
   </nav>
   
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("navMenu");
-      menu.classList.toggle("show");
+    function showDropdown() {
+      document.getElementById('servicesDropdown').style.display = 'flex';
     }
-
-    function toggleDropdown(event, id) {
-      // Prevent the default link behavior
-      event.preventDefault();
-
-      const dropdown = document.getElementById(id);
-      dropdown.classList.toggle("active");
-
-      // Close other dropdowns if you want (optional)
-      document.querySelectorAll('.dropdown').forEach(el => {
-        if (el.id !== id) el.classList.remove('active');
-      });
+  
+    function hideDropdown() {
+      document.getElementById('servicesDropdown').style.display = 'none';
     }
-
-    // Optional: close dropdown when clicking outside
-    document.addEventListener('click', function (e) {
-      const distributionDropdown = document.getElementById('distributionDropdown');
-      if (!distributionDropdown.contains(e.target)) {
-        distributionDropdown.classList.remove('active');
-      }
-    });
-
-   
-  document.querySelectorAll('.dropdown > a').forEach(item => {
-    item.addEventListener('click', function (e) {
-      e.preventDefault(); // prevent default link behavior
-      const dropdown = this.parentElement;
-      dropdown.classList.toggle('active');
-    });
-  });
-
-
   </script>
+  
 </header>
 <!--navbar end-->
 

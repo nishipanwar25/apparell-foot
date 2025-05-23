@@ -19,7 +19,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 8px 20px;
   /* Reduced padding */
   border-bottom: 1px solid #ccc;
   background-color: #fff;
@@ -63,35 +63,10 @@ body {
   /* bolder */
   font-size: 18px;
   /* increased */
-  padding: 8px 0;
+  padding: 10px 13px;
   /* more padding */
   position: relative;
-}
-
-.cta button {
-  background: #225e9a;
-  background: -moz-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
-  background: -webkit-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
-  background: linear-gradient(to right, #225e9a 0%, #192133 100%);
-  -webkit-box-shadow: 0 10px 15px 0px rgba(11, 6, 86, 0.2);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  /* bigger button */
-  font-weight: 600;
-  font-size: 17px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  /* smooth transition */
-}
-
-/* Hover effect */
-.cta button:hover {
-  background-color: #225e9a;
-  /* darker shade of red */
-  transform: scale(1.05);
-  /* zooms in 5% */
+  margin-left: 20px;
 }
 
 .start-journey {
@@ -109,6 +84,7 @@ body {
   /* bigger text */
   padding: 12px 28px;
   /* more spacious */
+ 
 }
 
 /* Animated border outside the text box */
@@ -154,65 +130,180 @@ body {
   }
 }
 
-.nav-menu ul {
-  list-style: none;
+
+
+
+
+
+
+/* Services Dropdown Styling */
+.services-dropdown {
+  position: fixed; /* Fixed to viewport */
+  top: 60px; /* height of navbar (adjust accordingly) */
+  left: 0;
+  width: 100vw;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 20px 60px;
   display: flex;
-  align-items: center;
-  gap: 30px;
-  padding: 0;
+  gap: 60px;
+  z-index: 1001;
 }
 
-.dropdown {
+
+.dropdown-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dropdown-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.dropdown-item img {
+  width: 40px;
+  height: 40px;
+  background-color: #fce9ed;
+  padding: 10px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.dropdown-item h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #111;
+  font-weight: 600;
+}
+
+.dropdown-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Ensure nav-item is positioned relatively */
+.nav-item.dropdown {
+  position: static;
+}
+
+/* Base dropdown container */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  background-color: #fff; /* Or any background you prefer */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+  gap: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+/* Ensure no max-width constraints from parent */
+.navbar, .dropdown-parent {
   position: relative;
 }
 
-/* Dropdown Content (hidden by default) */
-.dropdown-grid {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: -100%;
-  background: #fff;
-  padding: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: none;
-  flex-wrap: nowrap;
-  gap: 45px;
-  z-index: 999;
-  border-radius: 10px;
-  width: 650px;
-  height: 350px;
+.dropdown-menu {
+  max-width: none;
 }
 
-.dropdown:hover .dropdown-grid {
+.services-dropdown {
   display: flex;
+  gap: 60px;
+  padding: 70px 60px;
+  position: fixed;
+  top: 70px;
+  max-height: 800px; /* Increased height */
+  left: 0;
+  width: 100vw;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  z-index: 1001;
 }
 
-/* Grid Columns */
-.grid-column {
+.dropdown-item h4,
+.dropdown-item p {
+  white-space: normal; /* Allows text to wrap */
+  word-wrap: break-word; /* Break long words if needed */
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Optional: add ellipsis if too long */
+  font-size: 15px;
+}
+
+.dropdown-item h4{
+  font-size: 20px;
+}
+
+/* NEW: Left Section for Tabs */
+.dropdown-left {
+  flex: 0 0 200px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
+  border-right: 1px solid #ddd;
+  padding-right: 30px;
 }
 
-/* Items */
-.grid-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.dropdown-tab {
+  padding: 8px 18px;
+  font-size: 18px;
+  border: none;
+  background: #6393c3;
+  text-align: left;
+  border-radius: 25px; /* Rounded buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: 500;
-  font-size: 14px;
-  color: #333;
+  text-align: center;
+  color: white;
+  border: 3px solid #192133; /* 🔵 Custom border color */
 }
 
-.grid-item:hover {
-  color: #e84266;
+#servicesDropdown {
+  display: none; /* Hidden initially */
 }
 
-.grid-item img {
-  width: 20px;
-  height: 20px;
+
+.dropdown-tab:hover {
+  background: #225e9a;
+  background: -moz-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
+  background: -webkit-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
+  background: linear-gradient(to right, #225e9a 0%, #192133 100%);
+  -webkit-box-shadow: 0 10px 15px 0px rgba(11, 6, 86, 0.2);
+  border: 3px solid #192133; /* 🔵 Custom border color */
 }
+
+.dropdown-tab.active {
+  background: #225e9a;
+  background: -moz-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
+  background: -webkit-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
+  background: linear-gradient(to right, #225e9a 0%, #192133 100%);
+  -webkit-box-shadow: 0 10px 15px 0px rgba(11, 6, 86, 0.2);
+  border: 3px solid #192133; /* 🔵 Custom border color */
+}
+
+.dropdown-tab:hover,
+.dropdown-tab.active {
+  color: white;
+}
+
+/* Right side already exists, just renamed */
+.dropdown-right {
+  flex: 1;
+  display: flex;
+  gap: 80px;
+}
+
+
 
 /* Base style for dropdown arrows */
 
@@ -398,7 +489,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
+  padding: 10px 20px;
   /* Use a grid image or use grid lines via CSS */
   position: relative;
 }
