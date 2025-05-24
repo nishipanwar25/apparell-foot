@@ -92,7 +92,8 @@ html {
   font-weight: 500;
   border: none;
   width: max-content;
-  min-width: 150px; /* optional: keeps consistent button width */
+  min-width: 150px;
+  /* optional: keeps consistent button width */
 }
 
 
@@ -100,6 +101,7 @@ html {
 .industry-content {
   display: none;
 }
+
 .industry-content.active {
   display: flex;
 }
@@ -157,32 +159,45 @@ html {
 
 /* Services Dropdown Styling */
 .services-dropdown {
-  position: fixed; /* Fixed to viewport */
-  top: 55px; /* height of navbar (adjust accordingly) */
+  position: fixed;
+  /* Fixed to viewport */
+  top: 55px;
+  /* height of navbar (adjust accordingly) */
   left: 0;
   width: 100vw;
-  background: white;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  /* background: white; */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   padding: 20px 50px;
   display: flex;
   gap: 60px;
   z-index: 1001;
+  background: #7bafe3;
+  background: linear-gradient(180deg, rgba(123, 175, 227, 1) 43%, rgba(0, 0, 0, 1) 100%);
 }
 
 
 .dropdown-column {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
+
 }
 
 .dropdown-item {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   align-items: flex-start;
-  text-wrap: nowrap;
+}
+
+/* Style the icon */
+.dropdown-item i {
+  color: white;
+  font-size: 18px;
+  min-width: 24px;
+  /* reserves space to align icons */
+  text-align: center;
+  padding-top: 4px;
+  /* align with heading vertically */
 }
 
 .dropdown-item img {
@@ -197,20 +212,38 @@ html {
 .dropdown-item h4 {
   margin: 0 0 5px;
   font-size: 10px;
-  color: #111;
+  color: white;
   font-weight: 500;
+}
+
+/* Headings styling */
+.dropdown-item h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Optional: make columns evenly spaced */
+.industry-content {
+  display: flex;
+  gap: 50px !important;
+  /* space between columns */
+  padding: 20px;
 }
 
 .dropdown-tab.active {
   background-color: #E84266;
   color: white;
 }
+
 .dropdown-tab {
   cursor: pointer;
   padding: 8px 12px;
   border: none;
   background: none;
 }
+
 .dropdown-right {
   display: flex;
   gap: 20px;
@@ -223,22 +256,88 @@ html {
 }
 
 .industry-content h4 {
-  font-weight: 700; /* Bold */
+  font-weight: 700;
+  /* Bold */
 }
 
 .industry-content p {
-  font-weight: 300; /* Light for p */
+  font-weight: 300;
+  /* Light for p */
   margin: 4px 0;
+
 }
 
 .industry-content p a {
-  font-weight: 400 !important; /* Light for links inside p */
-  color: black !important; /* inherit color from parent */
-  text-decoration: none; /* optional */
+  font-weight: 400 !important;
+  /* Light for links inside p */
+  color: rgb(195, 189, 189) !important;
+  /* inherit color from parent */
+  text-decoration: none;
+  /* optional */
 }
 
+.industry-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  /* Adjust spacing between columns */
+  padding: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* or flex-start / center */
+}
 
+/* Each column stacks items vertically */
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 220px;
+}
 
+.first-dropdown-column {
+  gap: 68px
+}
+
+.second-dropdown-column {
+  gap: 95px;
+}
+
+/* Each item in a column */
+.dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Icons */
+.dropdown-item i {
+  color: white;
+  font-size: 18px;
+  min-width: 20px;
+  margin-top: 3px;
+}
+
+/* Headings */
+.dropdown-item h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  gap: 10px;
+}
+
+/* Links */
+.dropdown-item p {
+  margin: 3px 0;
+}
+
+.dropdown-item p a {
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+}
 
 
 .dropdown-item p {
@@ -258,18 +357,22 @@ html {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100vw; /* Full viewport width */
-  background-color: #fff; /* Or any background you prefer */
+  width: 100vw;
+  /* Full viewport width */
+  background-color: #fff;
+  /* Or any background you prefer */
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+  grid-template-columns: repeat(2, 1fr);
+  /* Two-column layout */
   gap: 20px;
   padding: 40px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
 
 /* Ensure no max-width constraints from parent */
-.navbar, .dropdown-parent {
+.navbar,
+.dropdown-parent {
   position: relative;
 }
 
@@ -280,27 +383,38 @@ html {
 .services-dropdown {
   display: flex;
   gap: 60px;
-  padding: 70px 60px;
+  padding: 50px 60px;
   position: fixed;
   top: 70px;
-  max-height: 800px; /* Increased height */
+  max-height: 600px;
+  /* Increased height */
   left: 0;
   width: 100vw;
-  background: white;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  background: #4585c4;
+  background: linear-gradient(180deg, rgba(69, 133, 196, 1) 28%, rgba(0, 0, 0, 1) 75%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   z-index: 1001;
 }
 
+i.fas {
+  color: white;
+}
+
+
 .dropdown-item h4,
 .dropdown-item p {
-  white-space: normal; /* Allows text to wrap */
-  word-wrap: break-word; /* Break long words if needed */
-  overflow: hidden; /* Prevent text overflow */
-  text-overflow: ellipsis; /* Optional: add ellipsis if too long */
+  white-space: normal;
+  /* Allows text to wrap */
+  word-wrap: break-word;
+  /* Break long words if needed */
+  overflow: hidden;
+  /* Prevent text overflow */
+  text-overflow: ellipsis;
+  /* Optional: add ellipsis if too long */
   font-size: 15px;
 }
 
-.dropdown-item h4{
+.dropdown-item h4 {
   font-size: 20px;
 }
 
@@ -320,19 +434,22 @@ html {
   border: none;
   background: #6393c3;
   text-align: left;
-  border-radius: 25px; /* Rounded buttons */
+  border-radius: 25px;
+  /* Rounded buttons */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: 500;
   text-align: center;
   color: white;
-  border: 3px solid #192133; /* 🔵 Custom border color */
+  border: 3px solid #192133;
+  /* 🔵 Custom border color */
 }
 
 .services-dropdown {
   display: none;
   position: absolute;
-  background-color: white;
+  background: #7bafe3;
+  background: linear-gradient(180deg, rgb(5, 70, 131) 10%, rgb(7, 16, 48) 100%);
   z-index: 1000;
   /* add any additional styling you need */
 }
@@ -344,7 +461,8 @@ html {
   background: -webkit-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
   background: linear-gradient(to right, #225e9a 0%, #192133 100%);
   -webkit-box-shadow: 0 10px 15px 0px rgba(11, 6, 86, 0.2);
-  border: 3px solid #192133; /* 🔵 Custom border color */
+  border: 3px solid #192133;
+  /* 🔵 Custom border color */
 }
 
 .dropdown-tab.active {
@@ -353,7 +471,8 @@ html {
   background: -webkit-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
   background: linear-gradient(to right, #225e9a 0%, #192133 100%);
   -webkit-box-shadow: 0 10px 15px 0px rgba(11, 6, 86, 0.2);
-  border: 3px solid #192133; /* 🔵 Custom border color */
+  border: 3px solid #192133;
+  /* 🔵 Custom border color */
 }
 
 .dropdown-tab:hover,
@@ -1792,11 +1911,11 @@ body {
     padding: 30px 10px;
   }
 
-  .services h2{
+  .services h2 {
     font-size: 16px;
   }
 
-  .services p{
+  .services p {
     font-size: 20px;
   }
 
