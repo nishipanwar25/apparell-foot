@@ -270,9 +270,9 @@ html {
 .industry-content p a {
   font-weight: 400 !important;
   /* Light for links inside p */
-  color: rgb(195, 189, 189) !important;
+  color: whitesmoke !important;
   /* inherit color from parent */
-  text-decoration: none;
+  text-decoration:none;
   /* optional */
 }
 
@@ -320,13 +320,13 @@ html {
 /* Headings */
 .dropdown-item h4 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   white-space: nowrap;
   display: flex;
   gap: 5px;
-
 }
+
 
 /* Links */
 .dropdown-item p {
@@ -335,7 +335,7 @@ html {
 
 .dropdown-item p a {
   font-weight: 300;
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -388,7 +388,7 @@ html {
   padding: 10px 60px;
   position: fixed;
   top: 70px;
-  max-height: 500px;
+  max-height: 550px;
   /* Increased height */
   left: 0;
   width: 100vw;
@@ -417,6 +417,11 @@ i.fas {
 }
 
 
+.icon-tight {
+  margin-right: -30px; /* Reduce spacing between icon and text */
+}
+
+
 
 .dropdown-item p a{
   font-size: .9rem !important;
@@ -433,8 +438,8 @@ i.fas {
 }
 
 .dropdown-tab {
-  padding: 5px 15px;
-  font-size: 15px;
+  padding: 8px 15px;
+  font-size: 17px;
   border: none;
   background: #6393c3;
   text-align: left;
@@ -449,6 +454,7 @@ i.fas {
   margin-top: 20px;
   /* 🔵 Custom border color */
 }
+
 
 .services-dropdown {
   display: none;
