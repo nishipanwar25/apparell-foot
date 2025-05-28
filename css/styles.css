@@ -1495,7 +1495,7 @@ body {
 /* Why choose us */
 .why-choose-us {
   position: relative;
-  padding: 60px 20px;
+  padding: 50px 20px;
   font-family: 'Inter', sans-serif;
   color: #333;
   overflow: hidden;
@@ -1522,7 +1522,7 @@ body {
 }
 
 .image-column {
-  flex: 1 1 35%;
+  flex: 1 1 40%;
   min-width: 300px;
 }
 
@@ -1534,13 +1534,13 @@ body {
 .text-column {
   flex: 1 1 55%;
   min-width: 300px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .text-column h2 {
   font-size: 2rem;
   color: #1a0249;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .text-column .subheading {
@@ -1552,7 +1552,7 @@ body {
 .features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 20px;
 }
 
 .feature-box h3 {
@@ -3556,3 +3556,63 @@ footer .pale {
     max-width: 100%;
   }
 }
+
+/* Contact us pagee */
+.consultation-section {
+  padding: 30px;
+  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.consultation-title {
+  text-align: center;
+  font-size: 32px;
+  padding: 60px;
+  line-height: 1.4; /* Adjust as needed: 1.4–2 usually looks good */
+}
+
+.highlight {
+  color: #225e9ae1;
+}
+
+.consultation-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  overflow: hidden;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.consultation-left {
+  flex: 1.2;
+  min-width: 250px;
+  font-size: 16px;
+  color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.consultation-left h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.consultation-right {
+  flex: 1.2;
+  min-width: 300px;
+  overflow: hidden
+}
+
+
+/* Icons (Optional if using Font Awesome) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
