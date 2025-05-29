@@ -2955,7 +2955,6 @@ footer {
 }
 
 
-
 .contact-form {
   background-color: #fff;
   max-width: auto;
@@ -3259,7 +3258,9 @@ label {
 }
 
 
-
+.footer{
+  height: auto;
+}
 
 
 footer ul {
