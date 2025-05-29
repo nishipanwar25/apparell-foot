@@ -291,7 +291,7 @@ html {
 .dropdown-column {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   min-width: 220px;
 }
 
@@ -367,7 +367,7 @@ html {
   grid-template-columns: repeat(2, 1fr);
   /* Two-column layout */
   gap: 20px;
-  padding: 40px;
+  padding: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
@@ -387,8 +387,8 @@ html {
   gap: 20px;
   padding: 10px 60px;
   position: fixed;
-  top: 65px;
-  max-height: 550px;
+  top: 62px;
+  max-height: 480px;
   /* Increased height */
   left: 0;
   width: 100vw;
