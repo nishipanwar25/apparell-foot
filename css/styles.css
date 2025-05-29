@@ -1116,11 +1116,6 @@ i.fas {
   max-width: 600px;
 }
 
-.about-content h1 {
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
 
 .about-content p {
   margin-bottom: 20px;
@@ -1146,6 +1141,33 @@ i.fas {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.heading-box {
+  background: #225e9a;
+  background: -moz-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
+  background: -webkit-linear-gradient(left, #f92c8b 0%, #b02cd6 100%);
+  background: linear-gradient(to right, #225e9a 0%, #192133 100%);
+  -webkit-box-shadow: 0 10px 15px 0px rgba(11, 6, 86, 0.2);
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 150px;
+  text-align: center;
+  margin-bottom: 3.0rem;     /* Only bottom margin now */
+  max-width: fit-content;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  align-items: left;
+  margin-left: 0;            /* Aligns to left */
+  margin-bottom: 2.5rem;  /* Add more space below the heading box */
+
+}
+
+
+.heading-box h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+  margin: 0;
 }
 
 /* Responsive */
