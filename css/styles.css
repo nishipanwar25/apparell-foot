@@ -296,12 +296,16 @@ html {
 }
 
 .first-dropdown-column {
-  gap: 68px
+  gap: 53px
 }
 
 .second-dropdown-column {
-  gap: 95px;
+  gap: 78px;
 }
+
+/* .third-dropdown-column{
+  gap:50px
+} */
 
 /* Each item in a column */
 .dropdown-item {
