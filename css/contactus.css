@@ -1,0 +1,191 @@
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px;
+    background: radial-gradient(circle at bottom left, #ffffff 0%, #004d9978 50%, #004d99b4 100%);
+    flex-wrap: wrap;
+  }
+  
+  .left-section {
+    width: 48%;
+    margin-top: 50px;
+  }
+  
+  .right-section {
+    width: 35%;
+    background: #ffffff;
+    padding: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 40px; /* Increased spacing inside form */
+    min-height: 620px; /* Increased height */
+    margin-right: 40px;
+  }
+  
+  .icon {
+    font-size: 48px;
+    color: #225e9a;
+    margin-bottom: 20px;
+  }
+  
+  .left-section h2 {
+    font-size: 28px;
+  }
+  
+  .left-section h2 span {
+    color: #225e9a;
+  }
+  
+  .info-box p {
+    background:#225e9a;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .alt-contact {
+    margin-top: 20px;
+    font-size: 17px;
+  }
+  
+  .alt-contact .phone, .alt-contact .email {
+    font-weight: bold;
+    color: #225e9a;
+  }
+  
+  .right-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .right-section h3 span {
+    color: #225e9a;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 5px;
+  }
+  
+  .half-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .half-input label {
+    flex: 1;
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0;
+  }
+  
+  form textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  form button {
+    background: #225e9a;
+    color: white;
+    border: none;
+    padding: 15px 0;             /* Vertical padding only */
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 80%;                  /* Wider button */
+    display: block;              /* Allows margin: auto to work */
+    margin: 30px auto 0 auto;    /* Centered + top spacing */
+    text-align: center;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .container1 {
+      flex-direction: column;
+    }
+    .left-section, .right-section {
+      width: 100%;
+    }
+  }
+
+  /* Contact us pagee */
+.consultation-section {
+    padding: 30px;
+    background: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  
+  .consultation-title {
+    text-align: center;
+    font-size: 32px;
+    padding: 60px;
+    line-height: 1.4; /* Adjust as needed: 1.4–2 usually looks good */
+  }
+  
+  .highlight {
+    color: #225e9ae1;
+  }
+  
+  .consultation-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    background: whitesmoke;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  
+  
+    max-width: 900px;
+    overflow: hidden;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .consultation-left {
+    flex: 1.2;
+    min-width: 250px;
+    font-size: 20px;
+    color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+  }
+  
+  .consultation-left h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .consultation-right {
+    flex: 1.2;
+    min-width: 300px;
+    overflow: hidden
+  }
+  
+  
+  /* Icons (Optional if using Font Awesome) */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+  
