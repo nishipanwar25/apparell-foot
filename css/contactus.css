@@ -128,12 +128,14 @@
   }
 
   /* Contact us pagee */
-.consultation-section {
+  .consultation-section {
     padding: 30px;
-    background: #f9f9f9;
+    background: url('white-background-with-white-background-blue-background-with-white-lines_483537-4180.avif') no-repeat center center/cover;
     font-family: 'Segoe UI', sans-serif;
     overflow: hidden;
+    position: relative;
   }
+  
   
   .consultation-title {
     text-align: center;
