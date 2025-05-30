@@ -1300,7 +1300,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   margin: 40px 0;
   will-change: transform;
   transition: transform 0.2s linear;
