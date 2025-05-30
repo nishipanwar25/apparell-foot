@@ -1274,10 +1274,11 @@ body {
   padding: 0.8rem 1.4rem;
   border-radius: 200px;
   text-align: center;
-  margin: 0 auto 3.5rem auto;
   max-width: fit-content;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   align-items: center;
+  margin: 0 auto 1.5rem auto; /* reduce bottom space */
+  margin-top: 20px;           /* optional: slightly reduce top space */
 }
 
 .clients-heading {
@@ -1290,7 +1291,7 @@ body {
 
 
 .clients-wrapper {
-  padding: 60px 0;
+  padding: 20px 0;
   overflow: hidden;
   background: #fff;
 }
@@ -1312,9 +1313,16 @@ body {
   transition: transform 0.3s ease;
 }
 
-.clients-wrapper img:hover {
-  transform: scale(1.05);
+.clients-row--1 img {
+  max-height: none; /* override the 48px limit */
+  height: auto;
+  width: 180px;
+  object-fit: contain;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
 
 
 
