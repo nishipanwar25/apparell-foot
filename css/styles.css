@@ -1297,6 +1297,16 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.clients-row--2 img {
+  max-height: none; /* override the 48px limit */
+  height: auto;
+  width: 250px;
+  object-fit: contain;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 
 
 
