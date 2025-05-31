@@ -1275,7 +1275,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 10px;
+  gap:10px;
   margin: 40px 0;
   will-change: transform;
   transition: transform 0.2s linear;
