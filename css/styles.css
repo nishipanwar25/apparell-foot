@@ -735,7 +735,7 @@ i.fas {
 .animated-headline span {
   opacity: 0;
   display: inline-block;
-  animation: fadeInWords 0.5s ease forwards;
+  animation: fadeInWords 1s ease forwards;
 }
 
 .animated-headline span:nth-child(1) { animation-delay: 0s; }
