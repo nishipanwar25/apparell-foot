@@ -423,3 +423,255 @@ body {
     }
   }
   
+
+ 
+  /* misson section */
+  .mission-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 100px;
+  }
+  
+  .text-content {
+    max-width: 650px;
+    flex: 1 1 45%;
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(to right, #7a5fff, #5e5ce6);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    gap: 8px;
+  }
+  
+  .text-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .text-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 24px;
+  }
+  
+  .service-card {
+    background: #f7f7f9;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  }
+  
+  .service-card .icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, #7a5fff, #5e5ce6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .service-card .icon img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .service-card .info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  .service-card .info p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  
+  
+  .image-collage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 45%;
+  }
+  
+  .image-collage .top-image img,
+  .image-collage .bottom-images img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .image-collage .bottom-images {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .image-collage .bottom-images img {
+    flex: 1;
+    height: 200px;
+  }
+  
+
+  /* meet our team */
+
+  
+  .team-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .section-header .badge {
+    background: #e0e4ff;
+    color: #225e9a;
+    padding: 6px 14px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .section-header h2 {
+    margin: 15px 0 40px;
+    font-size: 32px;
+    color: #0b0b3b;
+    font-weight: 600;
+  }
+  
+  .team-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .team-card {
+    position: relative;
+    width: 280px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    animation: slideIn 1s ease forwards;
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  
+  .team-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+  }
+  
+  .team-card .info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .team-card .info .text {
+    text-align: left;
+  }
+  
+  .team-card .info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0b0b3b;
+  }
+  
+  .team-card .info p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  
+  .team-card .share-icon {
+    background: #225e9a;
+    color: white;
+    border-radius: 60%;
+    padding: 10px;
+    width: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .team-card .share-icon:hover {
+    background: #3730a3;
+  }
+  
+  .team-card .social-bar {
+    position: absolute;
+    top: 0;
+    right: 0; /* ✅ move to the right */
+    height: 100%;
+    width: 60px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transform: translateX(100%); /* ✅ start hidden on the right */
+    transition: transform 0.3s ease;
+    color: white;
+    z-index: 2;
+  }
+  
+  .team-card:hover .social-bar {
+    transform: translateX(0); /* ✅ slide in from right */
+  }
+  
+  
+  .team-card .social-bar a {
+    background: white;
+    color: #225e9a;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .team-card .social-bar a:hover {
+    background: #3730a3;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  
+  .team-card .social-bar a:hover {
+    transform: scale(1.2);
+  }
+  
+  .team-card:hover .social-bar {
+    transform: translateX(0);
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
