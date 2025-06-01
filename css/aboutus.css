@@ -1,0 +1,200 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+  
+  .it-solutions-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    gap: 70px;
+    flex-wrap: wrap;
+    font-size: 20px;
+
+  }
+  
+  .content-left {
+    flex: 1 1 500px;
+    max-width: 600px;
+  }
+  
+  .badge {
+    display: inline-block;
+    color: white;
+    background: linear-gradient(to right, #225e9a 0%, #192133 100%);
+    padding: 13px 20px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .content-left h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 16px;
+  }
+  
+  .content-left p {
+    color: #444;
+    margin-bottom: 32px;
+    font-size: 18px;
+  }
+  
+  .progress-bars {
+    background: #f2f4ff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+  }
+  
+ 
+.progress-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* spacing between each bar */
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  
+  .progress-bar {
+    flex-grow: 1;
+    background-color:color ;
+    border-radius: 50px;
+    margin: 0 12px;
+    height: 8px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    background-color:#225e9a;
+    height: 100%;
+    border-radius: 50px;
+  }
+  
+  .percent {
+    min-width: 40px;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .learn-more-btn2 {
+    display: inline-block;
+    background: linear-gradient(to right, #225e9a 0%, #192133 100%);
+    color: white;
+    padding: 0.8rem 1.0rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+  
+    /* Animation */
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInFromRight 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes slideInFromRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  .content-right {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .main-image-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  /* The white hover animation effect */
+  .main-image-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.8s ease, height 0.8s ease, opacity 0.8s ease;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .main-image-container:hover::after {
+    width: 250%;
+    height: 250%;
+    opacity: 1;
+  }
+  
+  .main-image {
+    width: 140%;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .overlay-image {
+    position: absolute;
+    bottom: -10px;
+    left: -30px;
+    width: 80%;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+    z-index: 3;
+    transform-origin: center center; /* ensures zoom from center */
+  }
+  
+  .image-wrapper:hover .overlay-image {
+    transform: scale(1.03); /* slightly zoom in */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .it-solutions-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .content-right {
+      margin-top: 40px;
+    }
+  
+    .overlay-image {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      margin-top: 20px;
+    }
+  }
+  
