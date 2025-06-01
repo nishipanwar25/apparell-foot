@@ -21,16 +21,30 @@ body {
     max-width: 600px;
   }
   
+  
+
   .badge {
-    display: inline-block;
-    color: white;
-    background: linear-gradient(to right, #225e9a 0%, #192133 100%);
-    padding: 13px 20px;
-    font-weight: 600;
-    font-size: 18px;
+   
+    background-color: #d6d8ff;
+    color: #225e9a;
+    padding: 10px 15px;
     border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    max-width: 240px;
+    z-index: 10;
     margin-bottom: 30px;
   }
+  
+  .badge span {
+    color: #225e9a;
+    margin-right: 6px;
+    font-weight: bold;
+  }
+  
   
   .content-left h1 {
     font-size: 2.5rem;
@@ -42,7 +56,7 @@ body {
   .content-left p {
     color: #444;
     margin-bottom: 32px;
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .progress-bars {
@@ -87,7 +101,7 @@ body {
     display: inline-block;
     background: linear-gradient(to right, #225e9a 0%, #192133 100%);
     color: white;
-    padding: 0.8rem 1.0rem;
+    padding: 0.6rem 1.0rem;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
@@ -195,6 +209,217 @@ body {
       bottom: 0;
       left: 0;
       margin-top: 20px;
+    }
+  }
+  
+
+  /* about 2nd */
+ 
+  
+  .about-section {
+    background-color: #f3f3fd;
+    padding: 60px 20px;
+  }
+  
+  .eitech-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Image Collage */
+  .image-collage-container {
+    position: relative;
+    width: 500px;
+    height: 420px;
+    flex-shrink: 0;
+  }
+  
+  .image {
+    position: absolute;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .image1 {
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 280px;
+    z-index: 3;
+  }
+  
+  
+  
+  .image2 {
+    top: -20px;
+    left: 220px;
+    width: 240px;
+    height: 240px;
+    z-index: 2;
+  }
+
+  .image-collage-container {
+    position: relative;
+    width: 500px;
+    height: 420px;
+    flex-shrink: 0;
+  }
+  
+  .badge1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: #111;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    max-width: 240px;
+    z-index: 10;
+  }
+  
+  .badge1 span {
+    color: #225e9a;
+    margin-right: 6px;
+    font-weight: bold;
+  }
+  
+  
+  .image3 {
+    top: 210px;
+    left: 120px;
+    width: 260px;
+    height: 180px;
+    z-index: 1;
+  }
+  
+  /* Right Content */
+  .content {
+    max-width: 520px;
+  }
+  
+  .label {
+    display: inline-block;
+    background-color: #d6d8ff;
+    color: #225e9a;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  
+  .content h1 {
+    font-size: 34px;
+    color: #101010;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  
+  .content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 28px;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 28px;
+  }
+  
+  .stat-box {
+    text-align: center;
+  }
+  
+  .stat-box .percent {
+    font-size: 32px;
+    font-weight: 700;
+    color: #225e9a;
+  }
+  
+  .stat-box .desc {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    margin-top: 4px;
+  }
+  
+  .stat-box .desc span {
+    font-weight: 400;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .quote-box {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    font-style: italic;
+    font-size: 15px;
+    color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    margin-bottom: 28px;
+    border-left: 4px solid #225e9a; /* fixed line */
+  }
+  
+  
+  .learn-more-btn3 {
+    display: inline-block;
+    background: linear-gradient(to right, #225e9a 0%, #192133 100%);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+  
+    /* Animation */
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInFromRight 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes slideInFromRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .eitech-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .image-collage-container {
+      margin-bottom: 40px;
     }
   }
   
