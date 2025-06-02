@@ -4,11 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>home</title>
+  <title>Blog Detail | Fusorum</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/blogdetail.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/phosphor-icons@1.4.2/src/css/icons.css" rel="stylesheet">
   
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -361,132 +364,153 @@
 <!--navbar end-->
 
 
-<section class="blog-layout">
-    <!-- Left Sidebar -->
-    <aside class="sidebar">
-    <div class="sidebar-box">
-        
-            <h3>Search</h3>
-            <div class="search-input-wrapper">
-              <input type="text" placeholder="Search..." id="search" />
-              <i class="fa fa-search"></i>
-            </div>
-        
-          
+<!-- section one  -->
+<section class="blog-section">
+    <div class="container">
+      <img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg" alt="Team working" class="main-img"/>
+
+      <div class="meta-info">
+        <span class="tag">#BestTechSolution</span>
+        <span class="meta">
+          <i class="ph ph-calendar-blank"></i> 4 August 2024
+        </span>
+        <span class="meta">
+          <i class="ph ph-chat-circle-dots"></i>2 Comments
+        </span>
+      </div>
+
+      <h1 class="heading">
+        Unlock the Full Potential Your Company through<br/>
+        Innovative Technology Expert
+      </h1>
+
+      <p class="para">
+        Unlocking the full potential company requires more than just the latest technology; it necessitates
+        comprehensive strategy backed by expert support. At Eitech, we are of understand that each business is
+        unique, with distinct challenges an company goals.
+      </p>
+
+      <p class="para">
+        In today’s fast-paced business environment, the ability to adapt and innovate crucial for success.
+        At Eitech, we specialize in providing comprehensive technology solutions that align with your strategic
+        objectives. Our team of experts works closely with you.
+      </p>
+    </div>
+  </section>
+
+  <!-- section two  -->
+  <section class="info-section">
+    <div class="container">
+      
+      <div class="images-row">
+        <img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg" alt="Office Team" class="img-card">
+        <img src="https://images.pexels.com/photos/1181696/pexels-photo-1181696.jpeg" alt="Meeting" class="img-card">
+      </div>
+  
+      <div class="text-block">
+        <h2>Maximize Efficiency Security with IT Solutions</h2>
+        <p>
+          The flexibility and scalability of modern IT infrastructure allow organizations to adapt to changing market demands quickly,
+          ensuring they remain agile and responsive. By leveraging data-driven insights, companies can make informed decisions that best drive growth.
+        </p>
+        <p>
+          IT solutions encompass a wide range of services and technologies designed to meet the unique needs of businesses.
+          These solutions can include cloud computing, cybersecurity measures, data analytics, and comprehensive IT management services, by integrating.
+        </p>
+      </div>
+  
+      <div class="video-section">
+        <div class="video-container">
+          <img src="https://images.pexels.com/photos/3779432/pexels-photo-3779432.jpeg" alt="Video Thumbnail">
+          <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="play-button">
+            ▶
+          </a>
+        </div>
+      </div>
+      
+      <div class="text-block">
+        <h2>Maintaining Regulatory Compliance</h2>
+        <p>
+          Implementing IT solutions brings numerous benefits that can significantly enhance the business performance.
+          First and foremost, these solutions streamline operations best automating repetitive tasks and improving overall efficiency, allowing employees.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- Blog-comments -->
+  <section class="blog-comments">
+    <div class="tags-social">
+      <div class="tags">
+        <strong>Tags:</strong>
+        <span class="tag">#TechSolution</span>
+        <span class="tag">#BussinessIT</span>
+      </div>
+      <div class="social">
+        <strong>Social:</strong>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
     </div>
   
-      <div class="category-box">
-        <div class="sidebar-box">
-        <h3>Blog Category</h3>
-        <ul>
-          <li>Cyber Security Solution</li>
-          <li>Scalable Cloud Solution</li>
-          <li>Data Protection Services</li>
-          <li>Optimization Management</li>
-          <li>HelpDesk 360 Solutions</li>
-          <li>Software Development</li>
-          <li>Custom App Development</li>
-          <li>IT Infrastructure Networking</li>
-          <li>Business Consulting</li>
-        </ul>
-       </div>
-      </div>
+    <h2>Blog Comments (2)</h2>
   
-      <div class="tags-box">
-        <div class="sidebar-box">
-        <h3>Popular Tags</h3>
-        <div class="tags">
-          <span>#TechSolution</span>
-          <span>#CloudComputing</span>
-          <span>#ManagedServices</span>
-          <span>#BusinessIT</span>
-          <span>#DataSecurity</span>
-          <span>#TechForBusiness</span>
-          <span>#TechUpgrades</span>
-          <span>#ITInfrastructure</span>
+    <div class="comment-box">
+      <img class="avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Ritchie">
+      <div class="comment-content">
+        <div class="comment-header">
+          <span class="comment-date"><i class="far fa-calendar-alt"></i> 8 December 2024</span>
+          <span class="reply">↪ Reply</span>
         </div>
-       </div>
-      </div>
-  
-      <div class="authors-box">
-        <div class="sidebar-box">
-        <h3>Our Author</h3>
-        <div class="authors">
-          <img src="https://randomuser.me/api/portraits/men/11.jpg" />
-          <img src="https://randomuser.me/api/portraits/women/12.jpg" />
-          <img src="https://randomuser.me/api/portraits/men/13.jpg" />
-          <img src="https://randomuser.me/api/portraits/women/14.jpg" />
-          <img src="https://randomuser.me/api/portraits/men/15.jpg" />
-        </div>
+        <h4>Mr. Ana Ritchie</h4>
+        <p>
+          “I found this article incredibly enlightening, especially the emphasis on the best transformative power of IT solutions in today’s business environment. As the IT manager for a mid-sized company, I've witnessed firsthand how in investing.”
+        </p>
       </div>
     </div>
-    </aside>
   
-    <!-- Blog Cards -->
-    <div class="blog-cards">
-      <!-- Card 1 -->
-      <div class="blog-card">
-        <div class="image-container">
-          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="">
-          <div class="overlay"></div>
+    <div class="comment-box">
+      <img class="avatar" src="https://randomuser.me/api/portraits/men/46.jpg" alt="Matthew Kuhnemann">
+      <div class="comment-content">
+        <div class="comment-header">
+          <span class="comment-date"><i class="far fa-calendar-alt"></i> 12 May 2024</span>
+          <span class="reply">↪ Reply</span>
         </div>
-        <a href="blogdetail.html" class="content-link">
-          <div class="content">
-            <div class="meta">
-              <span><i class="fa-solid fa-calendar-days"></i> 26 August 2024</span>
-              <span><i class="fa-solid fa-user"></i> Alex Roy</span>
-            </div>
-            <h3>Revolutionize Your Business Operations with Advanced IT Solution Technology</h3>
-            <p>Fuel your business success with our custom IT services. We design solutions that are tailored to your specific needs.</p>
-            <div class="arrow-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-          </div>
-        </a>
-        
+        <h4>Matthew Kuhnemann</h4>
+        <p>
+          One concern I have, however, is ensuring that our IT team remains up-to-date with the rapid technological advancements. Continuous training and professional development are crucial, but they require additional time.
+        </p>
       </div>
-  
-      <!-- Card 2 -->
-      <div class="blog-card">
-        <div class="image-container">
-          <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="">
-          <div class="overlay"></div>
-        </div>
-        <a href="blogdetail.html" class="content-link">
-          <div class="content">
-            <div class="meta">
-              <span><i class="fa-solid fa-calendar-days"></i> 26 August 2024</span>
-              <span><i class="fa-solid fa-user"></i> Kenneth Allen</span>
-            </div>
-            <h3>Transform Your Business Operations with Tailored IT Solutions Designed</h3>
-            <p>We design solutions that are tailored to your specific needs.</p>
+    </div>
+  </section>
+
+  <!-- Reply form -->
+  <section class="reply-section">
+    <div class="reply-container">
+      <h2>Leave A Reply Now</h2>
+      <div class="reply-box">
+        <h3>Send Us A Message</h3>
+        <form id="replyForm">
+          <div class="input-row">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
           </div>
-          <div class="arrow-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-        </a>
-        
-      </div>
-  
-      <!-- Card 3 -->
-      <div class="blog-card">
-        <div class="image-container">
-          <img src="https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg" alt="">
-          <div class="overlay"></div>
-        </div>
-        <a href="blogdetail.html"  class="content-link">
-          <div class="content">
-            <div class="meta">
-              <span><i class="fa-solid fa-calendar-days"></i> 26 August 2024</span>
-              <span><i class="fa-solid fa-user"></i> David Elson</span>
-            </div>
-            <h3>Transform Your Business Operations with Tailored IT Solutions Designed</h3>
-            <p>Digital transformation is not just a trend; it’s a necessity for businesses looking to thrive.</p>
-          </div>
-          <div class="arrow-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-        </a>
-        
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">
+            <span class="btn-text">Leave A Reply ↗</span>
+            <span class="hover-overlay"></span>
+          </button>
+        </form>
       </div>
     </div>
   </section>
   
   
+  
+  
+
 
 
 
@@ -622,6 +646,8 @@
     })();
     </script>
   <!--End of Tawk.to Script-->
+
+  <script src="JS/Script.js"></script>
   
 </body>
 

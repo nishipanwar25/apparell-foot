@@ -317,6 +317,35 @@ gsap.fromTo(".cta-button",
     });
   });
 
+  const video = document.getElementById("promoVideo");
+  const playBtn = document.getElementById("playBtn");
+  
+  playBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play().then(() => {
+        playBtn.style.display = "none";
+      }).catch(error => {
+        console.error("Video play failed:", error);
+      });
+    }
+  });
+  
+  video.addEventListener("pause", () => {
+    playBtn.style.display = "block";
+  });
+  
+  video.addEventListener("play", () => {
+    playBtn.style.display = "none";
+  });
+  
+  
+
+  document.getElementById('replyForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Reply submitted successfully!');
+    this.reset();
+  });
+
 
 
 
