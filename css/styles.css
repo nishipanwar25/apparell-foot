@@ -731,11 +731,10 @@ i.fas {
 .hero-section h1 strong {
   color: #225e9a;
 }
-
 .animated-headline span {
   opacity: 0;
   display: inline-block;
-  animation: fadeInWords 1s ease forwards;
+  animation: fadeInLeft 1.2s ease forwards;
 }
 
 .animated-headline span:nth-child(1) { animation-delay: 0s; }
@@ -749,16 +748,17 @@ i.fas {
 .animated-headline span:nth-child(9) { animation-delay: 2.4s; }
 .animated-headline span:nth-child(10) { animation-delay: 2.7s; }
 
-@keyframes fadeInWords {
+@keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
+
 
 
 .hero-content {
