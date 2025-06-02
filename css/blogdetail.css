@@ -13,16 +13,15 @@ body {
   
   
   .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 50px;
   }
   
   .main-img {
     width: 100%;
     border-radius: 12px;
   }
-  
   .meta-info {
     margin-top: 20px;
     display: flex;
@@ -34,19 +33,24 @@ body {
   .tag {
     background-color: #225e9a;
     color: white;
-    padding: 6px 14px;
+    padding: 6px 12px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    height: 34px; /* Matches .meta */
   }
   
   .meta {
     color: #444;
-    font-size: 18px;
-    display: flex;
+    font-size: 15px;
+    display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    height: 34px; /* Matches .tag for uniformity */
   }
+  
   
   .heading {
     font-size: 30px;
