@@ -53,10 +53,15 @@ function handleScroll() {
     const clamped = Math.max(0, Math.min(1, scrollPercent));
 
     const offset = clamped * 100; // Adjust scroll strength
-    row1.style.transform = `translateX(${offset}px)`;
+
+    // Shift row1 left initially by 100px to remove space before logos
+    row1.style.transform = `translateX(${offset - 100}px)`;
     row2.style.transform = `translateX(-${offset}px)`;
   }
 }
+
+window.addEventListener('scroll', handleScroll);
+handleScroll();
 
 window.addEventListener('scroll', () => {
   window.requestAnimationFrame(handleScroll);
