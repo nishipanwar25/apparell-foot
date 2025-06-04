@@ -518,7 +518,7 @@ html {
   z-index: 2;
   overflow: hidden;
 } */
-
+/* 
 .phone-frame img {
   width: 100%;
   height: auto;
@@ -536,7 +536,7 @@ html {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   margin-bottom: 20px;
-}
+} */
 
 /* .iphone-notch {
   width: 120px;
@@ -551,7 +551,7 @@ html {
   z-index: 2;
 } */
 
-.iphone-screen {
+/* .iphone-screen {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -564,7 +564,7 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 
 .stats-container {
@@ -649,7 +649,7 @@ html {
 .phone-frame-backcircle {
   position: absolute;
   width: 750px;
-  height: 750px;
+  height: 700px;
   background: linear-gradient(#225e9a8f, #225e9a08);
   border-radius: 50%;
   top: 49%;
