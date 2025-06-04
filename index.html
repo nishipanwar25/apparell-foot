@@ -192,20 +192,26 @@
 
         <div class="hero-phone-div">
           <div class="phone-frame-backcircle"></div>
-          <a href="#" class="laptop-link">
-            <div class="laptop-frame">
-              <div class="laptop-screen">
-                <img
-                  src="https://cdn-ilchebh.nitrocdn.com/tddUaqtYoWmRfDTHlxtxPMGaFYrSAorD/assets/images/optimized/rev-b6bbc8e/appmakersla.com/wp-content/uploads/2024/02/Book-Club.png"
-                  alt="App in Laptop"
-                />
+          
+          <div class="laptop-link">
+            <div class="laptop-screen video-wrapper">
+              <!-- Preview Image -->
+              <img src="images/desktop.png" alt="App in Laptop" class="preview-img" />
+        
+              <!-- Play Button -->
+              <div class="play-button" onclick="playVideo()">
+                ▶
               </div>
-              
+        
+              <!-- Video (hidden initially) -->
+              <video id="laptopVideo" class="laptop-video" controls>
+                <source src="Video/small.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
-          </a>
-          
-          
+          </div>
         </div>
+        
         
 
         <div class="features-right">
@@ -504,7 +510,7 @@
           </p>
         </div>
         <div class="stat-box">
-          <h3>700+</h3>
+          <h3>70+</h3>
           <p>Global Brands & Fast Growing Startups Trust us</p>
         </div>
         <div class="stat-box">

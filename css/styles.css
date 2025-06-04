@@ -449,11 +449,11 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* center the container */
+  transform: translate(-50%, -50%);
 }
 
 .laptop-frame {
-  width: 300px;
+  width: 500px; /* ⬆️ Increased from 300px */
   background-color: #333;
   border-radius: 16px 16px 6px 6px;
   overflow: hidden;
@@ -464,28 +464,53 @@ html {
 }
 
 .laptop-screen {
-  background-color: #000;
-  padding: 8px; /* reduced black frame padding */
+  background-color: transparent;
+  padding: 8px;
   border-radius: 16px 16px 0 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.laptop-screen img {
+.preview-img {
   width: 100%;
-  height: auto;
+  height: 100%; /* make it fill the laptop screen height */
+  object-fit: cover; /* maintain aspect ratio and fill the space */
   display: block;
   border-radius: 4px;
 }
 
-.laptop-keyboard-base {
-  height: 12px;
-  background-color: #444;
-  border-radius: 0 0 12px 12px;
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-  top: -4px;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px; /* ⬆️ Larger play icon */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 14px 22px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
 }
+
+.play-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.laptop-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
 
 
 

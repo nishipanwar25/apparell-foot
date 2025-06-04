@@ -347,6 +347,16 @@ gsap.fromTo(".cta-button",
   });
 
 
+  function playVideo() {
+    document.querySelector(".preview-img").style.display = "none";
+    document.querySelector(".play-button").style.display = "none";
+    const video = document.getElementById("laptopVideo");
+    video.style.display = "block";
+    video.play();
+  }
+
+
+
 
 
 
