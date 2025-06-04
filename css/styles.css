@@ -74,18 +74,54 @@ html {
 }
 
 .services-dropdown {
-  display: none;
   position: absolute;
   top: 130%;
-  left: -100px; /* shifted left by 150px from right edge */
+  left: -100px;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 8px 15px; /* tighter padding */
-  min-width: 180px;  /* smaller width */
-  max-width: 70vw;   /* limit max width relative to viewport */
+  padding: 8px 15px;
+  min-width: 180px;
+  max-width: 70vw;
   z-index: 999;
+  border-bottom: 5px solid #225e9a; /* Adds a colored top border */
+
+  /* Slide animation */
+  opacity: 0;
+  transform: translateY(-15px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1s ease, transform 1s ease, visibility 1s ease;
+
+
 }
+
+
+
+
+.dropdown-container:hover .services-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+.services-dropdown {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.dropdown-container:hover .services-dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 
 .dropdown-grid {
   display: grid;
