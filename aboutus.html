@@ -15,346 +15,127 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-<!--navbar start-->
+<!-- Navbar Start -->
 <header class="navbar">
-    <div class="logo">
-      <a href="index.html">
-          <img src="images/fusorum.png" alt="Fusorum logo" />
-      </a>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/fusorum.png" alt="Fusorum logo" />
+    </a>
   </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
-    <nav class="nav-menu" id="navMenu">
-  
-      <ul>
-        
-  
-        <!-- Company Dropdown -->
-        <li class="nav-item dropdown" onmouseover="showDropdown('companyDropdown')" onmouseout="hideDropdown('companyDropdown')">
-          <a href="#" class="nav-link">Company <span>&#x25BE;</span></a>
-          <div class="services-dropdown" id="companyDropdown">
-          <div class="dropdown-left">
-            <button class="dropdown-tab active">Company</button>
-            <!-- <button class="dropdown-tab">Careers</button> -->
-          </div>
-          <div class="dropdown-right">
-            <div class="dropdown-column">
-              <a href="aboutus.html" class="dropdown-item" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-info-circle"></i> <!-- POS -->
-                <div>
-                  <h4>About us</h4>
-                  <!-- <p>Optimize business operations with scalable ERP systems.</p> -->
-                </div>
-              </a>
-              <a href="contactus.html" class="dropdown-item" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-envelope"></i>
-                <div>
-                  <h4>Contact us</h4>
-                  <!-- <p>Enhance customer relationships and sales efficiency.</p> -->
-                </div>
-              </a>
-              
-              
-              
-            </div>
-            <div class="dropdown-column">
-              <a href="#" class="dropdown-item" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-users"></i> <!-- Accounting -->
-                <div>
-                  <h4>Our Team</h4>
-                  <!-- <p>Enhance customer relationships and sales efficiency.</p> -->
-                </div>
-              </a>
-              <a href="Blog.html" class="dropdown-item" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-blog"></i> <!-- CRM -->
-                <div>
-                  <h4>Blog</h4>
-                  <!-- <p>Enhance customer relationships and sales efficiency.</p> -->
-                </div>
-              </a>
-            </div>
+
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+  <nav class="nav-menu" id="navMenu">
+    <ul class="nav-list">
+      <!-- Company Dropdown -->
+      <li class="dropdown-container" onmouseover="showDropdown('CompanyDropdown')" onmouseout="hideDropdown('CompanyDropdown')">
+
+        <a href="#">Company<span>&#x25BE;</span></a>
+        <div id="CompanyDropdown" class="services-dropdown">
+          <div class="dropdown-grid">
+            <a href="aboutus.html" class="dropdown-item">
+              <i class="fas fa-info-circle"></i> <span>About us</span>
+            </a>
+            <a href="contactus.html" class="dropdown-item">
+              <i class="fas fa-envelope"></i> <span>Contact us</span>
+            </a>
+            <a href="team.html" class="dropdown-item">
+              <i class="fas fa-users"></i> <span>Team</span>
+            </a>
+            <a href="Blog.html" class="dropdown-item">
+              <i class="fas fa-blog"></i> <span>Blogs</span>
+            </a>
           </div>
         </div>
       </li>
-  
-        <!-- Distribution Dropdown Start -->
-        <li class="nav-item dropdown" onmouseover="showDropdown('servicesDropdown')" onmouseout="hideDropdown('servicesDropdown')">
-          <a href="#" class="nav-link">Industries <span>&#x25BE;</span></a>
-        
-          <div class="services-dropdown" id="servicesDropdown" style="display: none;">
-            <div class="dropdown-left">
-              <button class="dropdown-tab active" onclick="showIndustryContent('retailContent', this)">Retail</button>
-              <button class="dropdown-tab" onclick="showIndustryContent('manufacturingContent', this)">Manufacturing</button>
-            </div>
-        
-            <div class="dropdown-right">
-              <!-- RETAIL CONTENT (Visible by Default) -->
-              <style>
-                .industry-content h4 {
-                  font-weight: 700;
-                }
-              
-                .industry-content p {
-                  font-weight: 300 !important;
-                  margin: 4px 0;
-                }
-              </style>
-              
-              <div id="retailContent" class="industry-content">
-                <div class="dropdown-column first-dropdown-column">
-                  <div class="dropdown-item">
-                    <!-- <i class="fas fa-tshirt"></i> -->
-                    <div>
-                      <h4><i class="fas fa-tshirt"></i> Apparel & Footwear</h4>
-                      <p><i class="fas fa-ring icon-tight"></i> <a href="page.html">Bridal Store</a></p>
-                      <p><i class="fas fa-store icon-tight"></i> <a href="#">Boutique Store</a></p>
-                      <p><i class="fas fa-tshirt icon-tight"></i> <a href="#">Readymade Garment</a></p>
-                      <p><i class="fas fa-shoe-prints icon-tight"></i> <a href="#">Footwear Store</a></p>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="dropdown-item">
-                    <!-- <i class="fas fa-tags"></i> -->
-  
-                    <div>
-                      <h4> <i class="fas fa-tags"></i>Specialized Retail</h4>
-                      <p><i class="fas fa-gift icon-tight"></i> <a href="#">Gift Shop</a></p>
-                      <p><i class="fas fa-tools icon-tight"></i> <a href="#">Hardware Store</a></p>
-                      <p><i class="fas fa-wine-bottle icon-tight"></i> <a href="#">Liquor Store</a></p>
-                      <p><i class="fas fa-paw icon-tight"></i> <a href="#">Pet Shop</a></p>
-                      <p><i class="fas fa-building icon-tight"></i> <a href="#">Shopping Mall</a></p>
-                      <p><i class="fas fa-football-ball icon-tight"></i> <a href="#">Sports Shop</a></p>
-                      <p><i class="fas fa-puzzle-piece icon-tight"></i> <a href="#">Toy Store</a></p>
-  
-                    </div>
-                  </div>
-  
-                  
-                </div>
-                <div class="dropdown-column second-dropdown-column">
-                  <div class="dropdown-item">
-                    <!-- <i class="fas fa-store"></i> -->
-  
-                    <div>
-                      <h4> <i class="fas fa-store"></i>Hypermarket & Departmental Store</h4>
-                      <p><i class="fas fa-store-alt icon-tight"></i> <a href="#">Convenience Store</a></p>
-                      <p><i class="fas fa-warehouse icon-tight"></i> <a href="#">Departmental Store</a></p>
-                      <p><i class="fas fa-shopping-cart icon-tight"></i> <a href="#">Hypermarket</a></p>
-  
-                    </div>
-                  </div>
-                  
-                  <div class="dropdown-item">
-                    <!-- <i class="fas fa-ice-cream"></i> -->
-  
-                    <div>
-                      <h4> <i class="fas fa-ice-cream"></i> Food & Confectionery</h4>
-                      <p><i class="fas fa-bread-slice icon-tight"></i> <a href="#">Bakery Shop</a></p>
-                      <p><i class="fas fa-ice-cream icon-tight"></i> <a href="#">IceCream Shop</a></p>
-                      <p><i class="fas fa-candy-cane icon-tight"></i> <a href="#">Sweet Shop</a></p>
-  
-                    </div>
-                  </div>
-                </div>
-  
-  
-  
-                <div class="dropdown-column">
-                  <div class="dropdown-item">
-                    <!-- <i class="fas fa-shopping-basket"></i> -->
-  
-                    <div>
-                      <h4><i class="fas fa-shopping-basket"></i>Supermarket & Groceries</h4>
-                      <p><i class="fas fa-apple-alt icon-tight"></i> <a href="#">Fruits & Vegetable Shop</a></p>
-                      <p><i class="fas fa-store icon-tight"></i> <a href="#">Grocery Store</a></p>
-                      <p><i class="fas fa-shopping-basket icon-tight"></i> <a href="#">Kirana Store</a></p>
-                      <p><i class="fas fa-shopping-cart icon-tight"></i> <a href="#">Minimart</a></p>
-                      <p><i class="fas fa-warehouse icon-tight"></i> <a href="#">Supermarket</a></p>
-  
-                    </div>
-                  </div>
-                  
-                  <div class="dropdown-item">
-                    <!-- <i class="fas fa-book"></i> -->
-  
-                    <div>
-                      <h4> <i class="fas fa-book"></i> Books & Office Supplies</h4>
-                      <p><i class="fas fa-book-open icon-tight"></i> <a href="#">Book Store</a></p>
-                      <p><i class="fas fa-pencil-alt icon-tight"></i> <a href="#">Stationery Store</a></p>
-                    </div>
-                  </div>
-                  <div class="dropdown-item">
-                    <!-- <i class="fas fa-spa"></i> -->
-  
-                    <div>
-                      <h4> <i class="fas fa-spa"></i>Lifestyle</h4>
-                      <p><i class="fas fa-air-freshener icon-tight"></i> <a href="#">Cosmetic Store</a></p>
-                      <p><i class="fas fa-couch icon-tight"></i> <a href="#">HomeDecor & Furniture</a></p>
-                      <p><i class="fas fa-gem icon-tight"></i> <a href="#">Imitation Jewellery</a></p>
-  
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              
-              
-              <!-- MANUFACTURING CONTENT (Hidden by Default) -->
-              <div id="manufacturingContent" class="industry-content" style="display: none;">
-                <div class="dropdown-column">
-                  <div class="dropdown-item">
-                    <i class="fas fa-industry"></i>
-                    <div><h4>FMCG</h4></div>
-                  </div>
-                  <div class="dropdown-item">
-                    <i class="fas fa-robot"></i>
-                    <div><h4>Food & Beverages</h4></div>
-                  </div>
-                  <div class="dropdown-item">
-                    <i class="fas fa-tools"></i>
-                    <div><h4>Footwear</h4></div>
-                  </div>
-                  <div class="dropdown-item">
-                    <i class="fas fa-tools"></i>
-                    <div><h4>Garment & Apparel</h4></div>
-                  </div>
-                  <div class="dropdown-item">
-                    <i class="fas fa-cogs"></i>
-                    <div><h4>Steel</h4></div>
-                  </div>
-                  <div class="dropdown-item">
-                    <i class="fas fa-cogs"></i>
-                    <div><h4>Textile</h4></div>
-                  </div>
-                </div>
-          
-                  
-                </div>
-              </div>
-            </div>
+
+       <!-- Industries Dropdown -->
+      <li class="dropdown-container" onmouseover="showDropdown('industriesDropdown')" onmouseout="hideDropdown('industriesDropdown')">
+        <a href="#">Industries<span>&#x25BE;</span></a>
+        <div id="industriesDropdown" class="services-dropdown">
+          <div class="dropdown-grid">
+            <a href="healthcare.html" class="dropdown-item">
+              <i class="fas fa-tshirt"></i> <span>Apparel & Footwear</span>
+            </a>
+            <a href="finance.html" class="dropdown-item">
+              <i class="fas fa-shopping-bag"></i> <span>Specialized Retail</span>
+            </a>
+            <a href="education.html" class="dropdown-item">
+              <i class="fas fa-store-alt"></i> <span>Hypermarket & Departmental Store</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-ice-cream"></i> <span>Food & Confectionery</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-shopping-cart"></i> <span>Supermarket & Groceries</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-book"></i> <span>Books & Office Supplies</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-couch"></i> <span>Lifestyle</span>
+            </a>
           </div>
-        </li>
-        <!-- Distribution Dropdown End -->
-  
-        <script>
-          function showDropdown(id) {
-            document.getElementById(id).style.display = 'flex';
           
-            // Optional: reset to Retail when dropdown opens
-            showIndustryContent('retailContent', document.querySelector('.dropdown-tab:first-child'));
-          }
-          
-          function hideDropdown(id) {
-            document.getElementById(id).style.display = 'none';
-          }
-          
-          function showIndustryContent(idToShow, button) {
-            // Hide all content sections
-            document.querySelectorAll('.industry-content').forEach(el => {
-              el.style.display = 'none';
-            });
-          
-            // Remove active class from all tabs
-            document.querySelectorAll('.dropdown-tab').forEach(tab => {
-              tab.classList.remove('active');
-            });
-          
-            // Show selected content and mark button as active
-            document.getElementById(idToShow).style.display = 'flex';
-            button.classList.add('active');
-          }
-          </script>
-          
-    
-  
-        <!-- Solutions Dropdown -->
-        <li class="nav-item dropdown" onmouseover="showDropdown('solutionsDropdown')" onmouseout="hideDropdown('solutionsDropdown')">
-          <a href="#" class="nav-link">Solutions <span>&#x25BE;</span></a>
-          <div class="services-dropdown" id="solutionsDropdown">
-          <div class="dropdown-left">
-            <button class="dropdown-tab active">Solutions</button>
-            <!-- <button class="dropdown-tab">Startups</button> -->
-          </div>
-          <div class="dropdown-right">
-            <div class="dropdown-column">
-              <div class="dropdown-item">
-                <i class="fas fa-cash-register"></i> <!-- POS -->
-                <div>
-                  <h4>POS</h4>
-                  <!-- <p>Optimize business operations with scalable ERP systems.</p> -->
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <i class="fas fa-boxes"></i> <!-- ERP -->
-                <div>
-                  <h4>ERP</h4>
-                  <!-- <p>Enhance customer relationships and sales efficiency.</p> -->
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <i class="fas fa-file-invoice-dollar"></i> <!-- Accounting -->
-                <div>
-                  <h4>Accounting</h4>
-                  <!-- <p>Enhance customer relationships and sales efficiency.</p> -->
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <i class="fas fa-users"></i> <!-- CRM -->
-                <div>
-                  <h4>CRM</h4>
-                  <!-- <p>Enhance customer relationships and sales efficiency.</p> -->
-                </div>
-              </div>
-            </div>
-            <div class="dropdown-column">
-              <div class="dropdown-item">
-                <i class="fas fa-warehouse"></i> <!-- Inventory -->
-                <div>
-                  <h4>Inventory Management</h4>
-                  <!-- <p>Accelerate your delivery pipeline with DevOps best practices.</p> -->
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <i class="fas fa-store"></i> <!-- Omnichannel E-Commerce -->
-                <div>
-                  <h4>Omnichannel E-Commerce</h4>
-                </div>
-              </div>
-              <div class="dropdown-item">
-                <i class="fas fa-lightbulb"></i> <!-- Smart Retail -->
-                <div>
-                  <h4>Smart Retail</h4>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </li>
-        <li><a href="careers.html">Career</a></li>
-        <li class="start-journey">
-          <a href="#contact">Book Demo Now</a>
-        </li>
-      </ul>
-      
-    </nav>
-    
-  
-    <script>
-      // Generic dropdown handler with IDs
-      function showDropdown(id) {
-        const dropdown = document.getElementById(id);
-        if (dropdown) dropdown.style.display = 'flex';
-      }
-    
-      function hideDropdown(id) {
-        const dropdown = document.getElementById(id);
-        if (dropdown) dropdown.style.display = 'none';
-      }
-    </script>
-    
-    
-  </header>
-  <!--navbar end-->
+
+      <!-- Solutions Dropdown -->
+      <li class="dropdown-container" onmouseover="showDropdown('solutionsDropdown')" onmouseout="hideDropdown('solutionsDropdown')">
+        <a href="#">Solutions<span>&#x25BE;</span></a>
+        <div id="solutionsDropdown" class="services-dropdown">
+          <div class="dropdown-grid">
+            <a href="erp.html" class="dropdown-item">
+              <i class="fas fa-cash-register"></i> <span>POS</span>
+            </a>
+            <a href="crm.html" class="dropdown-item">
+              <i class="fas fa-chart-pie"></i> <span>ERP</span>
+            </a>
+            <a href="automation.html" class="dropdown-item">
+              <i class="fas fa-file-invoice-dollar"></i> <span>Accounting</span>
+            </a>
+            <a href="ai.html" class="dropdown-item">
+              <i class="fas fa-users"></i> <span>CRM</span>
+            </a>
+            <a href="ai.html" class="dropdown-item">
+              <i class="fas fa-boxes"></i> <span>Inventory Management</span>
+            </a>
+            <a href="ai.html" class="dropdown-item">
+              <i class="fas fa-shopping-basket"></i> <span>Omnichannel E-Commerce</span>
+            </a>
+            <a href="ai.html" class="dropdown-item">
+              <i class="fas fa-lightbulb"></i> <span>Smart Retail</span>
+            </a>
+          </div>
+          
+        </div>
+      </li>
+
+
+      <li><a href="careers.html">Career</a></li>
+      <li class="start-journey">
+        <a href="#contact">Book Demo Now</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    menu.classList.toggle('active');
+  }
+
+  function showDropdown(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function hideDropdown(id) {
+    document.getElementById(id).style.display = "none";
+  }
+</script>
 
   <!--About Start-->
   <section class="it-solutions-section">
