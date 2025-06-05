@@ -519,7 +519,7 @@ html {
 .hero-content {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 300px;
   align-items: self-start;
   margin-top: 40px;
   flex-wrap: nowrap;
@@ -534,7 +534,7 @@ html {
 .features-left {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+
   flex-direction: column;
   gap: 80px;
   text-align: left;
@@ -549,16 +549,42 @@ html {
   gap: 80px;
 }
 
+.feature > div:last-child {
+  line-height: 60px; /* matches icon-box1 height */
+}
+
+
 .feature {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
 }
 
-.feature img {
-  width: 70px;
-  height: 70px;
+.icon-box1 {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #225e9ae1;
+  background-color: white; /* or transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* No border-radius = sharp corners */
 }
+
+.icon-box1 i {
+  color: #225e9ae1;
+  font-size: 30px;
+}
+
+.feature div {
+  transform: translateY(-25%);
+}
+
+/* .feature img {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 20px;
+} */
 
 .feature strong {
   font-size: 22px;
@@ -709,14 +735,14 @@ html {
 
 .phone-frame-backcircle {
   position: absolute;
-  width: 750px;
+  width: 700px;
   height: 700px;
   background: linear-gradient(#225e9a8f, #225e9a08);
   border-radius: 50%;
   top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 0;
+  z-index: -2;
 }
 
 
