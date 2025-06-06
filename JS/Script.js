@@ -348,12 +348,17 @@ gsap.fromTo(".cta-button",
 
 
   function playVideo() {
-    document.querySelector(".preview-img").style.display = "none";
-    document.querySelector(".play-button").style.display = "none";
-    const video = document.getElementById("laptopVideo");
-    video.style.display = "block";
+    const video = document.getElementById('laptopVideo');
+    const playBtn = document.querySelector('.play-button');
+    const previewImg = document.querySelector('.preview-img');
+  
+    video.style.display = 'block';
+    playBtn.style.display = 'none';
+    previewImg.style.opacity = 1; // Optional: fade the image slightly
     video.play();
   }
+  
+
 
 
 

@@ -199,25 +199,25 @@
 
         <div class="hero-phone-div">
           <div class="phone-frame-backcircle"></div>
-          
+        
           <div class="laptop-link">
             <div class="laptop-screen video-wrapper">
-              <!-- Preview Image -->
+              <!-- Laptop Frame Image -->
               <img src="images/desktop.png" alt="App in Laptop" class="preview-img" />
         
-              <!-- Play Button -->
-              <div class="play-button" onclick="playVideo()">
-                ▶
-              </div>
-        
-              <!-- Video (hidden initially) -->
-              <video id="laptopVideo" class="laptop-video" controls>
+              <!-- Video Element -->
+              <video id="laptopVideo" class="laptop-video" controls loop style="display: none;">
                 <source src="Video/small.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              
+        
+              <!-- Play Button -->
+              <div class="play-button" onclick="playVideo()">▶</div>
             </div>
           </div>
         </div>
+        
         
         <div class="features-right">
           <div class="feature">
