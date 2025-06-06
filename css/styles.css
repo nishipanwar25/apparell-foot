@@ -490,7 +490,7 @@ html {
   left: 6%;
   width: 88%;
   height: 53%;
-  object-fit: cover;
+  object-fit: contain;
   pointer-events: none; /* no interaction */
 }
 
