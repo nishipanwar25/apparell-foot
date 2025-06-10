@@ -1,10 +1,15 @@
 // testimonials slider
 const logos = [
-  'logo1.png',
-  'logo2.png',
-  'logo3.png',
-  'logo4.png',
-  'logo5.png'
+  'images/LOGO/logo1.png',
+  'images/LOGO/logo2.png',
+  'images/LOGO/logo3.png',
+  'images/LOGO/logo4.png',
+  'images/LOGO/logo5.png',
+  'images/LOGO/logo6.jpg',
+  'images/LOGO/logo7.jpg',
+  'images/LOGO/logo8.png',
+  'images/LOGO/logo9.png',
+  'images/LOGO/logo10.png',
 ];
 
 const logoTrack = document.getElementById('logoTrack');
