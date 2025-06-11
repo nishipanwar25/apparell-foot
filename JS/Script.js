@@ -14,14 +14,18 @@ const logos = [
 
 const logoTrack = document.getElementById('logoTrack');
 
-// Duplicate logo set for seamless loop
 for (let i = 0; i < 10; i++) {
   logos.forEach((src, index) => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'logo-wrapper';
+
     const img = document.createElement('img');
     img.src = src;
     img.alt = `Logo ${index + 1}`;
     img.className = 'logo-img';
-    logoTrack.appendChild(img);
+
+    wrapper.appendChild(img);
+    logoTrack.appendChild(wrapper);
   });
 }
 
