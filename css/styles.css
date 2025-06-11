@@ -1215,10 +1215,10 @@ body {
 }
 
 .logo-wrapper {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  background: linear-gradient(to right, #336b84, #0b9960);
+  background: #929b9d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1232,8 +1232,8 @@ body {
 
 .logo-img {
   /* width: auto; */
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   object-fit: contain;
   display: block;
   filter: none !important;
