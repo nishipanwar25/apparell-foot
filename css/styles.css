@@ -1206,7 +1206,10 @@ body {
   overflow: hidden;
   width: 100%;
   margin: 50px;
+  position: relative;
+  right: 50px;
 }
+
 
 .logo-track {
   display: flex;
