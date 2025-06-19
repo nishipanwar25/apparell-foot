@@ -1204,9 +1204,10 @@ body {
 /* Logo slider styles */
 .logo-slider {
   overflow: hidden;
-  width: 100%;
+  width: 120%;
   margin: 50px;
-  position: relative;             
+  position: relative;
+  right: 60px;
   padding: 0 10px; 
   margin: 40px 0; 
 }
