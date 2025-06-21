@@ -1204,12 +1204,12 @@ body {
 /* Logo slider styles */
 .logo-slider {
   overflow: hidden;
-  width: 120%;
-  margin: 50px;
+  width: 100vw;
+  margin: 40px 0;
   position: relative;
-  right: 60px;
-  padding: 0 10px; 
-  margin: 40px 0; 
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0; 
 }
 
 
@@ -1220,8 +1220,8 @@ body {
 }
 
 .logo-wrapper {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: whitesmoke;
   display: flex;
