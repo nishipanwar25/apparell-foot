@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>retail | fusorum</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/specializedRetail.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- bootstrap js -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+      
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- navbar start -->
+   <header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/fusorum.png" alt="Fusorum logo" />
+    </a>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+  <nav class="nav-menu" id="navMenu">
+    <ul class="nav-list">
+      <!-- Company Dropdown -->
+      <li class="dropdown-container" onmouseover="showDropdown('CompanyDropdown')" onmouseout="hideDropdown('CompanyDropdown')">
+
+        <a href="#">Company<span>&#x25BE;</span></a>
+        <div id="CompanyDropdown" class="services-dropdown">
+          <div class="dropdown-grid">
+            <a href="aboutus.html" class="dropdown-item">
+              <i class="fas fa-info-circle"></i> <span>About us</span>
+            </a>
+            <a href="contactus.html" class="dropdown-item">
+              <i class="fas fa-envelope"></i> <span>Contact us</span>
+            </a>
+            <!-- <a href="team.html" class="dropdown-item">
+              <i class="fas fa-users"></i> <span>Team</span>
+            </a> -->
+            <a href="Blog.html" class="dropdown-item">
+              <i class="fas fa-blog"></i> <span>Blogs</span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+       <!-- Industries Dropdown -->
+      <li class="dropdown-container" onmouseover="showDropdown('industriesDropdown')" onmouseout="hideDropdown('industriesDropdown')">
+        <a href="#">Industries<span>&#x25BE;</span></a>
+        <div id="industriesDropdown" class="services-dropdown">
+          <div class="dropdown-grid">
+            <a href="healthcare.html" class="dropdown-item">
+              <i class="fas fa-tshirt"></i> <span>Apparel & Footwear</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-shopping-bag"></i> <span>Specialized Retail</span>
+            </a>
+            <a href="education.html" class="dropdown-item">
+              <i class="fas fa-store-alt"></i> <span>Hypermarket & Departmental Store</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-ice-cream"></i> <span>Food & Confectionery</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-shopping-cart"></i> <span>Supermarket & Groceries</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-book"></i> <span>Books & Office Supplies</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-couch"></i> <span>Lifestyle</span>
+            </a>
+          </div>
+          
+        </div>
+      </li>
+
+      <!-- Solutions Dropdown -->
+      <li class="dropdown-container" onmouseover="showDropdown('solutionsDropdown')" onmouseout="hideDropdown('solutionsDropdown')">
+        <a href="#">Solutions<span>&#x25BE;</span></a>
+        <div id="solutionsDropdown" class="services-dropdown">
+          <div class="dropdown-grid">
+            <a href="erp.html" class="dropdown-item">
+              <i class="fas fa-cash-register"></i> <span>POS</span>
+            </a>
+            <a href="crm.html" class="dropdown-item">
+              <i class="fas fa-chart-pie"></i> <span>ERP</span>
+            </a>
+            <a href="automation.html" class="dropdown-item">
+              <i class="fas fa-file-invoice-dollar"></i> <span>Accounting</span>
+            </a>
+            <a href="ai.html" class="dropdown-item">
+              <i class="fas fa-users"></i> <span>CRM</span>
+            </a>
+            <a href="ai.html" class="dropdown-item">
+              <i class="fas fa-boxes"></i> <span>Inventory Management</span>
+            </a>
+            <a href="ai.html" class="dropdown-item">
+              <i class="fas fa-shopping-basket"></i> <span>Omnichannel E-Commerce</span>
+            </a>
+            <a href="ai.html" class="dropdown-item">
+              <i class="fas fa-lightbulb"></i> <span>Smart Retail</span>
+            </a>
+          </div>
+          
+        </div>
+      </li>
+
+
+      <li><a href="careers.html">Career</a></li>
+      <li class="start-journey">
+        <a href="#contact">Book Demo Now</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- navbar ends -->
+
+<!-- dropdown js start -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    menu.classList.toggle('show');
+  }
+
+  function showDropdown(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function hideDropdown(id) {
+    document.getElementById(id).style.display = "none";
+  }
+</script>
+  <!-- dropdown js ends --> 
+
+
+<!--hero section start  -->
+<section class="hero">
+<div class="left-content">
+<button type="button" class="btn btn-primary">industry</button> 
+<h1 class="hero-head">Retail Software Development Services</h1>
+<p class="hero-para">Retail software is becoming an indispensable assistant for organizing purchases, delivery, storage, personnel management, and other activities related to offline sales. Automating all these processes helps increase your business's productivity and focus human resources on the core activity — sales. Our software developers always choose an individual approach to create retail solutions that increase your customer satisfaction rate.</p>
+ <button type="button" class="lets-talk">Let's talk</button> </div>
+ <div class="right-content">
+  <img src="images/hero_image.webp" class="right-img" alt="">
+ </div>
+</section>
+<!--hero section ends  -->
+
+<!-- solution Page starts -->
+ <div class="solutions">
+  <h1 class="sol-head">Retail Software Solutions</h1>
+  <div class="sol-cards">
+  <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Customer Online Store</h5>
+    <p class="card-text">If you want to start selling to online users, we will help you do everything right from the very beginning, providing not only the creation of a turnkey online store but also consulting at each stage of bringing your business online. We offer a clear system of making your store successful with the help of high-quality retail software solutions.</p>
+  </div>
+</div>
+  <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Dropshipping Platform</h5>
+    <p class="card-text">Starting a dropshipping business is a significant first step towards entrepreneurship. With providing efficient retail software development services, we develop an online resource for suppliers and online stores working on dropshipping. Suppliers will be able to upload their goods to the platform, work on warehouse management and online stores will be able to trade the selected goods without repurchasing them to their warehouse.</p>
+  </div>
+</div>
+  <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Market Place</h5>
+    <p class="card-text">For a visitor, an online marketplace is just a showcase with a product, but in fact, it is a platform with well-thought-out business logic and processes. We create applications and monitor their life. We see which solutions for retail are popular and which are not. We transfer all this experience to retail app development for our clients. Excellent customer experience is an essential part of successful retail business
+    cases.</p>
+  </div>
+  </div>
+  <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Online Catalog</h5>
+    <p class="card-text">Creating an online catalog is a retail software development service perfect for retail companies of various products to present a catalog of goods on the internet. With custom retail software solutions, you can inform your existing customers about the assortment and its content, provide a description of goods and prices, and keep up to date with new events.</p>
+  </div>
+  </div>
+  <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Customer Account Management Software</h5>
+    <p class="card-text">A personal account is a must-have for e- commerce projects. Without it, it is more challenging to make a purchase, track the status of an order, participate in a loyalty program, or apply a promo code and get a discount. A convenient customer account with an online store increases customer loyalty and the likelihood of repeat orders.</p>
+  </div>
+  </div>
+  <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Supply Chain Management Systems</h5>
+    <p class="card-text">Our team offers supply chain management software development to help optimize and increase supply, reduce costs, and focus on business strategy. Our expertise includes retail solutions for automating sales catalog management, ordering products and services, payment processing, receiving sales estimates, delivery management processes, processing invoices for purchase orders, and processing purchase orders for goods and services.</p>
+  </div>
+</div>
+</div>
+<button type="button" class="lets-talk" id="ask-exp">Ask our experts</button>
+</div>
+<!-- solution Page ends -->
+
+<!-- technologies section starts -->
+ <section class="technologies">
+  <div class="tech-main">
+  <div class="tech-header">
+ <h1 class="tech-head">Technologies We Use</h1>
+ <p class="tech-para">No retail business owner can grow without implementing a stack of technologies that will best meet the company's challenges. With many years of retail software development experience, we consult our clients on what retail technologies can positively impact their business.</p>
+ </div>
+ <div class="tech-img">
+  <img src="images/Retail-Software-Development3-Services-Geniusee-06-20-2025_02_58_PM.png" alt="tech">
+ </div>
+ </div>
+
+ <!-- technologies content boxes start -->
+  <div class="tech-cards">
+  <div class="card">
+  <div class="card-body">
+    <h5 class="card-title">E-commerce platforms & POS software solutions</h5>
+    <p class="card-text">We develop software solutions for retail companies around the world. During the custom software development process, we use the best marketing and e-commerce platforms such as Shopify, SAP Hybris, AWS, Salesforce, Magento, Microsoft Dynamics CRM, PayPal, and more. By cooperating with Geniusee specialists, you get software created with up-to-date technologies that change the future of the retail industry. With our retail software development solutions many businesses stay ahead of the competition.</p>
+  </div>
+</div>
+
+  <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Diverse omnichannel solutions for retail</h5>
+    <p class="card-text">The modern client is already omnichannel. This is not limited to retail. Previously, you could only eat pizza in a pizzeria and communicate only at a personal meeting, and now we can do it anywhere. With the help of well-designed software, you get an omnichannel retail model, which implies that the client themselves choose where and how to buy. We create solutions that get to the very essence of the omnichannel approach — to satisfy the needs of the client here and now, providing superior customer experience.</p>
+  </div>
+</div>
+ 
+  <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Innovative data processing with AI</h5>
+    <p class="card-text">Tracking customer reactions, machine learning and product categorization, price forecasting, logistics, marketing automation, virtual and augmented reality — we will help you implement all these retail solutions into your business as easily as possible. As a retail software development company, we help you use artificial intelligence in your retail software so that you start a new stage of your business development and improve the quality of data processing. It will allow you to have the right point of view on your business.</p>
+  </div>
+</div>
+
+  <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Online ordering systems</h5>
+    <p class="card-text">Online ordering systems are an essential tool for any retail enterprise. Expansion of custom retail software development opportunities, increased audience, profit growth, and business growth is only a partial list of benefits from introducing new technologies, especially in a competitive market. The Geniusee team develops online ordering applications for a ready-made solution and custom functionality.</p>
+  </div>
+</div>
+</div>
+<div class="tech-images">
+<img src="images/java.png" alt="tech-img" class="tech-IMG">
+<img src="images/laravel.webp" alt="tech-img" class="tech-IMG">
+<img src="images/js.webp" alt="tech-img" class="tech-IMG">
+<img src="images/Python.webp" alt="tech-img" class="tech-IMG">
+<img src="images/react-native.png" alt="tech-img" class="tech-IMG">
+<img src="images/React.png" alt="tech-img" class="tech-IMG"> 
+<img src="images/mysql.png" alt="tech-img" class="tech-IMG">
+<img src="images/node.webp" alt="tech-img" class="tech-IMG">
+<img src="images/swift.webp" alt="tech-img" class="tech-IMG">
+<img src="images/AWS.png" alt="tech-img" class="tech-IMG">
+<img src="images/MongoDB.webp" alt="tech-img" class="tech-IMG">
+<img src="images/php.webp" alt="tech-img" class="tech-IMG">
+</div>
+ <!-- technologies content boxes ends -->
+</section>
+<!-- technologies section ends -->
+
+
+<!-- mobile app development start -->
+<div class="mobile-dev">
+  <div class="mobile-right">
+  <h1>Retail Mobile App <br> Development Process</h1>
+  <button type="button" class="lets-talk">Ask an expert</button>
+  <img src="images/Group_24273.webp" alt="" class="mob-img">
+  </div>
+
+  <!-- accordion mobile dev start -->
+   <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Analysis and concept
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">We study the target audience and competitors and develop a general design concept of retail solutions.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       TT and prototypes
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">We develop detailed technical specifications, compose the user's journey, and create and test prototypes.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+     Design
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">We develop a design that makes the customer experience as transparent and enjoyable as possible during online shopping.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        Development and integration
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">We offer an interactive and adaptive layout, connecting integrations with CRM, ERP, online payments, delivery services, and email/SMS mailing.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+        Testing and launch
+      </button>
+    </h2>
+    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">After the tests of retail solutions, we launch a project with content and a database of products and customized metrics ready for SEO promotion.</div>
+    </div>
+  </div>
+</div>
+<!-- accordion ends -->
+</div>
+<!-- mobile app development ends -->
+
+<!-- why hire furosum start -->
+ <div class="why-hire">
+  <h1>Why Hire Fusorum for Retail <br> Software Development?</h1>
+  <div class="hire-cards">
+
+    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Tranparency</h5>
+        <p class="card-text">We inform the client about each stage of the retail application development. We conduct daily zoom calls and sum up the two-week intermediate results.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">price</h5>
+        <p class="card-text">We create an interactive product prototype. We believe it's better to spend 10% of the budget on a prototype than 100% on a completed custom retail software that doesn't make a profit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Timing</h5>
+        <p class="card-text">We accurately predict the timing of web/mobile apps for retail development. We complete 85% of projects ahead of schedule.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Result</h5>
+        <p class="card-text">We test web/mobile apps at all stages of development and before entering the market. We provide technical support after the release.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+ </div>
+<!-- why hire furosum ends -->
+
+<!--Footer Start-->
+  <footer>
+    <div class="col-9 footer">
+      <div class="footer-logo-wrap-upd">
+        <a href="https://geniusee.com/" class="footer-logo-wrapper"><img src="images/fusorum.png" width="140"
+            height="45" alt="Geniusee logo" class="footer-logo"></a>
+        <!-- <p class="font--14 pale no-hover">Fusorum — software product development services.</p> -->
+
+        <div class="social-wrap-upd">
+          <a class="social-icon-wrap" href="https://www.facebook.com/Fusorum" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/facebook-icon_pOwRbXvVm.svg" alt="Social Icon" width="10"
+              height="20" loading="lazy">
+          </a>
+          <a class="social-icon-wrap" href="https://www.linkedin.com/company/geniusee" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/linkedin-icon_7EtYZVLqIu.svg" alt="Social Icon" width="18"
+              height="18" loading="lazy">
+          </a>
+          
+          <a class="social-icon-wrap" href="https://www.instagram.com/fusorum/" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/instagram-icon_hB0rjh8aG.svg" alt="Social Icon" width="18"
+              height="18" loading="lazy">
+          </a>
+          <a class="social-icon-wrap" href="https://twitter.com/GeniuseeSW" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/layer1.webp" alt="Social Icon" width="18" height="17"
+              loading="lazy">
+          </a>
+
+        </div>
+      </div>
+      <div class="links-wrapper-grid">
+        <div class="footer-links">
+          <div>
+            <h4 class="font--h4"><a href="/digital-transformation-consulting" class="font--h4">Company</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/fusorum/fusorum/aboutus.html">About us</a></li>
+              <li class="menu-item"><a class="font--14" href="/technology-consulting-services">Team</a>
+              </li>
+              <li class="menu-item"><a class="font--14" href="/fusorum/fusorum/contactus.html">Contact us</a></li>
+              <li class="menu-item"><a class="font--14" href="/fusorum/fusorum/Blog.html">Blogs</a></li>
+            </ul>
+          </div>
+           <div>
+              <h4 class="font--h4 h4-mt"><a href="/retail" class="font--h4">Career</a></h4>
+            </div>
+          <!-- <div>
+            <h4 class="font--h4 h4-mt"><a href="/outstaffing" class="font--h4">Outstaffing</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/dedicated-team">Dedicated Team</a></li>
+              <li class="menu-item"><a class="font--14" href="/time-and-material">Time And Material</a></li>
+            </ul>
+          </div> -->
+          <!-- <div>
+            <h4 class="font--h4 h4-mt"><a href="/digital-transformation-consulting" class="font--h4 no-hover">Product
+                design</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/ui-ux-design">Product Experience Design</a></li>
+              <li class="menu-item"><a class="font--14" href="/business-analysis">Business Analysis</a></li>
+            </ul>
+          </div> -->
+        </div>
+        <div class="footer-links">
+          <h4 class="font--h4"><a href="/software" class="font--h4">Industries</a></h4>
+          <ul>
+            <li class="menu-item"><a class="font--14" href="/mvp-startups">Apparel & Footwear</a></li>
+            <li class="menu-item"><a class="font--14" href="/digital-transformation">Hypermarket & Departmental Store</a></li>
+            <li class="menu-item"><a class="font--14" href="/web-development">Supermarket & Groceries</a></li>
+            <li class="menu-item"><a class="font--14" href="/mobile-development">Lifestyle</a></li>
+            <li class="menu-item"><a class="font--14 no-hover" href="#">Specialized Retail</a></li>
+            <li class="menu-item"><a class="font--14" href="/devops">Food & Confectionery</a></li>
+            <li class="menu-item"><a class="font--14" href="/aws">Books & Office Supplies</a></li>
+          </ul>
+          <!-- <div>
+            <h4 class="font--h4 h4-mt"><a href="/ai-powered-app-development" class="font--h4">AI-powered App
+                Development</a></h4>
+          </div> -->
+        </div>
+        <div class="footer-links">
+
+          <div>
+            <h4 class="font--h4"><a href="/fintech" class="font--h4">Solutions</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/ewallet">POS</a></li>
+              <li class="menu-item"><a class="font--14" href="/banking-software-development">Accounting</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">Inventory Management</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">Smart Retail</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">ERP</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">CRM</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">Omnichannel E-Commerce</a></li>
+            </ul>
+          </div>
+          <div>
+            <!-- <div>
+              <h4 class="font--h4 h4-mt"><a href="/edtech" class="font--h4">EdTech</a></h4>
+              <ul>
+                <li class="menu-item"><a class="font--14" href="/e-learning">e-Learning</a></li>
+                <li class="menu-item"><a class="font--14" href="/lms">LMS</a></li>
+              </ul>
+            </div> -->
+            <!-- <div>
+              <h4 class="font--h4 h4-mt"><a href="/retail" class="font--h4">Retail</a></h4>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9 footer-copyright-upd">
+      <div>
+      </div>
+      <div>
+        <a href="#" class="font--14 pale">Terms & Conditions</a>
+      </div>
+      <div>
+        <a href="/privacy-policy" class="font--14 pale">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+  <!--Footer End-->
+</body>
+</html>
