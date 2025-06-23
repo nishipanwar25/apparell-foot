@@ -1,9 +1,32 @@
-body {
+/* body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
   background: #fff;
   box-sizing: border-box;
+  width: 100%;
+} */
+
+body {
+  background: white;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+
 }
 
 /* Hero section styles */
@@ -59,8 +82,8 @@ body {
 }
 
 .lets-talk {
-  background-color:#f9e8d2;
-  color: white;
+  background-color:#FFD700;
+  color: black;
   font-weight: 600;
   padding: 16px 32px;
   border-radius: 25px;
@@ -71,7 +94,7 @@ body {
 }
 
 .lets-talk:hover {
-  background-color: #f39c12;
+  background-color: #c7b137;
   transform: translateY(-2px);
 }
 
@@ -115,6 +138,8 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   height: auto;
+  background: #f8f9fa;
+  color: #2c3e50;
 }
 
 .sol-cards .card:hover {
@@ -198,7 +223,8 @@ body {
 
 .tech-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   padding: 40px 0;
 }
@@ -265,9 +291,16 @@ body {
 }
 
 .accordion-body {
-  padding: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 20px; /* initial horizontal padding */
   color: #6c757d;
   line-height: 1.6;
+}
+
+.accordion-body.open {
+  padding: 20px; /* add top/bottom when open */
 }
 
 /* Why hire section */
@@ -297,6 +330,13 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background: #fff;
+}
+
+.hire-cards .card img{
+  height: 100px;
+  width: 100px;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .hire-cards .card-body {

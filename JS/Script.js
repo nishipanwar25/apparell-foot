@@ -232,7 +232,7 @@ function getBotResponse(input) {
     return "I'm here to help! Ask me about Pricing, Services, or Contact.";
   }
 }
-
+document.addEventListener("DOMContentLoaded", () => {
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
     const body = header.nextElementSibling;
@@ -253,6 +253,7 @@ document.querySelectorAll('.accordion-header').forEach(header => {
       icon.textContent = '−';
     }
   });
+});
 });
 
 // process section
