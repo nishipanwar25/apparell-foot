@@ -518,7 +518,7 @@ html {
     padding: 15px;
   }
 }
-
+/* mobile devices */
 @media (max-width: 480px) {
   .hero-head {
     font-size: 1.6rem;
