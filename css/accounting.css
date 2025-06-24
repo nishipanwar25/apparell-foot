@@ -97,6 +97,46 @@ body {
 }
 /* accounting softawre perks ends */
 
+/* <!-- features section starts -->  */
+  .features{
+    margin: 40px;
+    padding: 40px;
+  }
+
+  .features-up-div{
+    display: flex;
+  }
+
+  .features-up-div h2 {
+    padding-top: 10px;
+  }
+
+  .f-img{
+    width: 200px;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  .features-cards{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .features-cards p{
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+
+  .F-card{
+    max-width: 400px;
+  }
+
+  .F-card p{
+    max-width: 300px;
+  }
+/* <!-- features section ends -->  */
 
 
 
@@ -147,6 +187,20 @@ body {
   .perks-points ul>li{
     font-size: 1.1rem;
   }
+
+  .features-up-div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features-up-div img{
+   display: none;
+  }
+
+  .features-cards{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width:576px){
@@ -161,6 +215,20 @@ body {
   }
 
   .perks-points{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features-up-div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features-up-div img{
+   display: none;
+  }
+
+  .features-cards{
     display: flex;
     flex-direction: column;
   }
@@ -181,6 +249,10 @@ body {
    .hero-para {
     font-size: 1rem;
   }
+
+  .features-up-div>h1,h2{
+     font-size: 2rem;
+  }
 }
 
 @media (max-width: 992px){
@@ -193,6 +265,10 @@ body {
    .perks h1
    {
     font-size: 2.5rem;
+  }
+
+  .features-up-div>h1,h2{
+     font-size: 2.5rem;
   }
   
 }
@@ -209,6 +285,10 @@ body {
 
    .perks-points ul>li{
     font-size: 1.3rem;
+  }
+
+  .features-up-div>h1,h2{
+     font-size: 3rem;
   }
 
 }
