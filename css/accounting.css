@@ -125,7 +125,7 @@ body {
   }
 
   .features-cards p{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.1rem;
   }
 
@@ -135,6 +135,19 @@ body {
 
   .F-card p{
     max-width: 300px;
+  }
+
+  .lets-talk{
+  background-color:#FFD700;
+  color: black;
+  font-weight: 600;
+  padding: 16px 32px;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
   }
 /* <!-- features section ends -->  */
 
