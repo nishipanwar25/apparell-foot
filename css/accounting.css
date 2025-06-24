@@ -151,6 +151,34 @@ body {
   }
 /* <!-- features section ends -->  */
 
+/* custom section start */
+.custom{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px;
+  padding: 40px;
+}
+
+.custom-left h1{
+   font-weight: 500;
+   margin-bottom: 20px;
+}
+
+.custom-left img{
+   width: 300px;
+   margin-top: 20px;
+   padding-top: 20px;
+}
+
+.accordion{
+  background-color: #95c5f8;
+}
+
+.accordion-body li::marker {
+  color: #007BFF; /* Your desired color */
+}
+/* custom section ends */
+
 
 
 
@@ -246,6 +274,11 @@ body {
     flex-direction: column;
   }
 
+  .custom{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 @media (max-width: 768px){
@@ -265,6 +298,11 @@ body {
 
   .features-up-div>h1,h2{
      font-size: 2rem;
+  }
+
+   .custom{
+    display: flex;
+    flex-direction: column;
   }
 }
 
