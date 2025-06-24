@@ -84,11 +84,17 @@ body {
     justify-content: space-evenly;
     gap: 50px;
     margin-top: 50px;
+    font-weight: 300;
   }
 
   .perks-points ul>li{
     font-size: 1.1rem;
+    margin-bottom: 5px; 
   }
+
+  .perks-points li::marker {
+  color: #007BFF; /* Your desired color */
+}
 /* accounting softawre perks ends */
 
 
