@@ -1,0 +1,954 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 70vh;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 5%;
+  min-height: 70vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.left-hero {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding-right: 40px;
+  padding-bottom: 50px;
+}
+
+.hero-head {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hero-para {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.right-hero img {
+  max-width: 80%;
+  height: auto;
+  margin-left: 50px;
+  padding-left: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+.order {
+  background-color: #ffd700;
+  color: black;
+  width: 200px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order:hover {
+  background-color: #c7b137;
+  transform: translateY(-2px);
+}
+
+/* accounting softawre perks start */
+.perks {
+  margin: 40px;
+  padding: 40px;
+}
+
+.perks-points {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  margin-top: 50px;
+  font-weight: 300;
+}
+
+.perks-points ul > li {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.perks-points li::marker {
+  color: #007bff; /* Your desired color */
+}
+/* accounting softawre perks ends */
+
+/* <!-- features section starts -->  */
+.features {
+  margin: 40px;
+  padding: 40px;
+}
+
+.features-up-div {
+  display: flex;
+}
+
+.features-up-div h2 {
+  padding-top: 10px;
+}
+
+.f-img {
+  width: 200px;
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.features-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.features-cards p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.F-card {
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  border: none;
+}
+
+.F-card:hover {
+  transform: translateY(-5px);
+}
+
+.F-card p {
+  max-width: 300px;
+}
+
+.lets-talk {
+  background-color: #ffd700;
+  color: black;
+  font-weight: 600;
+  padding: 16px 32px;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lets-talk:hover {
+  background-color: #c7b137;
+  transform: translateY(-2px);
+}
+/* <!-- features section ends -->  */
+
+/* custom section start */
+.custom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px;
+  padding: 40px;
+}
+
+.custom-left {
+  flex: 1;
+  max-width: 400px;
+}
+
+.custom-left h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.custom-left img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.accordion {
+  flex: 1;
+  background-color: #95c5f8;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-body li::marker {
+  color: #007bff; /* Your desired color */
+}
+/* custom section ends */
+
+/* accounting features start */
+.accounting {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  padding: 40px;
+}
+
+.account-features {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.account-head h1,
+h2 {
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+.account-features p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.account-card {
+  flex: 1;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  border: none;
+}
+
+.account-card:hover {
+  transform: translateY(-5px);
+}
+
+.account-card p {
+  max-width: 300px;
+}
+/* accounting features ends */
+
+/* <!-- how it works starts --> */
+.works {
+  margin: 40px;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.works h1 {
+  color: black;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.card {
+  background: transparent !important;
+  border: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 30px;
+  position: relative;
+  right: 200px;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(246deg) brightness(104%)
+    contrast(97%);
+}
+
+.card-body {
+  padding: 0 !important;
+  text-align: left;
+  padding: 12px;
+}
+
+.card-title {
+  margin-bottom: 20px;
+}
+
+.card-title a {
+  color: #6366f1;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+  display: block;
+}
+
+.card-title a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+  text-decoration-color: #6366f1;
+}
+
+.card-text {
+  color: black;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+/* <!-- how it works ends --> */
+
+/* _________RESPONSIVE MEDIA QUERIES_______ */
+
+/* Extra Large Screens (1400px and up) */
+@media (min-width: 1400px) {
+  .hero {
+    padding: 80px 8%;
+  }
+
+  .hero-head {
+    font-size: 3.5rem;
+  }
+
+  .hero-para {
+    font-size: 1.3rem;
+  }
+
+  .perks,
+  .features,
+  .custom,
+  .accounting,
+  .works {
+    margin: 60px;
+    padding: 60px;
+  }
+}
+
+/* Large Screens (1200px to 1399px) */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .hero {
+    padding: 60px 6%;
+  }
+
+  .hero-head {
+    font-size: 3rem;
+  }
+
+  .hero-para {
+    font-size: 1.2rem;
+  }
+
+  .perks h1,
+  .features h1,
+  .accounting h1 {
+    font-size: 2.8rem;
+  }
+
+  .perks-points ul > li {
+    font-size: 1.2rem;
+  }
+
+  .work-cards {
+    gap: 50px 70px;
+  }
+}
+
+/* Medium-Large Screens (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero-head {
+    font-size: 2.5rem;
+  }
+
+  .hero-para {
+    font-size: 1.1rem;
+  }
+
+  .perks h1,
+  .features h1,
+  .accounting h1 {
+    font-size: 2.5rem;
+  }
+
+  .perks-points ul > li {
+    font-size: 1.1rem;
+  }
+
+  .features-cards {
+    gap: 15px;
+  }
+
+  .account-features {
+    gap: 15px;
+  }
+
+  .work-cards {
+    gap: 40px 60px;
+  }
+}
+
+/* Medium Screens (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 4%;
+    min-height: auto;
+  }
+
+  .left-hero {
+    max-width: 100%;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .hero-head {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-para {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .right-hero {
+    margin-bottom: 30px;
+  }
+
+  .right-hero img {
+    max-width: 60%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .order {
+    width: 180px;
+    padding: 14px 28px;
+  }
+
+  .perks,
+  .features,
+  .accounting,
+  .works {
+    margin: 30px 20px;
+    padding: 30px 20px;
+  }
+
+  .custom {
+    margin: 30px 20px;
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .perks h1,
+  .features h1,
+  .accounting h1 {
+    font-size: 2.2rem;
+  }
+
+  .perks-points {
+    gap: 30px;
+  }
+
+  .features-up-div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .f-img {
+    width: 150px;
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .features-cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .F-card,
+  .account-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .account-features {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .work-cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .works h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+}
+
+/* Small-Medium Screens (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 3%;
+    min-height: auto;
+  }
+
+  .left-hero {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero-head {
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+  }
+
+  .hero-para {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .right-hero img {
+    max-width: 70%;
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+
+  .order {
+    width: 160px;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .perks,
+  .features,
+  .accounting,
+  .works {
+    margin: 25px 15px;
+    padding: 25px 15px;
+  }
+
+  .custom {
+    margin: 25px 15px;
+    padding: 25px 15px;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .perks h1,
+  .features h1,
+  .accounting h1 {
+    font-size: 2rem;
+  }
+
+  .perks-points {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .perks-points ul > li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .features-up-div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .f-img {
+    width: 120px;
+    margin: 15px 0;
+    padding: 0;
+  }
+
+  .features-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .F-card,
+  .account-card {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  .F-card p,
+  .account-card p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .account-features {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .works h1 {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+
+  .work-cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .card-title a {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
+/* Small Screens (480px to 575px) */
+@media (max-width: 575px) and (min-width: 480px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 25px 2%;
+    min-height: auto;
+  }
+
+  .hero-head {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-para {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+
+  .right-hero img {
+    max-width: 80%;
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+
+  .order {
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  .perks,
+  .features,
+  .accounting,
+  .works {
+    margin: 20px 10px;
+    padding: 20px 10px;
+  }
+
+  .custom {
+    margin: 20px 10px;
+    padding: 20px 10px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .perks h1,
+  .features h1,
+  .accounting h1 {
+    font-size: 1.8rem;
+  }
+
+  .perks-points {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .perks-points ul > li {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+
+  .features-up-div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .f-img {
+    display: none;
+  }
+
+  .features-cards {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .F-card,
+  .account-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .F-card p,
+  .account-card p {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .account-features {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .works h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .work-cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 10px;
+  }
+
+  
+  .card-img-top{
+    position: relative;
+    right: 120px;
+  }
+
+  .card-title a {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra Small Screens (up to 479px) */
+@media (max-width: 479px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px 2%;
+    min-height: auto;
+  }
+
+  .hero-head {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .hero-para {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+
+  .right-hero img {
+    max-width: 90%;
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+
+  .order {
+    width: 140px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .perks,
+  .features,
+  .accounting,
+  .works {
+    margin: 15px 5px;
+    padding: 15px 5px;
+  }
+
+  .custom {
+    margin: 15px 5px;
+    padding: 15px 5px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .perks h1,
+  .features h1,
+  .accounting h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .perks-points {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .perks-points ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .perks-points ul > li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .features-up-div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features-up-div h1 {
+    font-size: 1.6rem;
+  }
+
+  .features-up-div h2 {
+    font-size: 1.2rem;
+    padding-top: 5px;
+  }
+
+  .f-img {
+    display: none;
+  }
+
+  .features-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .F-card,
+  .account-card {
+    padding: 18px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .F-card h2,
+  .account-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .F-card p,
+  .account-card p {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .account-features {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .lets-talk {
+    width: 140px;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    margin-top: 15px;
+  }
+
+  .custom-left h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .custom-left img {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .works h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .work-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 5px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card-img-top {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    position: relative;
+    right: 120px;
+  }
+
+  .card-title a {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
