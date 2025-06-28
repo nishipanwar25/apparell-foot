@@ -1,0 +1,296 @@
+body {
+  background: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* hero section starts */
+   .hero{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(43, 43, 243);
+   }
+
+   .left-hero{
+    max-width: 600px;
+   }
+   
+   .left-hero h1{
+    font-size: 4rem;
+   }
+
+   .left-hero p{
+    font-size: 1.2rem;
+    font-weight: 500;
+   }
+
+   .left-hero > h1,p,button{
+     padding: 10px 0;
+   }
+
+   /* media query for hero section */
+   @media screen and (max-width: 480px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    margin: 15px;
+  }
+
+  .left-hero h1 {
+    font-size: 2rem;
+  }
+
+  .left-hero p {
+    font-size: 0.95rem;
+  }
+
+  .left-hero > h1,
+  .left-hero > p,
+  .left-hero > button {
+    padding: 6px 0;
+  }
+
+  .left-hero button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .right img {
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto 0;
+  }
+}
+
+   @media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .left-hero {
+    max-width: 100%;
+  }
+
+  .left-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .left-hero p {
+    font-size: 1rem;
+  }
+
+  .left-hero > h1,
+  .left-hero > p,
+  .left-hero > button {
+    padding: 8px 0;
+  }
+
+  .right img {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+  }
+}
+
+/* hero section ends */
+
+/* strength section start */
+.strength{
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.strength h1{
+   font-size: 3rem;
+}
+
+.strength button{
+   border-radius: 50px;
+   margin-bottom: 50px;
+   border: 1px solid whitesmoke;
+}
+
+.strength p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* media query */
+
+@media screen and (max-width: 768px) {
+  .strength {
+    max-width: 90%;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .strength h1 {
+    font-size: 2.2rem;
+  }
+
+  .strength p {
+    font-size: 1rem;
+  }
+
+  .strength button {
+    right: 0;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .strength {
+    max-width: 95%;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .strength h1 {
+    font-size: 1.8rem;
+  }
+
+  .strength p {
+    font-size: 0.95rem;
+  }
+
+  .strength button {
+    right: 0;
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    width: 100%;
+  }
+}
+/* strength section ends */
+
+/* gst section starts */
+
+    .gst {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 80px 60px;
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+.left-gst {
+  flex: 1;
+  max-width: 50%;
+   font-weight: 500;
+}
+
+.left-gst h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.left-gst p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.left-gst ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.left-gst ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.right-gst {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.right-gst img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+  .gst {
+    flex-direction: column;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  #additional-query{
+    flex-direction: column;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .left-gst, .right-gst {
+    max-width: 100%;
+  }
+
+  .left-gst h2 {
+    font-size: 2rem;
+  }
+
+  .left-gst p {
+    font-size: 1rem;
+  }
+
+  .left-gst ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+}
+/* gst section ends */
+
+/* business section starts */
+.business{
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.business h1{
+   font-size: 3.5rem;
+}
+
+.business p{
+    font-size: larger;
+}
+
+.business button{
+   border-radius: 50px;
+   margin-bottom: 30px;
+   border: 1px solid whitesmoke;
+}
+
+/* business section ends */
