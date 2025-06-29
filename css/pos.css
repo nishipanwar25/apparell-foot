@@ -287,6 +287,45 @@ html {
    border: 1px solid whitesmoke;
 }
 
+/* media query */
+/* Responsive styles for .business section */
+@media (max-width: 992px) {
+  .business {
+    padding: 40px 20px;
+  }
+
+  .business h1 {
+    font-size: 2.5rem;
+  }
+
+  .business p {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+
+  .business button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .business h1 {
+    font-size: 2rem;
+  }
+
+  .business p {
+    font-size: 0.95rem;
+  }
+
+  .business button {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+}
+
+
 /* business section ends */
 
 /* grid cards starts */
