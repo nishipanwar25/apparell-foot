@@ -408,6 +408,45 @@ html {
     width: 100px;
     border-radius: 50px;
 }
+/* media query */
+/* Responsive styles for .choose section */
+@media (max-width: 992px) {
+  .choose {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .choose h1 {
+    font-size: 2.5rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .choose-reason {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+  }
+
+  .choose-svg img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .choose h1 {
+    font-size: 2rem;
+  }
+
+  .choose-svg img {
+    height: 70px;
+    width: 70px;
+  }
+}
+
 /* choose section ends */
 
 /* faq section starts */
