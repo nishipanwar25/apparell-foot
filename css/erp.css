@@ -1,0 +1,378 @@
+/* ERP Page Specific Styles */
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5% 100px;
+    min-height: 70vh;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+}
+
+.left-hero {
+    flex: 1;
+    max-width: 500px;
+    padding-right: 40px;
+}
+
+.left-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.left-hero p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.left-hero button {
+    background: #4F7EFF;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.left-hero button:hover {
+    background: #3d6bff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(79, 126, 255, 0.3);
+}
+
+.right-hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-hero img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+/* Why Use Section */
+.why-use {
+    display: flex;
+    align-items: center;
+    padding: 100px 5%;
+    background: #f8f9ff;
+    gap: 60px;
+}
+
+.why-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.why-left img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+.why-right {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.why-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-right li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    line-height: 1.5;
+}
+
+.why-right li:before {
+    content: "✓";
+    color: #4F7EFF;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+/* Features Section */
+.features {
+    padding: 100px 5%;
+    background: white;
+    text-align: center;
+}
+
+.features h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.features > p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-cards .card {
+    background: #f8f9ff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e8ecff;
+}
+
+.feature-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(79, 126, 255, 0.1);
+}
+
+.feature-cards .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 24px;
+    background: #4F7EFF;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.feature-cards .card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+.feature-cards .card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.feature-cards .card a {
+    color: #4F7EFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: lowercase;
+}
+
+.feature-cards .card a:hover {
+    text-decoration: underline;
+}
+
+/* Beauty Card Sections */
+.beauty-card {
+    display: flex;
+    align-items: center;
+    padding: 80px 5%;
+    gap: 60px;
+}
+
+.beauty-card:nth-child(odd) {
+    background: white;
+}
+
+.beauty-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beauty-img img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+.left-beauty {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.left-beauty h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    line-height: 1.3;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.left-beauty p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+.left-beauty p a {
+    color: #4F7EFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.left-beauty p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5%;
+    }
+    
+    .left-hero {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .left-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .why-use {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .why-right {
+        padding-left: 0;
+    }
+    
+    .features h1 {
+        font-size: 2.2rem;
+    }
+    
+    .feature-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .beauty-card {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .left-beauty h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 5%;
+    }
+    
+    .left-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .left-hero p {
+        font-size: 1rem;
+    }
+    
+    .features {
+        padding: 60px 5%;
+    }
+    
+    .features h1 {
+        font-size: 1.8rem;
+    }
+    
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-cards .card {
+        padding: 30px 20px;
+    }
+    
+    .beauty-card {
+        padding: 60px 5%;
+    }
+    
+    .left-beauty h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Animation Effects */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero, .why-use, .features, .beauty-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4F7EFF;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3d6bff;
+}
