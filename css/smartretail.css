@@ -1,0 +1,70 @@
+/* feature Section Styles - Updated */
+.amir {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.amir-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.amir-cards h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 60px;
+}
+
+/* Updated grid layout for amir cards */
+.amir-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    justify-items: center;
+}
+
+.amir .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+}
+
+.amir .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.amir .card-img-top {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 20px auto 0;
+    display: block;
+}
+
+.amir .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.amir .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+
+.amir .card-text {
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+/* feature section ends */
