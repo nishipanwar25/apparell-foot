@@ -1,0 +1,459 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5% 60px;
+    min-height: 70vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.left-hero {
+    flex: 1;
+    max-width: 600px;
+    padding-right: 40px;
+}
+
+.left-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #1a202c;
+}
+
+.left-hero h1 .highlight {
+    color: #3b82f6;
+}
+
+.left-hero p {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.right-hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Indian Firms Section */
+.indian-firms {
+    padding: 80px 5% 60px;
+    text-align: center;
+    background-color: #f1f5f9;
+}
+
+.indian-firms h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a202c;
+}
+
+.indian-firms h4 {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.indian-firms-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.indian-firms-card {
+    background: white;
+    padding: 40px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.indian-firms-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+.indian-firms-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.indian-firms-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a202c;
+}
+
+.indian-firms-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Tools Section */
+.tools {
+    padding: 80px 5% 60px;
+    text-align: center;
+    background-color: white;
+}
+
+.tools h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a202c;
+}
+
+.tools p {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tool-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tool-card {
+    background: white;
+    padding: 40px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+}
+
+.tool-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.tool-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a202c;
+}
+
+.tool-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Indian Accounting Section */
+.indian-accounting {
+    padding: 80px 5% 60px;
+    background-color: #f1f5f9;
+}
+
+.indian-account-head {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.indian-account-head h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a202c;
+}
+
+.indian-account-head h2 {
+    font-size: 1.25rem;
+    color: #64748b;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.indian-account-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.indian-account-card {
+    background: white;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.indian-account-card:hover {
+    transform: translateY(-4px);
+}
+
+.indian-account-card img {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.indian-account-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a202c;
+}
+
+.indian-account-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Workflow Section */
+.workflow {
+    padding: 80px 5% 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.left-workflow,
+.right-workflow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.workflow-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.workflow-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Security Section */
+.security {
+    padding: 80px 5% 60px;
+    text-align: center;
+    background-color: #f8fafc;
+}
+
+.security h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1a202c;
+}
+
+.security-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto 32px;
+}
+
+.security-card {
+    background: white;
+    padding: 40px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.security-card:hover {
+    transform: translateY(-4px);
+}
+
+.security-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.security-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a202c;
+}
+
+.security-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5% 40px;
+    }
+    
+    .left-hero {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .left-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .workflow {
+        flex-direction: column;
+    }
+    
+    .workflow-img {
+        order: -1;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .indian-firms h2,
+    .tools h1,
+    .indian-account-head h1,
+    .security h1 {
+        font-size: 2rem;
+    }
+    
+    .indian-firms-cards,
+    .tool-cards,
+    .indian-account-cards,
+    .security-cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .indian-account-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero,
+    .indian-firms,
+    .tools,
+    .indian-accounting,
+    .workflow,
+    .security {
+        padding: 60px 5% 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .left-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .indian-firms-card,
+    .tool-card,
+    .indian-account-card,
+    .security-card {
+        padding: 32px 20px;
+    }
+    
+    .hero,
+    .indian-firms,
+    .tools,
+    .indian-accounting,
+    .workflow,
+    .security {
+        padding: 40px 5% 30px;
+    }
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.highlight-blue {
+    color: #3b82f6;
+}
