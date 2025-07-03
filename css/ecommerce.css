@@ -309,17 +309,12 @@ body {
     margin: 0 auto 32px;
 }
 
-/* Position the 4th and 5th cards in the center of the second row */
-.security-card:nth-child(4) {
-  grid-column: 1 / 3;
-  justify-self: end;
-  margin-right: 12px;
-}
-
-.security-card:nth-child(5) {
-  grid-column: 2 / 4;
-  justify-self: start;
-  margin-left: 12px;
+.last-two-cards {
+  grid-column: 1 / -1; /* Span all columns */
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
 }
 
 .security-card {
@@ -399,6 +394,12 @@ body {
         grid-template-columns: 1fr;
         gap: 24px;
     }
+
+    .last-two-cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
     
     .indian-account-card {
         flex-direction: column;
@@ -429,6 +430,12 @@ body {
     .indian-account-card,
     .security-card {
         padding: 32px 20px;
+    }
+
+    .last-two-cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
     
     .hero,
