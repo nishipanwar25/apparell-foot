@@ -373,8 +373,9 @@ html {
 }
 
 .card-text {
-  color: #d1d5db;
-  font-size: 0.875rem;
+  color: black;
+  font-size: 1 rem;
+  font-weight: 400;
   line-height: 1.6;
   margin-bottom: 0;
 }
@@ -433,9 +434,11 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
+  margin: 0 auto;
   margin-top: 80px;
   height: 90vh;
+  width: 100%;
   background-color: rgb(57, 57, 253);
   color: white;
 }
@@ -452,6 +455,10 @@ html {
   justify-content: space-evenly;
   gap: 150px;
   margin-top: 50px;
+}
+
+.choose-reason>div{
+    max-width: 120px;
 }
 
 .choose-svg img{
