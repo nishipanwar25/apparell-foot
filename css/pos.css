@@ -24,7 +24,7 @@ html {
     color: white;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgb(43, 43, 243);
+    background-color: rgb(81, 81, 253);
    }
 
    .left-hero{
@@ -136,6 +136,7 @@ html {
 .strength p{
     font-size: 1.2rem;
     font-weight: 400;
+    max-width: 600px;
 }
 
 /* media query */
@@ -202,8 +203,8 @@ html {
    font-weight: 500;
 }
 
-.left-gst h2 {
-  font-size: 2.5rem;
+.left-gst h4 {
+  /* font-size: 2.5rem; */
   margin-bottom: 20px;
 }
 
@@ -213,11 +214,18 @@ html {
   margin-bottom: 20px;
 }
 
+.left-gst ol {
+  padding-left: 20px;
+}
 .left-gst ul {
-  list-style-type: disc;
   padding-left: 20px;
 }
 
+.left-gst ol li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 2;
+}
 .left-gst ul li {
   margin-bottom: 10px;
   font-size: 1rem;
@@ -248,12 +256,17 @@ html {
     max-width: 100%;
   }
 
-  .left-gst h2 {
+  .left-gst h4 {
     font-size: 2rem;
   }
 
   .left-gst p {
     font-size: 1rem;
+  }
+
+  .left-gst ol {
+    padding-left: 0;
+    list-style-position: inside;
   }
 
   .left-gst ul {
@@ -275,6 +288,7 @@ html {
 
 .business h1{
    font-size: 3.5rem;
+   max-width: 800px;
 }
 
 .business p{
@@ -336,7 +350,7 @@ html {
   padding: 40px 20px;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   min-height: 100vh;
-}
+ }
 
 .card {
   background: rgba(55, 65, 81, 0.6);
