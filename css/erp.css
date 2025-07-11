@@ -72,6 +72,17 @@
     gap: 60px;
 }
 
+.action-impact{
+    display: flex;
+    gap: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.action-impact span:first-of-type {
+    margin-left: 30px;
+ }
+
 .why-left {
     flex: 1;
     display: flex;
@@ -196,6 +207,16 @@
     align-items: center;
     padding: 80px 5%;
     gap: 60px;
+}
+
+.beauty-card ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+ul li::marker {
+  color: blue;
 }
 
 .beauty-card:nth-child(odd) {

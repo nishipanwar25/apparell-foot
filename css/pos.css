@@ -6,6 +6,10 @@ body {
 }
 
 
+ul li::marker {
+  color: blue;
+}
+
 html {
   scroll-behavior: smooth;
 }
