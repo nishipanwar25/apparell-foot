@@ -1,5 +1,7 @@
 /* ERP Page Specific Styles */
-
+ul li::marker {
+  color: blue;
+}
 /* Hero Section */
 .hero {
     display: flex;
