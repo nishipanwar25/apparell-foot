@@ -142,6 +142,12 @@
     font-family: 'Urbanist', sans-serif;
 }
 
+.offer ul li{
+  margin-bottom: 5px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
 .right-payment .offer {
     margin-bottom: 40px;
 }

@@ -72,6 +72,21 @@
   max-width: 500px;
 }
 
+.right-insight ul li{
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.right-insight ul li::marker{
+  color: rgb(58, 250, 58);
+}
+
+.right-insight ul {
+  position: relative;
+  right: 10px;
+}
+
 .right-insight h2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -178,6 +193,12 @@
   background-color: #f8fafc;
 }
 
+.version h1{
+   padding-left: 20px;
+   margin-bottom: 40px;
+   margin-left: 20px;
+}
+
 .version-cards {
   max-width: 1000px;
   margin: 0 auto;
@@ -206,6 +227,16 @@
   height: 250px;
   object-fit: cover;
 }
+
+ .new-card ul {
+  padding-left: 20px;     
+  margin: 0;
+  line-height: 2;
+}
+
+ .new-card ul li {
+  font-size: 1.2rem;
+} 
 
 .version .card-body {
   padding: 30px;
@@ -243,6 +274,128 @@
   border-color: #38a169;
   transform: translateY(-2px);
 }
+
+/* why use crm section starts */
+.why-use-crm {
+  margin: 40px;
+  padding: 40px;
+}
+
+.why-use-crm{
+
+}
+
+.crm-points {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  margin-top: 50px;
+  font-weight: 300;
+}
+
+.crm-points ul > li {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.crm-points li::marker {
+  color: #38a169; /* Your desired color */
+}
+/* why use crm section ends */
+
+/* built for sale driven section starts */
+/* gst section starts */
+
+    .gst {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 80px 60px;
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+.left-gst {
+  flex: 1;
+  max-width: 50%;
+   font-weight: 500;
+}
+
+.left-gst h4 {
+  /* font-size: 2.5rem; */
+  margin-bottom: 20px;
+}
+
+.left-gst p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.left-gst ol {
+  padding-left: 20px;
+}
+.left-gst ul {
+  padding-left: 20px;
+}
+
+.left-gst ol li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.left-gst ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.right-gst {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.right-gst img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+  .gst {
+    flex-direction: column;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .left-gst, .right-gst {
+    max-width: 100%;
+  }
+
+  .left-gst h4 {
+    font-size: 2rem;
+  }
+
+  .left-gst p {
+    font-size: 1rem;
+  }
+
+  .left-gst ol {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .left-gst ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+}
+/* gst section ends */
+
+/* built for sale driven section ends */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -320,6 +473,16 @@
 
   .amir-cards h1 {
     font-size: 1.75rem;
+  }
+
+  .crm-points {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .crm-points ul > li {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
   }
 
   .version {
