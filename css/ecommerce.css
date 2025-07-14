@@ -422,6 +422,10 @@ body {
     line-height: 1.5;
 }
 
+/* <!-- why going omnichannel section starts --> */
+
+/* <!-- why going omnichannel section ends --> */
+
 /* Workflow Section */
 .workflow {
     padding: 80px 5% 60px;
@@ -430,6 +434,14 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+}
+
+.workflow-head{
+    font-size: 2.5rem;
+    font-weight: 700;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding-top: 30px;
 }
 
 .left-workflow,
@@ -724,6 +736,12 @@ body {
     gap: 30px;
   }
 
+  .workflow-head{
+    padding: 18px 32px;
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -787,6 +805,11 @@ body {
     top: 0;
   }
 
+  .workflow-head{
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 2rem;
+  }
   
   .version {
     padding: 40px 15px;
