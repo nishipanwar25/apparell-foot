@@ -2,6 +2,10 @@
 ul li::marker {
   color: blue;
 }
+
+li{
+     text-align: left;
+}
 /* Hero Section */
 .hero {
     display: flex;

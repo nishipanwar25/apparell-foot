@@ -59,6 +59,172 @@ body {
     height: auto;
 }
 
+/* <!-- what does omnichannel section starts --> */
+.features {
+  margin: 40px;
+  padding: 40px;
+}
+
+.features-up-div {
+  display: flex;
+}
+
+.feature-ul ul{
+  line-height: 2;
+  font-size: 1rem;
+
+}
+
+.features-up-div h2 {
+  padding-top: 10px;
+}
+
+.f-img {
+  width: 200px;
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.features-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.features-cards p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.F-card {
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  border: none;
+}
+
+.F-card:hover {
+  transform: translateY(-5px);
+}
+
+.F-card p {
+  max-width: 300px;
+}
+
+.lets-talk {
+  background-color: #ffd700;
+  color: black;
+  font-weight: 600;
+  padding: 16px 32px;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lets-talk:hover {
+  background-color: #c7b137;
+  transform: translateY(-2px);
+}
+/* <!-- what does omnichannel section ends --> */
+/* how fusorum connect section starts */
+  /* Version Section Styles */
+.version {
+  padding: 80px 20px;
+  background-color: #f8fafc;
+}
+
+.version h1{
+   padding-left: 20px;
+   margin-bottom: 40px;
+   margin-left: 20px;
+}
+
+.version-cards {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+.version .card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+}
+
+.version .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.version .card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+ .new-card ul {
+  padding-left: 20px;     
+  margin: 0;
+  line-height: 2;
+}
+
+ .new-card ul li {
+  font-size: 1.2rem;
+} 
+
+.version .card-body {
+  padding: 30px;
+}
+
+.version .card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.version .card-text {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.version .btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.version .btn-primary {
+  background-color: #48bb78;
+  border-color: #48bb78;
+  color: white;
+}
+
+.version .btn-primary:hover {
+  background-color: #38a169;
+  border-color: #38a169;
+  transform: translateY(-2px);
+}
+
+/* how fusorum connect section ends */
+
 /* Indian Firms Section */
 .indian-firms {
     padding: 80px 5% 60px;
@@ -348,6 +514,108 @@ body {
     line-height: 1.6;
 }
 
+/* gst section starts */
+    .gst {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 80px 60px;
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+.left-gst {
+  flex: 1;
+  max-width: 50%;
+   font-weight: 500;
+}
+
+.left-gst h4 {
+  /* font-size: 2.5rem; */
+  margin-bottom: 20px;
+}
+
+.left-gst p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.left-gst ol {
+  padding-left: 20px;
+}
+.left-gst ul {
+  padding-left: 20px;
+}
+
+.left-gst ol li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.left-gst ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.right-gst {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.right-gst img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+  .gst {
+    flex-direction: column;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .left-gst, .right-gst {
+    max-width: 100%;
+  }
+
+  .left-gst h4 {
+    font-size: 2rem;
+  }
+
+  .left-gst p {
+    font-size: 1rem;
+  }
+
+  .left-gst ol {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .left-gst ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .left-gst-ul li{
+    text-align: left;
+     position: relative;
+     text-indent: 0;      /* no extra indent */
+  }
+  .left-gst-ul li::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+/* gst section ends */
+
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero {
@@ -373,6 +641,18 @@ body {
         order: -1;
         margin-bottom: 40px;
     }
+
+    .features h1{
+    font-size: 2.5rem;
+  }
+
+  .features-cards {
+    gap: 15px;
+  }
+
+   .account-features {
+    gap: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -414,6 +694,36 @@ body {
     .security {
         padding: 60px 5% 40px;
     }
+
+     .features{
+    margin: 30px 20px;
+    padding: 30px 20px;
+  }
+
+  .features h1{
+    font-size: 2.2rem;
+  }
+
+  .features-up-div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .features-cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+   .version {
+    padding: 60px 20px;
+  }
+
+  .version-cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -446,6 +756,53 @@ body {
     .security {
         padding: 40px 5% 30px;
     }
+
+      .features{
+    margin: 20px 10px;
+    padding: 20px 10px;
+  }
+
+   .features h1{
+    font-size: 1.8rem;
+  }
+
+   .features-up-div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-ul{
+   padding: 0;
+   margin: 0;
+  }
+
+  .feature-ul li{
+    text-align: left;
+     position: relative;
+     text-indent: 0;      /* no extra indent */
+  }
+  .feature-ul li::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  
+  .version {
+    padding: 40px 15px;
+  }
+
+  .version-cards {
+    max-width: 100%;
+  }
+
+  .version .card-body {
+    padding: 20px;
+  }
+
+  .version .card-title {
+    font-size: 1.25rem;
+  }
 }
 
 /* Animation utilities */

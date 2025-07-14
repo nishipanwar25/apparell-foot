@@ -281,10 +281,6 @@
   padding: 40px;
 }
 
-.why-use-crm{
-
-}
-
 .crm-points {
   display: flex;
   justify-content: space-evenly;
@@ -304,8 +300,8 @@
 /* why use crm section ends */
 
 /* built for sale driven section starts */
-/* gst section starts */
 
+/* gst section starts */
     .gst {
   display: flex;
   justify-content: space-between;
