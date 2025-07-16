@@ -144,11 +144,11 @@
 }
 
 .version h1{
-   padding-left: 20px;
-   margin-bottom: 40px;
-   margin-left: 20px;
-   /* max-width: 900px; */
+  max-width: 900px;
+  margin-left:150px;
+  margin-bottom: 40px;
 }
+
 
 .version-cards {
   max-width: 1000px;
@@ -323,7 +323,7 @@
     padding: 100px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 60px;
 }
 
@@ -345,6 +345,7 @@
     flex: 1;
     color: white;
     max-width: 500px;
+    margin-right: 50px;
 }
 
 .right-payment h2 {
@@ -572,6 +573,12 @@
         max-width: 280px;
         text-align: center;
     }
+
+    .version h1{
+  max-width: 900px;
+  margin-left:30px;
+  margin-bottom: 40px;
+}
 }
 
 /* Mobile Small */

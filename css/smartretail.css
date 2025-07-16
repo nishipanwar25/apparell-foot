@@ -195,9 +195,9 @@
 }
 
 .version h1{
-   padding-left: 20px;
-   margin-bottom: 40px;
-   margin-left: 20px;
+  max-width: 900px;
+  margin-left:150px;
+  margin-bottom: 40px;
 }
 
 .version-cards {

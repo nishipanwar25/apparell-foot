@@ -194,10 +194,11 @@
 }
 
 .version h1{
-   padding-left: 20px;
-   margin-bottom: 40px;
-   margin-left: 20px;
+  max-width: 900px;
+  margin-left:150px;
+  margin-bottom: 40px;
 }
+
 
 .version-cards {
   max-width: 1000px;
@@ -280,6 +281,13 @@
   margin: 40px;
   padding: 40px;
 }
+
+.why-use-crm h1{
+  max-width: 900px;
+  margin-left:150px;
+  margin-bottom: 40px;
+}
+
 
 .crm-points {
   display: flex;
@@ -388,6 +396,13 @@
     padding-left: 0;
     list-style-position: inside;
   }
+
+  .version h1{
+  max-width: 900px;
+  margin-left:30px;
+  margin-bottom: 40px;
+}
+
 }
 /* gst section ends */
 
@@ -439,6 +454,22 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
+   .version h1{
+  /* max-width: 900px; */
+  margin-left:30px;
+  margin-bottom: 40px;
+  flex: 1;
+  max-width: 50%;
+   font-weight: 500;
+}
+
+ .why-use-crm h1{
+  /* max-width: 900px; */
+  margin-left:30px;
+  margin-bottom: 40px;
+  max-width: fit-content !important;
+}
 }
 
 @media (max-width: 480px) {
@@ -495,6 +526,9 @@
 
   .version .card-title {
     font-size: 1.25rem;
+  }
+ .version h1{
+   max-width: fit-content !important;
   }
 }
 
