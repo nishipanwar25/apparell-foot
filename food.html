@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        .fusorum-hero-wrapper {
+            min-height: 100vh;
+            padding-top: 80px; /* Space for future navbar */
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 183, 77, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.06) 0%, transparent 50%),
+                linear-gradient(135deg, #fefefe 0%, #f8fafc 25%, #f1f5f9 50%, #e2e8f0 75%, #f9fafb 100%);
+            background-size: 600% 600%, 400% 400%, 500% 500%, 300% 300%;
+            animation: fusorum-gradient-shift 12s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes fusorum-gradient-shift {
+            0% { background-position: 0% 50%, 100% 0%, 0% 100%, 50% 50%; }
+            25% { background-position: 100% 50%, 0% 100%, 100% 0%, 0% 0%; }
+            50% { background-position: 50% 100%, 50% 0%, 50% 50%, 100% 100%; }
+            75% { background-position: 0% 0%, 100% 50%, 0% 0%, 50% 0%; }
+            100% { background-position: 0% 50%, 100% 0%, 0% 100%, 50% 50%; }
+        }
+
+        .fusorum-hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .fusorum-content-section {
+            flex: 1;
+            z-index: 2;
+            animation: fusorum-slide-in-left 1s ease-out;
+        }
+
+        .fusorum-image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            animation: fusorum-slide-in-right 1s ease-out 0.3s both;
+        }
+
+        @keyframes fusorum-slide-in-left {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fusorum-slide-in-right {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fusorum-main-headline {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            position: relative;
+            background: linear-gradient(135deg, #1e293b 0%, #3730a3 30%, #1e40af 60%, #0f172a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            letter-spacing: -0.02em;
+        }
+
+        .fusorum-main-headline::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1), rgba(236, 72, 153, 0.1));
+            border-radius: 15px;
+            z-index: -1;
+            opacity: 0.7;
+            filter: blur(20px);
+            animation: fusorum-glow-pulse 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes fusorum-glow-pulse {
+            0% { opacity: 0.3; transform: scale(0.95); }
+            100% { opacity: 0.7; transform: scale(1.05); }
+        }
+
+        .fusorum-sub-description {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            max-width: 600px;
+            position: relative;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.8) 0%, 
+                rgba(248, 250, 252, 0.9) 50%, 
+                rgba(241, 245, 249, 0.8) 100%);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            color: #334155;
+            font-weight: 500;
+        }
+
+        .fusorum-sub-description::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
+            border-radius: 16px 16px 0 0;
+            animation: fusorum-rainbow-flow 4s linear infinite;
+        }
+
+        @keyframes fusorum-rainbow-flow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .fusorum-cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .fusorum-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+
+        .fusorum-hero-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 1.2rem;
+            text-align: center;
+            min-height: 400px;
+        }
+
+        .fusorum-hero-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Floating elements for visual interest */
+        .fusorum-floating-element {
+            position: absolute;
+            opacity: 0.08;
+            animation: fusorum-float 8s ease-in-out infinite;
+            border-radius: 50%;
+        }
+
+        .fusorum-floating-1 {
+            top: 15%;
+            right: 15%;
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(147, 51, 234, 0.3));
+            animation-delay: 0s;
+        }
+
+        .fusorum-floating-2 {
+            bottom: 25%;
+            left: 8%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.3));
+            animation-delay: 3s;
+        }
+
+        .fusorum-floating-3 {
+            top: 45%;
+            right: 8%;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(217, 119, 6, 0.3));
+            animation-delay: 6s;
+        }
+
+        .fusorum-floating-4 {
+            top: 25%;
+            left: 20%;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(219, 39, 119, 0.3));
+            animation-delay: 2s;
+        }
+
+        @keyframes fusorum-float {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            33% { transform: translateY(-15px) rotate(120deg) scale(1.1); }
+            66% { transform: translateY(-25px) rotate(240deg) scale(0.9); }
+        }
+
+        /* Features Section Styles */
+        .fusorum-features-wrapper {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #fafbff 0%, #f0f4ff 50%, #e8f2ff 100%);
+            position: relative;
+        }
+
+        .fusorum-features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .fusorum-section- {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .fusorum-section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1e293b 0%, #3730a3 50%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .fusorum-section-subtitle {
+            font-size: 1.2rem;
+            color: #475569;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .fusorum-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .fusorum-feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fusorum-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .fusorum-card-primary::before {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+
+        .fusorum-card-secondary::before {
+            background: linear-gradient(90deg, #10b981, #3b82f6);
+        }
+
+        .fusorum-card-accent::before {
+            background: linear-gradient(90deg, #f59e0b, #ec4899);
+        }
+
+        .fusorum-feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .fusorum-feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .fusorum-feature-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .fusorum-feature-card p {
+            color: #475569;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Business Impact Section */
+        .fusorum-impact-section {
+            margin: 5rem 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+            border-radius: 30px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .fusorum-impact-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #1e293b 0%, #3730a3 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .fusorum-impact-showcase {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .fusorum-impact-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .fusorum-impact-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            right: 25%;
+            height: 3px;
+            background: linear-gradient(90deg, #ef4444 25%, #3b82f6 50%, #10b981 75%);
+            transform: translateY(-50%);
+            z-index: 1;
+            border-radius: 3px;
+            opacity: 0.6;
+        }
+
+        /* Hexagon for Problems */
+        .fusorum-problem-hexagon {
+            width: 140px;
+            height: 140px;
+            position: relative;
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            margin: 20px 0;
+            border-radius: 20px;
+            transform: rotate(45deg);
+            border: 2px solid #fca5a5;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .fusorum-problem-hexagon:hover {
+            transform: rotate(45deg) scale(1.1);
+            box-shadow: 0 15px 40px rgba(239, 68, 68, 0.3);
+        }
+
+        .fusorum-hexagon-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            text-align: center;
+            width: 100px;
+        }
+
+        /* Diamond for Solutions */
+        .fusorum-solution-diamond {
+            width: 140px;
+            height: 140px;
+            position: relative;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            transform: rotate(45deg);
+            border: 2px solid #93c5fd;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .fusorum-solution-diamond:hover {
+            transform: rotate(45deg) scale(1.1);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .fusorum-diamond-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            text-align: center;
+            width: 100px;
+        }
+
+        /* Circle for Outcomes */
+        .fusorum-outcome-circle {
+            width: 140px;
+            height: 140px;
+            position: relative;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-radius: 50%;
+            border: 2px solid #86efac;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .fusorum-outcome-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.3);
+        }
+
+        .fusorum-circle-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100px;
+        }
+
+        .fusorum-problem-icon,
+        .fusorum-solution-icon,
+        .fusorum-outcome-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .fusorum-hexagon-content h4,
+        .fusorum-diamond-content h4,
+        .fusorum-circle-content h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .fusorum-hexagon-content h4 { color: #dc2626; }
+        .fusorum-diamond-content h4 { color: #2563eb; }
+        .fusorum-circle-content h4 { color: #16a34a; }
+
+        .fusorum-hexagon-content p,
+        .fusorum-diamond-content p,
+        .fusorum-circle-content p {
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        /* Business Types Section */
+        .fusorum-business-section {
+            margin: 5rem 0;
+        }
+
+        .fusorum-business-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #1e293b 0%, #f59e0b 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .fusorum-business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .fusorum-business-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 2.5rem 2rem;
+            backdrop-filter: blur(10px);
+            border: 2px solid;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fusorum-business-sweet { border-color: #f59e0b; }
+        .fusorum-business-bakery { border-color: #ec4899; }
+        .fusorum-business-packaged { border-color: #10b981; }
+        .fusorum-business-ready { border-color: #8b5cf6; }
+        .fusorum-business-beverage { border-color: #3b82f6; }
+        .fusorum-business-ice { border-color: #06b6d4; }
+
+        .fusorum-business-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .fusorum-business-emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .fusorum-business-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .fusorum-business-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .fusorum-business-features span {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+            color: #475569;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        /* Essential Features Section */
+        .fusorum-essential-section {
+            margin: 5rem 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            border-radius: 40px;
+            padding: 4rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fusorum-essential-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
+            animation: fusorum-essential-glow 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes fusorum-essential-glow {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .fusorum-essential-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            text-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .fusorum-essential-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .fusorum-essential-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fusorum-essential-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .fusorum-essential-card:hover::before {
+            opacity: 1;
+        }
+
+        .fusorum-essential-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .fusorum-essential-icon-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .fusorum-essential-icon {
+            font-size: 4rem;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .fusorum-essential-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            filter: blur(20px);
+            opacity: 0.6;
+            animation: fusorum-icon-pulse 3s ease-in-out infinite;
+        }
+
+        .fusorum-glow-blue { background: linear-gradient(45deg, #3b82f6, #1d4ed8); }
+        .fusorum-glow-green { background: linear-gradient(45deg, #10b981, #059669); }
+        .fusorum-glow-orange { background: linear-gradient(45deg, #f59e0b, #d97706); }
+        .fusorum-glow-purple { background: linear-gradient(45deg, #8b5cf6, #7c3aed); }
+        .fusorum-glow-pink { background: linear-gradient(45deg, #ec4899, #be185d); }
+        .fusorum-glow-teal { background: linear-gradient(45deg, #14b8a6, #0d9488); }
+
+        @keyframes fusorum-icon-pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+        }
+
+        .fusorum-essential-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .fusorum-essential-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .fusorum-essential-tag {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
+            color: #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .fusorum-essential-tag:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(147, 51, 234, 0.3) 100%);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Why Choose Section */
+        .fusorum-why-choose-section {
+            margin: 5rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 40px;
+            padding: 4rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fusorum-why-choose-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #1e293b 0%, #3730a3 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .fusorum-why-choose-container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .fusorum-why-choose-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .fusorum-why-choose-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fusorum-why-choose-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .fusorum-why-choose-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .fusorum-why-choose-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .fusorum-check-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.3));
+        }
+
+        .fusorum-check-content {
+            flex: 1;
+        }
+
+        .fusorum-check-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .fusorum-check-line {
+            height: 2px;
+            background: linear-gradient(90deg, #10b981, transparent);
+            margin-top: 0.5rem;
+            border-radius: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .fusorum-why-choose-item:hover .fusorum-check-line {
+            transform: scaleX(1);
+        }
+
+        /* Central Hub Visual */
+        .fusorum-why-choose-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fusorum-central-hub {
+            position: relative;
+            width: 250px;
+            height: 250px;
+        }
+
+        .fusorum-hub-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
+            z-index: 10;
+        }
+
+        .fusorum-hub-orbit {
+            position: absolute;
+            border: 2px dashed rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            animation: fusorum-orbit-rotate 20s linear infinite;
+        }
+
+        .fusorum-orbit-1 {
+            width: 160px;
+            height: 160px;
+            top: 45px;
+            left: 45px;
+            animation-duration: 15s;
+        }
+
+        .fusorum-orbit-2 {
+            width: 200px;
+            height: 200px;
+            top: 25px;
+            left: 25px;
+            animation-duration: 20s;
+            animation-direction: reverse;
+        }
+
+        .fusorum-orbit-3 {
+            width: 240px;
+            height: 240px;
+            top: 5px;
+            left: 5px;
+            animation-duration: 25s;
+        }
+
+        .fusorum-orbit-4 {
+            width: 280px;
+            height: 280px;
+            top: -15px;
+            left: -15px;
+            animation-duration: 30s;
+            animation-direction: reverse;
+        }
+
+        .fusorum-orbit-item {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes fusorum-orbit-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design for New Sections */
+        @media (max-width: 768px) {
+            .fusorum-essential-section,
+            .fusorum-why-choose-section {
+                padding: 2rem 1rem;
+                margin: 3rem 0;
+            }
+
+            .fusorum-essential-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fusorum-why-choose-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .fusorum-central-hub {
+                width: 200px;
+                height: 200px;
+            }
+
+            .fusorum-hub-center {
+                width: 80px;
+                height: 80px;
+                font-size: 0.8rem;
+            }
+
+            .fusorum-orbit-1 { width: 120px; height: 120px; top: 40px; left: 40px; }
+            .fusorum-orbit-2 { width: 140px; height: 140px; top: 30px; left: 30px; }
+            .fusorum-orbit-3 { width: 160px; height: 160px; top: 20px; left: 20px; }
+            .fusorum-orbit-4 { width: 180px; height: 180px; top: 10px; left: 10px; }
+
+            .fusorum-essential-title,
+            .fusorum-why-choose-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Responsive Design for New Sections */
+        @media (max-width: 768px) {
+            .fusorum-features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .fusorum-impact-item {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .fusorum-impact-item::before {
+                display: none;
+            }
+
+            .fusorum-problem-hexagon,
+            .fusorum-solution-diamond,
+            .fusorum-outcome-circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            .fusorum-hexagon-content,
+            .fusorum-diamond-content,
+            .fusorum-circle-content {
+                width: 80px;
+            }
+
+            .fusorum-business-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fusorum-section-title,
+            .fusorum-impact-title,
+            .fusorum-business-title {
+                font-size: 1.8rem;
+            }
+
+            .fusorum-impact-section {
+                padding: 2rem 1rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .fusorum-hero-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1rem;
+                gap: 2rem;
+            }
+
+            .fusorum-main-headline {
+                font-size: 2.5rem;
+            }
+
+            .fusorum-sub-description {
+                font-size: 1.1rem;
+                max-width: 100%;
+            }
+
+            .fusorum-hero-image {
+                max-width: 100%;
+                min-height: 300px;
+            }
+
+            .fusorum-floating-element {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .fusorum-hero-wrapper {
+                padding-top: 60px;
+            }
+
+            .fusorum-main-headline {
+                font-size: 2rem;
+            }
+
+            .fusorum-sub-description {
+                font-size: 1rem;
+            }
+
+            .fusorum-cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+  <!-- Navbar Start -->
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/fusorum.png" alt="Fusorum logo" />
+    </a>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+  <nav class="nav-menu" id="navMenu">
+    <ul class="nav-list">
+      <!-- Company Dropdown -->
+      <li class="dropdown-container" onmouseover="showDropdown('CompanyDropdown')" onmouseout="hideDropdown('CompanyDropdown')">
+
+        <a href="#">Company<span>&#x25BE;</span></a>
+        <div id="CompanyDropdown" class="services-dropdown">
+          <div class="dropdown-grid">
+            <a href="aboutus.html" class="dropdown-item">
+              <i class="fas fa-info-circle"></i> <span>About us</span>
+            </a>
+            <a href="contactus.html" class="dropdown-item">
+              <i class="fas fa-envelope"></i> <span>Contact us</span>
+            </a>
+            <!-- <a href="team.html" class="dropdown-item">
+              <i class="fas fa-users"></i> <span>Team</span>
+            </a> -->
+            <a href="Blog.html" class="dropdown-item">
+              <i class="fas fa-blog"></i> <span>Blogs</span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+       <!-- Industries Dropdown -->
+      <li class="dropdown-container" onmouseover="showDropdown('industriesDropdown')" onmouseout="hideDropdown('industriesDropdown')">
+        <a href="#">Industries<span>&#x25BE;</span></a>
+        <div id="industriesDropdown" class="services-dropdown">
+          <div class="dropdown-grid">
+            <a href="apparel.html" class="dropdown-item">
+              <i class="fas fa-tshirt"></i> <span>Apparel & Footwear</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-shopping-bag"></i> <span>Specialized Retail</span>
+            </a>
+            <a href="hyperMarket.html" class="dropdown-item">
+              <i class="fas fa-store-alt"></i> <span>Hypermarket & Departmental Store</span>
+            </a>
+            <a href="food.html" class="dropdown-item">
+              <i class="fas fa-ice-cream"></i> <span>Food & Confectionery</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-shopping-cart"></i> <span>Supermarket & Groceries</span>
+            </a>
+            <a href="retail.html" class="dropdown-item">
+              <i class="fas fa-book"></i> <span>Books & Office Supplies</span>
+            </a>
+            <a href="lifeStyle.html" class="dropdown-item">
+              <i class="fas fa-couch"></i> <span>Lifestyle</span>
+            </a>
+          </div>
+          
+        </div>
+      </li>
+
+      <!-- Solutions Dropdown -->
+      <li class="dropdown-container" onmouseover="showDropdown('solutionsDropdown')" onmouseout="hideDropdown('solutionsDropdown')">
+        <a href="#">Solutions<span>&#x25BE;</span></a>
+        <div id="solutionsDropdown" class="services-dropdown">
+          <div class="dropdown-grid">
+            <a href="pos.html" class="dropdown-item">
+              <i class="fas fa-cash-register"></i> <span>POS</span>
+            </a>
+            <a href="erp.html" class="dropdown-item">
+              <i class="fas fa-chart-pie"></i> <span>ERP</span>
+            </a>
+            <a href="accounting.html" class="dropdown-item">
+              <i class="fas fa-file-invoice-dollar"></i> <span>Accounting</span>
+            </a>
+            <a href="crm.html" class="dropdown-item">
+              <i class="fas fa-users"></i> <span>CRM</span>
+            </a>
+            <a href="inventory.html" class="dropdown-item">
+              <i class="fas fa-boxes"></i> <span>Inventory Management</span>
+            </a>
+            <a href="ecommerce.html" class="dropdown-item">
+              <i class="fas fa-shopping-basket"></i> <span>Omnichannel E-Commerce</span>
+            </a>
+            <a href="smartRetail.html" class="dropdown-item">
+              <i class="fas fa-lightbulb"></i> <span>Smart Retail</span>
+            </a>
+          </div>
+          
+        </div>
+      </li>
+
+
+      <li><a href="careers.html">Career</a></li>
+      <li class="start-journey">
+        <a href="#contact">Book Demo Now</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+    <section class="fusorum-hero-wrapper">
+        <!-- Floating decorative elements -->
+        <div class="fusorum-floating-element fusorum-floating-1"></div>
+        <div class="fusorum-floating-element fusorum-floating-2"></div>
+        <div class="fusorum-floating-element fusorum-floating-3"></div>
+        <div class="fusorum-floating-element fusorum-floating-4"></div>
+        
+        <div class="fusorum-hero-container">
+            <div class="fusorum-content-section">
+                <h1 class="fusorum-main-headline">
+                    From Kitchen to Counter—Fusorum Powers Your Profitable Journey
+                </h1>
+                <p class="fusorum-sub-description">
+                    Whether you run a sweet shop, bakery, artisan food outlet, or confectionery chain, the challenges are real—fast-moving inventory, expiry-sensitive stock, and the demand for personalized customer experience. Fusorum ERP brings everything together in one integrated platform to help you manage operations while growing your brand.
+                </p>
+                
+            </div>
+            
+            <div class="fusorum-image-section">
+                  <img src="./images/food.jpg" alt="food" width="600px">
+            </div>
+
+            <!-- Essential Features Section
+            <div class="fusorum-essential-section">
+                <h2 class="fusorum-essential-title">Features That Make Fusorum Essential for This Industry</h2>
+                
+                <div class="fusorum-essential-grid">
+                    <div class="fusorum-essential-card fusorum-essential-billing">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">🧾</div>
+                            <div class="fusorum-essential-glow fusorum-glow-blue"></div>
+                        </div>
+                        <h3>Fast GST-Ready Billing</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Multiple counters</div>
+                            <div class="fusorum-essential-tag">Touch billing</div>
+                            <div class="fusorum-essential-tag">Combo deals</div>
+                            <div class="fusorum-essential-tag">Loyalty points</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-inventory">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">📦</div>
+                            <div class="fusorum-essential-glow fusorum-glow-green"></div>
+                        </div>
+                        <h3>Inventory + Expiry Tracking</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Batch-wise stock</div>
+                            <div class="fusorum-essential-tag">Real-time alerts</div>
+                            <div class="fusorum-essential-tag">FIFO/LIFO options</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-recipe">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">🍽</div>
+                            <div class="fusorum-essential-glow fusorum-glow-orange"></div>
+                        </div>
+                        <h3>Recipe/Ingredient Mapping</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Auto-adjust raw material stock as items are sold</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-mobile">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">📱</div>
+                            <div class="fusorum-essential-glow fusorum-glow-purple"></div>
+                        </div>
+                        <h3>Mobile Ordering & Delivery Integrations</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">WhatsApp connect</div>
+                            <div class="fusorum-essential-tag">Custom app</div>
+                            <div class="fusorum-essential-tag">Delivery partners</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-analytics">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">📊</div>
+                            <div class="fusorum-essential-glow fusorum-glow-pink"></div>
+                        </div>
+                        <h3>Sales & Profit Analytics</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Profit margin tracking</div>
+                            <div class="fusorum-essential-tag">Shelf life analysis</div>
+                            <div class="fusorum-essential-tag">Sales speed metrics</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-packaging">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">🛍</div>
+                            <div class="fusorum-essential-glow fusorum-glow-teal"></div>
+                        </div>
+                        <h3>Packaging & Combo Management</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Bundle offers</div>
+                            <div class="fusorum-essential-tag">Gift packs</div>
+                            <div class="fusorum-essential-tag">Festive assortments</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Why Choose Section -->
+            <!-- <div class="fusorum-why-choose-section">
+                <h2 class="fusorum-why-choose-title">Why Choose Fusorum ERP for Your Food Business?</h2>
+                
+                <div class="fusorum-why-choose-container">
+                    <div class="fusorum-why-choose-grid">
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Built for perishables & freshness-focused retail</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Supports Indian FSSAI and GST compliance</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Real-time stock & sales visibility across branches</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Personalized customer billing & offers</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Quick deployment, full training & local support</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Mobile-accessible dashboard for owners & managers</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-why-choose-visual">
+                        <div class="fusorum-central-hub">
+                            <div class="fusorum-hub-center">Fusorum ERP</div>
+                            <div class="fusorum-hub-orbit fusorum-orbit-1">
+                                <div class="fusorum-orbit-item">🏪</div>
+                            </div>
+                            <div class="fusorum-hub-orbit fusorum-orbit-2">
+                                <div class="fusorum-orbit-item">📱</div>
+                            </div>
+                            <div class="fusorum-hub-orbit fusorum-orbit-3">
+                                <div class="fusorum-orbit-item">💰</div>
+                            </div>
+                            <div class="fusorum-hub-orbit fusorum-orbit-4">
+                                <div class="fusorum-orbit-item">📊</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="fusorum-features-wrapper">
+        <div class="fusorum-features-container">
+            <!-- Section Header -->
+            <div class="fusorum-section-header">
+                <h2 class="fusorum-section-title">What Fusorum Does for the Food & Confectionery Industry</h2>
+                
+            </div>
+
+            <!-- Features Grid -->
+            <div class="fusorum-features-grid">
+                <div class="fusorum-feature-card fusorum-card-primary">
+                    <div class="fusorum-feature-icon">📦</div>
+                    <h3>Batch & Expiry Tracking</h3>
+                    <p>Never sell expired items again. Our system alerts and auto-rotates stock for FIFO management.</p>
+                </div>
+
+                <div class="fusorum-feature-card fusorum-card-secondary">
+                    <div class="fusorum-feature-icon">⚡</div>
+                    <h3>High-Speed POS Billing</h3>
+                    <p>Barcode-based billing with support for combos, partial payments, takeaway, and dine-in modes.</p>
+                </div>
+
+                <div class="fusorum-feature-card fusorum-card-accent">
+                    <div class="fusorum-feature-icon">📋</div>
+                    <h3>GST & FSSAI Compliance</h3>
+                    <p>Generate proper invoices and maintain batch-wise traceability for regulatory ease.</p>
+                </div>
+
+                <div class="fusorum-feature-card fusorum-card-primary">
+                    <div class="fusorum-feature-icon">🧪</div>
+                    <h3>Recipe-Level Stock Consumption</h3>
+                    <p>Auto-deduct ingredients based on sales—ideal for bakeries and food manufacturers.</p>
+                </div>
+
+                <div class="fusorum-feature-card fusorum-card-secondary">
+                    <div class="fusorum-feature-icon">🎁</div>
+                    <h3>Offer & Festive Promotions</h3>
+                    <p>Manage festive combos, discount packs, and loyalty campaigns from one dashboard.</p>
+                </div>
+
+                <div class="fusorum-feature-card fusorum-card-accent">
+                    <div class="fusorum-feature-icon">🏢</div>
+                    <h3>Multi-Branch & Franchise Support</h3>
+                    <p>Whether you're a single outlet or a growing chain—we've got you covered.</p>
+                </div>
+            </div>
+
+            <!-- Business Impact Section -->
+            <div class="fusorum-impact-section">
+                <h2 class="fusorum-impact-title">Business Impact – Turning Sweet Sales into Strong Profits</h2>
+                
+                <div class="fusorum-impact-showcase">
+                    <div class="fusorum-impact-item">
+                        <div class="fusorum-problem-hexagon">
+                            <div class="fusorum-hexagon-content">
+                                <div class="fusorum-problem-icon">⚠️</div>
+                                <h4>Problem</h4>
+                                <p>Expired stock & wastage</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-solution-diamond">
+                            <div class="fusorum-diamond-content">
+                                <div class="fusorum-solution-icon">🔧</div>
+                                <h4>Solution</h4>
+                                <p>Expiry alerts + FIFO inventory</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-outcome-circle">
+                            <div class="fusorum-circle-content">
+                                <div class="fusorum-outcome-icon">📈</div>
+                                <h4>Result</h4>
+                                <p>Lower loss, higher margins</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-impact-item">
+                        <div class="fusorum-problem-hexagon">
+                            <div class="fusorum-hexagon-content">
+                                <div class="fusorum-problem-icon">🐌</div>
+                                <h4>Problem</h4>
+                                <p>Slow billing during peak hours</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-solution-diamond">
+                            <div class="fusorum-diamond-content">
+                                <div class="fusorum-solution-icon">⚡</div>
+                                <h4>Solution</h4>
+                                <p>Barcode-enabled POS + multi-counter</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-outcome-circle">
+                            <div class="fusorum-circle-content">
+                                <div class="fusorum-outcome-icon">🚀</div>
+                                <h4>Result</h4>
+                                <p>Faster checkout, more orders</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-impact-item">
+                        <div class="fusorum-problem-hexagon">
+                            <div class="fusorum-hexagon-content">
+                                <div class="fusorum-problem-icon">🌪️</div>
+                                <h4>Problem</h4>
+                                <p>Festival chaos</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-solution-diamond">
+                            <div class="fusorum-diamond-content">
+                                <div class="fusorum-solution-icon">🎯</div>
+                                <h4>Solution</h4>
+                                <p>Pre-built promotion engine</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-outcome-circle">
+                            <div class="fusorum-circle-content">
+                                <div class="fusorum-outcome-icon">🎉</div>
+                                <h4>Result</h4>
+                                <p>Seamless seasonal campaigns</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-impact-item">
+                        <div class="fusorum-problem-hexagon">
+                            <div class="fusorum-hexagon-content">
+                                <div class="fusorum-problem-icon">📉</div>
+                                <h4>Problem</h4>
+                                <p>Low customer retention</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-solution-diamond">
+                            <div class="fusorum-diamond-content">
+                                <div class="fusorum-solution-icon">❤️</div>
+                                <h4>Solution</h4>
+                                <p>Loyalty program with CRM</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-outcome-circle">
+                            <div class="fusorum-circle-content">
+                                <div class="fusorum-outcome-icon">🔄</div>
+                                <h4>Result</h4>
+                                <p>More repeat business</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-impact-item">
+                        <div class="fusorum-problem-hexagon">
+                            <div class="fusorum-hexagon-content">
+                                <div class="fusorum-problem-icon">✋</div>
+                                <h4>Problem</h4>
+                                <p>Manual stock updates</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-solution-diamond">
+                            <div class="fusorum-diamond-content">
+                                <div class="fusorum-solution-icon">🤖</div>
+                                <h4>Solution</h4>
+                                <p>Auto-deduct with recipe mapping</p>
+                            </div>
+                        </div>
+                        <div class="fusorum-outcome-circle">
+                            <div class="fusorum-circle-content">
+                                <div class="fusorum-outcome-icon">🎯</div>
+                                <h4>Result</h4>
+                                <p>Precise inventory control</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Types Section -->
+            <div class="fusorum-business-section">
+                <h2 class="fusorum-business-title"> Perfect for These Food & Sweets Businesses</h2>
+                
+                <div class="fusorum-business-grid">
+                    <div class="fusorum-business-card fusorum-business-sweet">
+                        <div class="fusorum-business-emoji">🍫</div>
+                        <h3>Sweet Shops & Mithai Chains</h3>
+                        <div class="fusorum-business-features">
+                            <span>Batch tracking</span>
+                            <span>Combos</span>
+                            <span>Returns</span>
+                            <span>Pre-orders</span>
+                            <span>GST billing</span>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-business-card fusorum-business-bakery">
+                        <div class="fusorum-business-emoji">🧁</div>
+                        <h3>Bakeries & Artisan Cake Studios</h3>
+                        <div class="fusorum-business-features">
+                            <span>Ingredient-level consumption</span>
+                            <span>Order tracking</span>
+                            <span>Delivery sync</span>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-business-card fusorum-business-packaged">
+                        <div class="fusorum-business-emoji">🍲</div>
+                        <h3>Packaged Food Retailers</h3>
+                        <div class="fusorum-business-features">
+                            <span>Shelf-life control</span>
+                            <span>Barcode stock management</span>
+                            <span>Supplier tracking</span>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-business-card fusorum-business-ready">
+                        <div class="fusorum-business-emoji">🍝</div>
+                        <h3>Ready-to-Eat Food Counters</h3>
+                        <div class="fusorum-business-features">
+                            <span>High-speed POS</span>
+                            <span>Thermal printing</span>
+                            <span>Dine-in/takeaway modes</span>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-business-card fusorum-business-beverage">
+                        <div class="fusorum-business-emoji">🍶</div>
+                        <h3>Confectionery & Beverage Stores</h3>
+                        <div class="fusorum-business-features">
+                            <span>Promotion packs</span>
+                            <span>Loyalty rewards</span>
+                            <span>Mobile ordering integrations</span>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-business-card fusorum-business-ice">
+                        <div class="fusorum-business-emoji">🍦</div>
+                        <h3>Ice Cream & Frozen Dessert Parlors</h3>
+                        <div class="fusorum-business-features">
+                            <span>Temperature-controlled inventory</span>
+                            <span>Seasonal menu management</span>
+                            <span>Custom sundae combinations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essential Features Section -->
+    <section class="fusorum-features-wrapper-new">
+        <div class="fusorum-features-container">
+            <div class="fusorum-essential-section">
+                <h2 class="fusorum-essential-title">Features That Make Fusorum Essential for This Industry</h2>
+                
+                <div class="fusorum-essential-grid">
+                    <div class="fusorum-essential-card fusorum-essential-billing">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">🧾</div>
+                            <div class="fusorum-essential-glow fusorum-glow-blue"></div>
+                        </div>
+                        <h3>Fast GST-Ready Billing</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Multiple counters</div>
+                            <div class="fusorum-essential-tag">Touch billing</div>
+                            <div class="fusorum-essential-tag">Combo deals</div>
+                            <div class="fusorum-essential-tag">Loyalty points</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-inventory">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">📦</div>
+                            <div class="fusorum-essential-glow fusorum-glow-green"></div>
+                        </div>
+                        <h3>Inventory + Expiry Tracking</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Batch-wise stock</div>
+                            <div class="fusorum-essential-tag">Real-time alerts</div>
+                            <div class="fusorum-essential-tag">FIFO/LIFO options</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-recipe">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">🍽</div>
+                            <div class="fusorum-essential-glow fusorum-glow-orange"></div>
+                        </div>
+                        <h3>Recipe/Ingredient Mapping</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Auto-adjust raw material stock as items are sold</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-mobile">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">📱</div>
+                            <div class="fusorum-essential-glow fusorum-glow-purple"></div>
+                        </div>
+                        <h3>Mobile Ordering & Delivery Integrations</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">WhatsApp connect</div>
+                            <div class="fusorum-essential-tag">Custom app</div>
+                            <div class="fusorum-essential-tag">Delivery partners</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-analytics">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">📊</div>
+                            <div class="fusorum-essential-glow fusorum-glow-pink"></div>
+                        </div>
+                        <h3>Sales & Profit Analytics</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Profit margin tracking</div>
+                            <div class="fusorum-essential-tag">Shelf life analysis</div>
+                            <div class="fusorum-essential-tag">Sales speed metrics</div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-essential-card fusorum-essential-packaging">
+                        <div class="fusorum-essential-icon-wrapper">
+                            <div class="fusorum-essential-icon">🛍</div>
+                            <div class="fusorum-essential-glow fusorum-glow-teal"></div>
+                        </div>
+                        <h3>Packaging & Combo Management</h3>
+                        <div class="fusorum-essential-features">
+                            <div class="fusorum-essential-tag">Bundle offers</div>
+                            <div class="fusorum-essential-tag">Gift packs</div>
+                            <div class="fusorum-essential-tag">Festive assortments</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Section -->
+            <div class="fusorum-why-choose-section">
+                <h2 class="fusorum-why-choose-title">Why Choose Fusorum ERP for Your Food Business?</h2>
+                
+                <div class="fusorum-why-choose-container">
+                    <div class="fusorum-why-choose-grid">
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Built for perishables & freshness-focused retail</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Supports Indian FSSAI and GST compliance</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Real-time stock & sales visibility across branches</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Personalized customer billing & offers</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Quick deployment, full training & local support</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="fusorum-why-choose-item">
+                            <div class="fusorum-check-icon">✔️</div>
+                            <div class="fusorum-check-content">
+                                <h4>Mobile-accessible dashboard for owners & managers</h4>
+                                <div class="fusorum-check-line"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fusorum-why-choose-visual">
+                        <div class="fusorum-central-hub">
+                            <div class="fusorum-hub-center">Fusorum ERP</div>
+                            <div class="fusorum-hub-orbit fusorum-orbit-1">
+                                <div class="fusorum-orbit-item">🏪</div>
+                            </div>
+                            <div class="fusorum-hub-orbit fusorum-orbit-2">
+                                <div class="fusorum-orbit-item">📱</div>
+                            </div>
+                            <div class="fusorum-hub-orbit fusorum-orbit-3">
+                                <div class="fusorum-orbit-item">💰</div>
+                            </div>
+                            <div class="fusorum-hub-orbit fusorum-orbit-4">
+                                <div class="fusorum-orbit-item">📊</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+ <!--Footer Start-->
+  <footer>
+    <div class="col-9 footer">
+      <div class="footer-logo-wrap-upd">
+        <a href="https://geniusee.com/" class="footer-logo-wrapper"><img src="images/fusorum.png" width="140"
+            height="45" alt="Geniusee logo" class="footer-logo"></a>
+        <!-- <p class="font--14 pale no-hover">Fusorum — software product development services.</p> -->
+
+        <div class="social-wrap-upd">
+          <a class="social-icon-wrap" href="https://www.facebook.com/Fusorum" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/facebook-icon_pOwRbXvVm.svg" alt="Social Icon" width="10"
+              height="20" loading="lazy">
+          </a>
+          <a class="social-icon-wrap" href="https://www.linkedin.com/company/geniusee" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/linkedin-icon_7EtYZVLqIu.svg" alt="Social Icon" width="18"
+              height="18" loading="lazy">
+          </a>
+          
+          <a class="social-icon-wrap" href="https://www.instagram.com/fusorum/" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/icons/instagram-icon_hB0rjh8aG.svg" alt="Social Icon" width="18"
+              height="18" loading="lazy">
+          </a>
+          <a class="social-icon-wrap" href="https://twitter.com/GeniuseeSW" rel="nofollow" target="_blank">
+            <img src="https://ik.imagekit.io/k0jemnbco/layer1.webp" alt="Social Icon" width="18" height="17"
+              loading="lazy">
+          </a>
+
+        </div>
+      </div>
+      <div class="links-wrapper-grid">
+        <div class="footer-links">
+          <div>
+            <h4 class="font--h4"><a href="/digital-transformation-consulting" class="font--h4">Company</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/fusorum/fusorum/aboutus.html">About us</a></li>
+              <li class="menu-item"><a class="font--14" href="/technology-consulting-services">Team</a>
+              </li>
+              <li class="menu-item"><a class="font--14" href="/fusorum/fusorum/contactus.html">Contact us</a></li>
+              <li class="menu-item"><a class="font--14" href="/fusorum/fusorum/Blog.html">Blogs</a></li>
+            </ul>
+          </div>
+           <div>
+              <h4 class="font--h4 h4-mt"><a href="/retail" class="font--h4">Career</a></h4>
+            </div>
+          <!-- <div>
+            <h4 class="font--h4 h4-mt"><a href="/outstaffing" class="font--h4">Outstaffing</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/dedicated-team">Dedicated Team</a></li>
+              <li class="menu-item"><a class="font--14" href="/time-and-material">Time And Material</a></li>
+            </ul>
+          </div> -->
+          <!-- <div>
+            <h4 class="font--h4 h4-mt"><a href="/digital-transformation-consulting" class="font--h4 no-hover">Product
+                design</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/ui-ux-design">Product Experience Design</a></li>
+              <li class="menu-item"><a class="font--14" href="/business-analysis">Business Analysis</a></li>
+            </ul>
+          </div> -->
+        </div>
+        <div class="footer-links">
+          <h4 class="font--h4"><a href="/software" class="font--h4">Industries</a></h4>
+          <ul>
+            <li class="menu-item"><a class="font--14" href="/mvp-startups">Apparel & Footwear</a></li>
+            <li class="menu-item"><a class="font--14" href="/digital-transformation">Hypermarket & Departmental Store</a></li>
+            <li class="menu-item"><a class="font--14" href="/web-development">Supermarket & Groceries</a></li>
+            <li class="menu-item"><a class="font--14" href="/mobile-development">Lifestyle</a></li>
+            <li class="menu-item"><a class="font--14 no-hover" href="#">Specialized Retail</a></li>
+            <li class="menu-item"><a class="font--14" href="/devops">Food & Confectionery</a></li>
+            <li class="menu-item"><a class="font--14" href="/aws">Books & Office Supplies</a></li>
+          </ul>
+          <!-- <div>
+            <h4 class="font--h4 h4-mt"><a href="/ai-powered-app-development" class="font--h4">AI-powered App
+                Development</a></h4>
+          </div> -->
+        </div>
+        <div class="footer-links">
+
+          <div>
+            <h4 class="font--h4"><a href="/fintech" class="font--h4">Solutions</a></h4>
+            <ul>
+              <li class="menu-item"><a class="font--14" href="/ewallet">POS</a></li>
+              <li class="menu-item"><a class="font--14" href="/banking-software-development">Accounting</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">Inventory Management</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">Smart Retail</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">ERP</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">CRM</a></li>
+              <li class="menu-item"><a class="font--14" href="/lending-software-development">Omnichannel E-Commerce</a></li>
+            </ul>
+          </div>
+          <div>
+            <!-- <div>
+              <h4 class="font--h4 h4-mt"><a href="/edtech" class="font--h4">EdTech</a></h4>
+              <ul>
+                <li class="menu-item"><a class="font--14" href="/e-learning">e-Learning</a></li>
+                <li class="menu-item"><a class="font--14" href="/lms">LMS</a></li>
+              </ul>
+            </div> -->
+            <!-- <div>
+              <h4 class="font--h4 h4-mt"><a href="/retail" class="font--h4">Retail</a></h4>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9 footer-copyright-upd">
+      <div>
+      </div>
+      <div>
+        <a href="#" class="font--14 pale">Terms & Conditions</a>
+      </div>
+      <div>
+        <a href="/privacy-policy" class="font--14 pale">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+  <!--Footer End-->
+
+    
+</body>
+</html>
