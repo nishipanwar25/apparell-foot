@@ -24,7 +24,98 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            background-color: rgb(236, 250, 255);
         }
+          .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+      gap: 40px;
+     
+    }
+    /* Animation Keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to hero section */
+.hero-section {
+  animation: fadeSlideUp 1s ease-out forwards;
+  opacity: 0; /* Start hidden, revealed by animation */
+}
+
+
+    .hero-content {
+      max-width: 50%;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      color: #1a1a1a;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .hero-content a {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-content a:hover {
+      background-color: #0056b3;
+    }
+
+    .hero-image {
+      max-width: 45%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .hero-content, .hero-image {
+        max-width: 100%;
+      }
+
+      .hero-content h1 {
+        font-size: 36px;
+      }
+
+      .hero-content p {
+        font-size: 16px;
+      }
+    }
 
         .fusorum-hero-wrapper {
             min-height: 100vh;
@@ -416,7 +507,7 @@
             width: 140px;
             height: 140px;
             position: relative;
-            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            background: linear-gradient(135deg, #fef2f2 0%, #f4f3e3 100%);
             margin: 20px 0;
             border-radius: 20px;
             transform: rotate(45deg);
@@ -1184,6 +1275,25 @@
   </nav>
 </header>
 
+ <section class="hero-section">
+    <!-- Left Content -->
+    <div class="hero-content">
+      <h1>From Kitchen to Counter<br>Fusorum Powers Your Profitable Journey.</h1>
+      <p>
+        Whether you run a sweet shop, bakery, artisan food outlet, or confectionery chain, the
+        challenges are real—fast-moving inventory, expiry-sensitive stock, and the demand for
+        personalized customer experience. Fusorum ERP brings everything together in one
+        integrated platform to help you manage operations while growing your brand.
+      </p>
+   
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="hero-image">
+      <img src="images/header-bg.svg" alt="ERP Delivery Truck" />
+    </div>
+  </section>
+
 
 
 
@@ -1194,181 +1304,7 @@
         <div class="fusorum-floating-element fusorum-floating-3"></div>
         <div class="fusorum-floating-element fusorum-floating-4"></div>
         
-        <div class="fusorum-hero-container">
-            <div class="fusorum-content-section">
-                <h1 class="fusorum-main-headline">
-                    From Kitchen to Counter—Fusorum Powers Your Profitable Journey
-                </h1>
-                <p class="fusorum-sub-description">
-                    Whether you run a sweet shop, bakery, artisan food outlet, or confectionery chain, the challenges are real—fast-moving inventory, expiry-sensitive stock, and the demand for personalized customer experience. Fusorum ERP brings everything together in one integrated platform to help you manage operations while growing your brand.
-                </p>
-                
-            </div>
-            
-            <div class="fusorum-image-section">
-                  <img src="./images/food.jpg" alt="food" width="600px">
-            </div>
-
-            <!-- Essential Features Section
-            <div class="fusorum-essential-section">
-                <h2 class="fusorum-essential-title">Features That Make Fusorum Essential for This Industry</h2>
-                
-                <div class="fusorum-essential-grid">
-                    <div class="fusorum-essential-card fusorum-essential-billing">
-                        <div class="fusorum-essential-icon-wrapper">
-                            <div class="fusorum-essential-icon">🧾</div>
-                            <div class="fusorum-essential-glow fusorum-glow-blue"></div>
-                        </div>
-                        <h3>Fast GST-Ready Billing</h3>
-                        <div class="fusorum-essential-features">
-                            <div class="fusorum-essential-tag">Multiple counters</div>
-                            <div class="fusorum-essential-tag">Touch billing</div>
-                            <div class="fusorum-essential-tag">Combo deals</div>
-                            <div class="fusorum-essential-tag">Loyalty points</div>
-                        </div>
-                    </div>
-
-                    <div class="fusorum-essential-card fusorum-essential-inventory">
-                        <div class="fusorum-essential-icon-wrapper">
-                            <div class="fusorum-essential-icon">📦</div>
-                            <div class="fusorum-essential-glow fusorum-glow-green"></div>
-                        </div>
-                        <h3>Inventory + Expiry Tracking</h3>
-                        <div class="fusorum-essential-features">
-                            <div class="fusorum-essential-tag">Batch-wise stock</div>
-                            <div class="fusorum-essential-tag">Real-time alerts</div>
-                            <div class="fusorum-essential-tag">FIFO/LIFO options</div>
-                        </div>
-                    </div>
-
-                    <div class="fusorum-essential-card fusorum-essential-recipe">
-                        <div class="fusorum-essential-icon-wrapper">
-                            <div class="fusorum-essential-icon">🍽</div>
-                            <div class="fusorum-essential-glow fusorum-glow-orange"></div>
-                        </div>
-                        <h3>Recipe/Ingredient Mapping</h3>
-                        <div class="fusorum-essential-features">
-                            <div class="fusorum-essential-tag">Auto-adjust raw material stock as items are sold</div>
-                        </div>
-                    </div>
-
-                    <div class="fusorum-essential-card fusorum-essential-mobile">
-                        <div class="fusorum-essential-icon-wrapper">
-                            <div class="fusorum-essential-icon">📱</div>
-                            <div class="fusorum-essential-glow fusorum-glow-purple"></div>
-                        </div>
-                        <h3>Mobile Ordering & Delivery Integrations</h3>
-                        <div class="fusorum-essential-features">
-                            <div class="fusorum-essential-tag">WhatsApp connect</div>
-                            <div class="fusorum-essential-tag">Custom app</div>
-                            <div class="fusorum-essential-tag">Delivery partners</div>
-                        </div>
-                    </div>
-
-                    <div class="fusorum-essential-card fusorum-essential-analytics">
-                        <div class="fusorum-essential-icon-wrapper">
-                            <div class="fusorum-essential-icon">📊</div>
-                            <div class="fusorum-essential-glow fusorum-glow-pink"></div>
-                        </div>
-                        <h3>Sales & Profit Analytics</h3>
-                        <div class="fusorum-essential-features">
-                            <div class="fusorum-essential-tag">Profit margin tracking</div>
-                            <div class="fusorum-essential-tag">Shelf life analysis</div>
-                            <div class="fusorum-essential-tag">Sales speed metrics</div>
-                        </div>
-                    </div>
-
-                    <div class="fusorum-essential-card fusorum-essential-packaging">
-                        <div class="fusorum-essential-icon-wrapper">
-                            <div class="fusorum-essential-icon">🛍</div>
-                            <div class="fusorum-essential-glow fusorum-glow-teal"></div>
-                        </div>
-                        <h3>Packaging & Combo Management</h3>
-                        <div class="fusorum-essential-features">
-                            <div class="fusorum-essential-tag">Bundle offers</div>
-                            <div class="fusorum-essential-tag">Gift packs</div>
-                            <div class="fusorum-essential-tag">Festive assortments</div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Why Choose Section -->
-            <!-- <div class="fusorum-why-choose-section">
-                <h2 class="fusorum-why-choose-title">Why Choose Fusorum ERP for Your Food Business?</h2>
-                
-                <div class="fusorum-why-choose-container">
-                    <div class="fusorum-why-choose-grid">
-                        <div class="fusorum-why-choose-item">
-                            <div class="fusorum-check-icon">✔️</div>
-                            <div class="fusorum-check-content">
-                                <h4>Built for perishables & freshness-focused retail</h4>
-                                <div class="fusorum-check-line"></div>
-                            </div>
-                        </div>
-
-                        <div class="fusorum-why-choose-item">
-                            <div class="fusorum-check-icon">✔️</div>
-                            <div class="fusorum-check-content">
-                                <h4>Supports Indian FSSAI and GST compliance</h4>
-                                <div class="fusorum-check-line"></div>
-                            </div>
-                        </div>
-
-                        <div class="fusorum-why-choose-item">
-                            <div class="fusorum-check-icon">✔️</div>
-                            <div class="fusorum-check-content">
-                                <h4>Real-time stock & sales visibility across branches</h4>
-                                <div class="fusorum-check-line"></div>
-                            </div>
-                        </div>
-
-                        <div class="fusorum-why-choose-item">
-                            <div class="fusorum-check-icon">✔️</div>
-                            <div class="fusorum-check-content">
-                                <h4>Personalized customer billing & offers</h4>
-                                <div class="fusorum-check-line"></div>
-                            </div>
-                        </div>
-
-                        <div class="fusorum-why-choose-item">
-                            <div class="fusorum-check-icon">✔️</div>
-                            <div class="fusorum-check-content">
-                                <h4>Quick deployment, full training & local support</h4>
-                                <div class="fusorum-check-line"></div>
-                            </div>
-                        </div>
-
-                        <div class="fusorum-why-choose-item">
-                            <div class="fusorum-check-icon">✔️</div>
-                            <div class="fusorum-check-content">
-                                <h4>Mobile-accessible dashboard for owners & managers</h4>
-                                <div class="fusorum-check-line"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="fusorum-why-choose-visual">
-                        <div class="fusorum-central-hub">
-                            <div class="fusorum-hub-center">Fusorum ERP</div>
-                            <div class="fusorum-hub-orbit fusorum-orbit-1">
-                                <div class="fusorum-orbit-item">🏪</div>
-                            </div>
-                            <div class="fusorum-hub-orbit fusorum-orbit-2">
-                                <div class="fusorum-orbit-item">📱</div>
-                            </div>
-                            <div class="fusorum-hub-orbit fusorum-orbit-3">
-                                <div class="fusorum-orbit-item">💰</div>
-                            </div>
-                            <div class="fusorum-hub-orbit fusorum-orbit-4">
-                                <div class="fusorum-orbit-item">📊</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </section>
+      
 
     <!-- Features Section -->
     <section class="fusorum-features-wrapper">
