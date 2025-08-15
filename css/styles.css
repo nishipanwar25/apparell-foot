@@ -3449,7 +3449,7 @@ footer .pale {
 footer .font--h4 {
   white-space: nowrap; 
   display: inline-block;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 600;
   margin-bottom: 12px;
 }
@@ -3478,7 +3478,7 @@ footer .social-wrap-upd {
 }
 
 .footer-links a.font--14 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* Footer bottom links in one line */
@@ -3493,7 +3493,7 @@ footer .social-wrap-upd {
 }
 
 .footer-copyright-upd a {
-  font-size: 14px;
+  font-size: 16px;
   color: #bbb;
 }
 
