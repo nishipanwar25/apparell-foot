@@ -453,7 +453,7 @@ html {
 }
 
 .laptop-frame {
-  width: 500px; /* ⬆️ Increased from 300px */
+  width: 500px; /* ⬆ Increased from 300px */
   background-color: #333;
   border-radius: 16px 16px 6px 6px;
   overflow: hidden;
@@ -504,8 +504,8 @@ html {
 
 
 .hero-content {
-  display: flex;
-  justify-content: center;
+  
+ 
   gap: 300px;
   align-items: self-start;
   margin-top: 40px;
@@ -3446,5 +3446,66 @@ footer .pale {
     max-width: 100%;
   }
 }
+footer .font--h4 {
+  white-space: nowrap; 
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+footer .social-wrap-upd {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
 
+/* Footer links grid */
+.links-wrapper-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
 
+.footer-links ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a.font--14 {
+  font-size: 14px;
+}
+
+/* Footer bottom links in one line */
+.footer-copyright-upd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
+}
+
+.footer-copyright-upd a {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-copyright-upd a:hover {
+  color: #fff;
+}
+/* Remove horizontal lines above Terms & Privacy */
+.footer-copyright-upd {
+  border-top: none !important; /* Remove my added line */
+}
+
+.col-9.footer,
+footer .col-9 {
+  border-top: none !important; /* Remove any inherited top borders */
+}
