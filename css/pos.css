@@ -23,33 +23,88 @@ html {
 }
 
 /* hero section starts */
-   .hero{
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: rgb(81, 81, 253);
-   }
+   .hero {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(81, 81, 253);
+  overflow: hidden; /* prevents unwanted scroll bars during animation */
+  padding: 40px 20px;
+}
 
-   .left-hero{
-    max-width: 600px;
-   }
-   
-   .left-hero h1{
-    font-size: 4rem;
-   }
+/* Hero Left Side Animation */
+.left-hero {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1.2s ease-out forwards;
+}
 
-   .left-hero p{
-    font-size: 1.2rem;
-    font-weight: 500;
-   }
+.left-hero h1 {
+  font-size: 4rem;
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
 
-   .left-hero > h1,p,button{
-     padding: 10px 0;
-   }
+.left-hero p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
 
-   /* media query for hero section */
-   @media screen and (max-width: 480px) {
+/* Hero Right Side Animation */
+.right img {
+  opacity: 0;
+  transform: translateX(60px);
+  animation: slideInRight 1.2s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+/* Spacing Cleanup */
+.left-hero > h1, 
+.left-hero > p, 
+.left-hero > button {
+  padding: 10px 0;
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(25px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Responsive Hero Styles */
+@media screen and (max-width: 480px) {
   .hero {
     flex-direction: column;
     text-align: center;
@@ -83,7 +138,7 @@ html {
   }
 }
 
-   @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero {
     flex-direction: column;
     text-align: center;
@@ -114,6 +169,7 @@ html {
     margin-top: 20px;
   }
 }
+
 
 /* hero section ends */
 
