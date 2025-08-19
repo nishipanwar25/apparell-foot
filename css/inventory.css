@@ -1,4 +1,7 @@
 /* Hero Section */
+.hero-wrapper{
+     background-color: #fdf2e9;
+}
 .hero {
     background-color: #fdf2e9;
     padding: 80px 20px;
