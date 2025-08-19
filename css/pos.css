@@ -23,7 +23,7 @@ html {
 }
 
 /* hero section starts */
-   .hero {
+  .hero {
   display: flex;
   color: white;
   align-items: center;
@@ -168,6 +168,39 @@ html {
     max-width: 350px;
     margin-top: 20px;
   }
+}
+/* Hero Left Side Animation */
+.left-hero {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1.2s ease-out forwards;
+}
+
+.left-hero h1 {
+  font-size: 4rem;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.5s;  /* Starts first */
+}
+
+.left-hero p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 1s;  /* Runs after heading */
+}
+
+/* Hero Right Side Animation */
+.right img {
+
+  opacity: 1;
+  transform: none;
+
+
 }
 
 
