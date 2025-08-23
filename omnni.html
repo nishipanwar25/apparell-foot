@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agility & Innovation Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  
+  background-color: #040404;
+  background-image: url("./images/background.jpeg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  
+}
+
+.left-content {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 1.8rem;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.8rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+}
+
+.service {
+  color: #12d18f;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 1.2rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin-bottom: 2rem;
+}
+
+
+.right-img {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-img img {
+  width: 480px; /* Adjust as needed */
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 6px 18px rgba(18,209,143,0.25));
+}
+
+/* Simple floating animation for image */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-24px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 900px) {
+  .container { flex-direction: column; text-align: center; }
+  .right-img img { width: 320px; }
+  .left-content { max-width: 100%; }
+}
+
+.et-interface {
+    position: relative;
+    width: 800px;
+    height: 400px;
+  }
+  .et-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border: 4px solid #4a9b9b;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  .et-center img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .et-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #4a9b9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .et-icon img {
+    width: 60%;
+    height: 60%;
+  }
+  /* Left icons */
+  .et-user     { top: 20%;  left: 15%; }
+  .et-group    { top: 30%;  left: 10%; }
+  .et-store    { top: 40%;  left: 15%; }
+  .et-package  { top: 50%;  left: 10%; }
+  .et-shop     { top: 60%;  left: 15%; }
+  .et-settings { top: 70%;  left: 10%; }
+  /* Right icons */
+  .et-calendar { top: 25%;  right: 15%; background: #4a9b9b; }
+  .et-cloud    { top: 40%;  right: 15%; background: #4a9b9b; }
+  .et-gear     { top: 55%;  right: 15%; background: #4a9b9b; }
+  .et-doc      { top: 70%;  right: 15%; background: #4a9b9b; }
+  .et-cart     { top: 85%;  right: 15%; background: #4a9b9b; }
+  /* Connection lines */
+  .et-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #4a9b9b;
+    opacity: 0.6;
+  }
+  .et-line-left:nth-of-type(1) { top: calc(20% + 25px); left: calc(15% + 50px); width: calc(50% - 15% - 50px); }
+  .et-line-left:nth-of-type(2) { top: calc(30% + 25px); left: calc(10% + 50px); width: calc(50% - 10% - 50px); }
+  .et-line-left:nth-of-type(3) { top: calc(40% + 25px); left: calc(15% + 50px); width: calc(50% - 15% - 50px); }
+  .et-line-left:nth-of-type(4) { top: calc(50% + 25px); left: calc(10% + 50px); width: calc(50% - 10% - 50px); }
+  .et-line-left:nth-of-type(5) { top: calc(60% + 25px); left: calc(15% + 50px); width: calc(50% - 15% - 50px); }
+  .et-line-left:nth-of-type(6) { top: calc(70% + 25px); left: calc(10% + 50px); width: calc(50% - 10% - 50px); }
+  .et-line-right {
+    top: 50%;
+    left: 50%;
+    width: 35%;
+    transform: translateY(-1px);
+  }
+.et-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border: 4px solid #4a9b9b;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 0 30px 0 #4a9b9b, 0 0 60px 0 #70cfcf;
+  /* Initial glow */
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 30px 0 #4a9b9b, 0 0 60px 0 #70cfcf;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 50px 15px #4a9b9b, 0 0 100px 30px #70cfcf;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+  100% {
+    box-shadow: 0 0 30px 0 #4a9b9b, 0 0 60px 0 #70cfcf;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+
+  
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-content">
+      <!-- <h2 class="subheading">Retail That’s Smarter, Faster & Profitable.</h2> -->
+      <h1> Sell Everywhere. Manage From One Dashboard</h1>
+      <!-- <p class="service">{ ServiceNow C </p> -->
+      <p class="desc"> Fusorum’s Omnichannel E-commerce ERP helps you unify sales across POS, website, mobile app, marketplaces, and social platforms—while syncing billing, stock, and accounting in real time.
+
+</p>
+      <!-- <a href="#" class="cta-button">Connect with us &rarr;</a> -->
+    </div>
+    <div class="right-img">
+      <!-- Replace with your own SVG network diagram or image -->
+      <!-- <img src="./images/omnni copy.png" alt="Network Diagram" /> -->
+     <div class="et-interface">
+  <!-- Left lines -->
+  <div class="et-line et-line-left"></div>
+  <div class="et-line et-line-left"></div>
+  <div class="et-line et-line-left"></div>
+  <div class="et-line et-line-left"></div>
+  <div class="et-line et-line-left"></div>
+  <div class="et-line et-line-left"></div>
+  <!-- Right line -->
+  <div class="et-line et-line-right"></div>
+
+  <!-- Left icons -->
+  <div class="et-icon et-user">
+    <img src="./images/user.svg" alt="User" />
+  </div>
+  <div class="et-icon et-group">
+    <img src="./images/group.svg" alt="Group" />
+  </div>
+  <div class="et-icon et-store">
+    <img src="./images/store.svg" alt="Store" />
+  </div>
+  <div class="et-icon et-package">
+    <img src="./images/package.svg" alt="Package" />
+  </div>
+  <div class="et-icon et-shop">
+    <img src="./images/store.svg" alt="Shop" />
+  </div>
+  <div class="et-icon et-settings">
+    <img src="./images/setting.svg" alt="Settings" />
+  </div>
+
+  <!-- Center logo -->
+  <div class="et-center">
+    <img src="./images/fusorum.png" alt="Fusorum Logo" />
+  </div>
+
+  <!-- Right icons -->
+  <div class="et-icon et-calendar">
+    <img src="./images/calendar.svg" alt="Calendar" style="filter: invert(1)" />
+  </div>
+  <div class="et-icon et-cloud">
+    <img src="./images/cloud.svg" alt="Cloud" style="filter: invert(1)" />
+  </div>
+  <div class="et-icon et-gear">
+    <img src="./images/gear.svg" alt="Gear" style="filter: invert(1)" />
+  </div>
+  <div class="et-icon et-doc">
+    <img src="./images/document.svg" alt="Document" style="filter: invert(1)" />
+  </div>
+  <div class="et-icon et-cart">
+    <img src="./images/cart.svg" alt="Cart" style="filter: invert(1)" />
+  </div>
+</div>
+
+     
+      
+    </div>
+  </div>
+
+
+ 
+
+
+    <script>
+    // Animate icons with delay
+    document.addEventListener("DOMContentLoaded", () => {
+      const icons = document.querySelectorAll(".icon-circle");
+      icons.forEach((icon, i) => {
+        setTimeout(() => {
+          icon.classList.add("show");
+        }, (i + 1) * 500); // stagger effect
+      });
+    });
+  </script>
+
+
+</body>
+</html>
