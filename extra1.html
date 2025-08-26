@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SARAHMARKET - Responsive Store Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      /* background: #f24216; */
+      overflow-x: hidden;
+      background-image: url("./images/slider4.png");
+    }
+    .main-section {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      /* background: #ed726d; */
+      overflow-x: hidden;
+    }
+    .overlay-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      /* background: rgba(196, 149, 149, 0.86); */
+      z-index: 1;
+      pointer-events: none;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      margin-left: 60px;
+      max-width: 480px;
+      animation: fadeInContent 1.1s both;
+    }
+    @keyframes fadeInContent {
+      from { opacity: 0; transform: translateY(40px);}
+      to   { opacity: 1; transform: translateY(0);}
+    }
+    .brand-title {
+      font-size: 3.2em;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+    .brand-title span {
+      color: #fff;
+      font-weight: 800;
+      font-family: inherit;
+    }
+    .main-desc {
+      font-size: 1.45em;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 36px;
+      color: #fff;
+    }
+    
+    .cards-area {
+      position: absolute;
+      right: 0;
+      top: 10%;
+      display: flex;
+      flex-direction: row;
+      gap: 36px;
+      z-index: 3;
+      pointer-events: none;
+      height: 88vh;
+    }
+   /* .demo-card { 
+      background: #fff;
+      width: 320px;
+      height: 460px;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.09);
+      overflow: hidden;
+      transform: rotate(-13deg) scale(0.92);
+      opacity: 0;
+      animation: slideInCard 1.2s forwards;
+    } */
+    /* .demo-card:nth-child(2) {
+      transform: rotate(-2deg) scale(0.97) translateY(12px);
+      animation-delay: .25s;
+      z-index: 2;
+    }
+    .demo-card:nth-child(3) {
+      transform: rotate(8deg) scale(0.98) translateY(38px);
+      animation-delay: .45s;
+      z-index: 1;
+    }
+    @keyframes slideFromLeft {
+  from { 
+    opacity: 0; 
+    transform: translateX(-100px);
+  }
+  to   { 
+    opacity: 1; 
+    transform: translateX(0);
+  }
+} */
+
+    /* .demo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media(max-width: 1200px){
+      .cards-area { right: -100px; }
+      .demo-card { width: 260px; height: 340px;}
+    }
+    @media(max-width: 800px){
+      .main-section { flex-direction: column; padding-top: 120px;}
+      .cards-area { display:none;}
+      .content { margin-left:25px; }
+    } */
+
+.cards-area {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  z-index: 3;
+  pointer-events: none;
+  height: 88vh;
+}
+
+.demo-card { 
+  width: 320px;
+  height: 460px;
+  overflow: hidden;
+  opacity: 0;
+  animation: slideInCard 1.2s forwards;
+  background: transparent;  /* कोई bg नहीं */
+  box-shadow: none;         /* shadow हटाई */
+}
+
+.demo-card:nth-child(1) {
+  transform: rotate(-15deg) scale(0.95) translateY(10px);
+  animation-delay: .1s;
+  z-index: 3;
+}
+.demo-card:nth-child(2) {
+  transform: rotate(-5deg) scale(0.97) translateY(25px);
+  animation-delay: .3s;
+  z-index: 2;
+}
+.demo-card:nth-child(3) {
+  transform: rotate(8deg) scale(0.98) translateY(40px);
+  animation-delay: .5s;
+  z-index: 1;
+}
+.demo-card:nth-child(1) {
+  transform: rotate(-15deg) scale(0.95) translateY(10px);
+}
+.demo-card:nth-child(2) {
+  transform: rotate(-5deg) scale(0.97) translateY(25px);
+}
+.demo-card:nth-child(3) {
+  transform: rotate(8deg) scale(0.98) translateY(40px);
+}
+
+
+.demo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes slideInCard {
+  from { opacity: 0; transform: translateY(100px) scale(0.9); }
+  to   { opacity: 1; }
+}
+
+@media(max-width: 1200px){
+  .cards-area { right: -100px; }
+  .demo-card { width: 260px; height: 340px;}
+}
+@media(max-width: 800px){
+  .main-section { flex-direction: column; padding-top: 120px;}
+  .cards-area { display:none;}
+  .content { margin-left:25px; }
+}
+
+    
+      
+  </style>
+</head>
+<body>
+  <section class="main-section">
+    <div class="overlay-bg"></div>
+    <div class="content">
+      <div class="brand-title"><span>Retail That’s Smarter, </span> Faster & Profitable.</div>
+      <div class="main-desc">
+        Fusorum ERP powers Smart Retail with real-time inventory, connected POS, CRM, and GST-compliant billing—so you can run your store or retail chain efficiently from anywhere.
+
+      </div>
+     
+    </div>
+    <div class="cards-area">
+      <div class="demo-card">
+        <img src="./images/slider.png" alt="Screenshot store 1">
+      </div>
+      <div class="demo-card">
+        <img src="./images/slider2.png" alt="Screenshot store 2">
+      </div>
+      <div class="demo-card">
+        <img src="./images/slider3.png" alt="Screenshot store 3">
+      </div>
+    </div>
+  </section>
+</body>
+</html>
